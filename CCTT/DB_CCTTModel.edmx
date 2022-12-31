@@ -1,0 +1,2272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_CCTTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="affiliated_entity">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="affiliated_entity_name" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="course_student">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" />
+          <Property Name="BOD" Type="date" />
+          <Property Name="affiliate_id" Type="int" />
+          <Property Name="national_id" Type="bigint" />
+          <Property Name="phone_num" Type="int" />
+          <Property Name="Email" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="degree">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="degree" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="15" />
+          <Property Name="department_details" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="extra_Course">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="course_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="course_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="course_information" Type="nvarchar" MaxLength="1000" />
+          <Property Name="price" Type="money" />
+          <Property Name="trainer_id" Type="int" />
+          <Property Name="max_student_count" Type="int" />
+          <Property Name="start_date" Type="date" />
+          <Property Name="hours" Type="int" />
+          <Property Name="days" Type="nvarchar" MaxLength="200" />
+          <Property Name="course_status" Type="int" />
+        </EntityType>
+        <EntityType Name="Faculty_member">
+          <Key>
+            <PropertyRef Name="National_id" />
+          </Key>
+          <Property Name="National_id" Type="bigint" Nullable="false" />
+          <Property Name="qualification" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" />
+          <Property Name="degree" Type="int" />
+          <Property Name="BOD" Type="date" />
+          <Property Name="phone_num" Type="int" />
+          <Property Name="address" Type="nvarchar" MaxLength="40" />
+          <Property Name="email" Type="varchar" MaxLength="30" />
+          <Property Name="start_work_Date" Type="date" />
+          <Property Name="gender" Type="int" />
+          <Property Name="nationality" Type="int" />
+          <Property Name="job_id" Type="int" />
+          <Property Name="graduation_date" Type="date" />
+          <Property Name="Major" Type="int" />
+          <Property Name="passport_id" Type="varchar" MaxLength="8" />
+          <Property Name="personal_id" Type="varchar" MaxLength="8" />
+          <Property Name="martial_status" Type="int" />
+          <Property Name="picture" Type="nvarchar" MaxLength="250" />
+          <Property Name="CV" Type="nvarchar" MaxLength="250" />
+          <Property Name="certificate_place_of_origin" Type="nvarchar" MaxLength="30" />
+          <Property Name="department" Type="int" />
+        </EntityType>
+        <EntityType Name="main_course">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="code_id" Type="nvarchar" MaxLength="30" />
+          <Property Name="course_name" Type="nvarchar" MaxLength="30" />
+          <Property Name="units" Type="int" />
+          <Property Name="hours" Type="int" />
+          <Property Name="reliability" Type="int" />
+          <Property Name="substitute_for" Type="int" />
+          <Property Name="type" Type="int" />
+        </EntityType>
+        <EntityType Name="main_course_rel_semster">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="department_id" Type="int" />
+          <Property Name="main_cours_id" Type="int" />
+          <Property Name="semster_id" Type="int" />
+        </EntityType>
+        <EntityType Name="major">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="major" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="nationality">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nationilty" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="num_semster">
+          <Key>
+            <PropertyRef Name="id_num_semster" />
+          </Key>
+          <Property Name="id_num_semster" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="number_sem" Type="nvarchar" MaxLength="30" />
+          <Property Name="name_sem" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="permission">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="type" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="qualification">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="qualification" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Semester">
+          <Key>
+            <PropertyRef Name="sem_id" />
+          </Key>
+          <Property Name="sem_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="semester" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="id" Type="int" />
+          <Property Name="id_num_semster_r" Type="int" />
+        </EntityType>
+        <EntityType Name="semster_student">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="year_id" Type="int" />
+          <Property Name="student_id" Type="int" />
+          <Property Name="department_id" Type="int" />
+        </EntityType>
+        <EntityType Name="semster_student_main_cours">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="semster_student_id" Type="int" />
+          <Property Name="main_cours_id" Type="int" />
+          <Property Name="final_only" Type="int" />
+          <Property Name="halfe_grade" Type="int" />
+          <Property Name="final_grade" Type="int" />
+          <Property Name="state_rate" Type="int" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" />
+          <Property Name="BOD" Type="date" />
+          <Property Name="gender" Type="int" />
+          <Property Name="nationality" Type="int" />
+          <Property Name="place_of_birth" Type="nvarchar" MaxLength="15" />
+          <Property Name="national_num" Type="int" />
+          <Property Name="phone_num" Type="int" />
+          <Property Name="parent_phone_num" Type="int" />
+          <Property Name="email" Type="varchar" MaxLength="30" />
+          <Property Name="address" Type="nvarchar" MaxLength="40" />
+          <Property Name="picture" Type="nvarchar" MaxLength="250" />
+          <Property Name="certificate_type" Type="nvarchar" MaxLength="30" />
+          <Property Name="certifcate_grade" Type="float" />
+          <Property Name="certificate_place_of_origin" Type="nvarchar" MaxLength="40" />
+          <Property Name="major" Type="nvarchar" MaxLength="40" />
+          <Property Name="year_of_joining" Type="int" />
+          <Property Name="semster_of_joining" Type="int" />
+          <Property Name="year_of_graduation" Type="int" />
+          <Property Name="learning_system" Type="nvarchar" MaxLength="20" />
+          <Property Name="file_id" Type="int" />
+          <Property Name="parent_name" Type="nvarchar" MaxLength="30" />
+          <Property Name="family_paper_id" Type="int" />
+          <Property Name="study_group" Type="int" />
+          <Property Name="semester" Type="int" />
+          <Property Name="state_sem" Type="int" />
+          <Property Name="state_id" Type="int" />
+          <Property Name="idColge" Type="int" />
+        </EntityType>
+        <EntityType Name="study_Group">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="max_student_count" Type="int" Nullable="false" />
+          <Property Name="semster" Type="int" Nullable="false" />
+          <Property Name="year" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="department" Type="int" />
+        </EntityType>
+        <EntityType Name="Trainer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="faculty_member_id" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BOD" Type="date" Nullable="false" />
+          <Property Name="major" Type="int" Nullable="false" />
+          <Property Name="qualification" Type="int" />
+          <Property Name="degree" Type="int" />
+          <Property Name="email" Type="varchar" MaxLength="30" />
+          <Property Name="phone_num" Type="int" />
+          <Property Name="address" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="national_id" Type="bigint" Nullable="false" />
+          <Property Name="nationality" Type="int" Nullable="false" />
+          <Property Name="gender" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="15" />
+          <Property Name="permioi_type" Type="int" />
+          <Property Name="password" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Year">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="year" Type="int" Nullable="false" />
+          <Property Name="season" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="year_serch" Type="nvarchar" MaxLength="40" />
+        </EntityType>
+        <Association Name="FK_course student_affiliate_id">
+          <End Role="affiliated_entity" Type="Self.affiliated_entity" Multiplicity="0..1" />
+          <End Role="course_student" Type="Self.course_student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="affiliated_entity">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="course_student">
+              <PropertyRef Name="affiliate_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_extra Course_trainer_id">
+          <End Role="Trainer" Type="Self.Trainer" Multiplicity="0..1" />
+          <End Role="extra_Course" Type="Self.extra_Course" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trainer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="extra_Course">
+              <PropertyRef Name="trainer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Faculty member_degree">
+          <End Role="degree" Type="Self.degree" Multiplicity="0..1" />
+          <End Role="Faculty_member" Type="Self.Faculty_member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="degree">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Faculty_member">
+              <PropertyRef Name="degree" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Faculty member_department">
+          <End Role="department" Type="Self.department" Multiplicity="0..1" />
+          <End Role="Faculty_member" Type="Self.Faculty_member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Faculty_member">
+              <PropertyRef Name="department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Faculty member_Major">
+          <End Role="major" Type="Self.major" Multiplicity="0..1" />
+          <End Role="Faculty_member" Type="Self.Faculty_member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="major">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Faculty_member">
+              <PropertyRef Name="Major" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Faculty member_nationality">
+          <End Role="nationality" Type="Self.nationality" Multiplicity="0..1" />
+          <End Role="Faculty_member" Type="Self.Faculty_member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nationality">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Faculty_member">
+              <PropertyRef Name="nationality" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Faculty member_qualification">
+          <End Role="qualification" Type="Self.qualification" Multiplicity="0..1" />
+          <End Role="Faculty_member" Type="Self.Faculty_member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="qualification">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Faculty_member">
+              <PropertyRef Name="qualification" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_main_course_reliability">
+          <End Role="main_course" Type="Self.main_course" Multiplicity="0..1" />
+          <End Role="main_course1" Type="Self.main_course" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="main_course">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="main_course1">
+              <PropertyRef Name="reliability" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_main_course_substitute_for">
+          <End Role="main_course" Type="Self.main_course" Multiplicity="0..1" />
+          <End Role="main_course1" Type="Self.main_course" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="main_course">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="main_course1">
+              <PropertyRef Name="substitute_for" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_main_course_rel_semster_department_id">
+          <End Role="department" Type="Self.department" Multiplicity="0..1" />
+          <End Role="main_course_rel_semster" Type="Self.main_course_rel_semster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="main_course_rel_semster">
+              <PropertyRef Name="department_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_main_course_rel_semster_main_cours_id">
+          <End Role="main_course" Type="Self.main_course" Multiplicity="0..1" />
+          <End Role="main_course_rel_semster" Type="Self.main_course_rel_semster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="main_course">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="main_course_rel_semster">
+              <PropertyRef Name="main_cours_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_main_course_rel_semster_semster_id">
+          <End Role="Semester" Type="Self.Semester" Multiplicity="0..1" />
+          <End Role="main_course_rel_semster" Type="Self.main_course_rel_semster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Semester">
+              <PropertyRef Name="sem_id" />
+            </Principal>
+            <Dependent Role="main_course_rel_semster">
+              <PropertyRef Name="semster_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Semester_id">
+          <End Role="department" Type="Self.department" Multiplicity="0..1" />
+          <End Role="Semester" Type="Self.Semester" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Semester">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Semester_id_num_semster_r">
+          <End Role="num_semster" Type="Self.num_semster" Multiplicity="0..1" />
+          <End Role="Semester" Type="Self.Semester" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="num_semster">
+              <PropertyRef Name="id_num_semster" />
+            </Principal>
+            <Dependent Role="Semester">
+              <PropertyRef Name="id_num_semster_r" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_semster_student_department_id">
+          <End Role="department" Type="Self.department" Multiplicity="0..1" />
+          <End Role="semster_student" Type="Self.semster_student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="semster_student">
+              <PropertyRef Name="department_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_student_nationality">
+          <End Role="nationality" Type="Self.nationality" Multiplicity="0..1" />
+          <End Role="student" Type="Self.student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nationality">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="student">
+              <PropertyRef Name="nationality" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_student_semester">
+          <End Role="Semester" Type="Self.Semester" Multiplicity="0..1" />
+          <End Role="student" Type="Self.student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Semester">
+              <PropertyRef Name="sem_id" />
+            </Principal>
+            <Dependent Role="student">
+              <PropertyRef Name="semester" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_student_semster_of_joining">
+          <End Role="Semester" Type="Self.Semester" Multiplicity="0..1" />
+          <End Role="student" Type="Self.student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Semester">
+              <PropertyRef Name="sem_id" />
+            </Principal>
+            <Dependent Role="student">
+              <PropertyRef Name="semster_of_joining" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_student_study_group">
+          <End Role="study_Group" Type="Self.study_Group" Multiplicity="0..1" />
+          <End Role="student" Type="Self.student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="study_Group">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="student">
+              <PropertyRef Name="study_group" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_study_Group_department">
+          <End Role="department" Type="Self.department" Multiplicity="0..1" />
+          <End Role="study_Group" Type="Self.study_Group" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="study_Group">
+              <PropertyRef Name="department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_study_Group_semster">
+          <End Role="Semester" Type="Self.Semester" Multiplicity="1" />
+          <End Role="study_Group" Type="Self.study_Group" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Semester">
+              <PropertyRef Name="sem_id" />
+            </Principal>
+            <Dependent Role="study_Group">
+              <PropertyRef Name="semster" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_study_Group_year">
+          <End Role="Year" Type="Self.Year" Multiplicity="1" />
+          <End Role="study_Group" Type="Self.study_Group" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Year">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="study_Group">
+              <PropertyRef Name="year" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trainer_degree">
+          <End Role="degree" Type="Self.degree" Multiplicity="0..1" />
+          <End Role="Trainer" Type="Self.Trainer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="degree">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Trainer">
+              <PropertyRef Name="degree" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trainer_major">
+          <End Role="major" Type="Self.major" Multiplicity="1" />
+          <End Role="Trainer" Type="Self.Trainer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="major">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Trainer">
+              <PropertyRef Name="major" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trainer_nationality">
+          <End Role="nationality" Type="Self.nationality" Multiplicity="1" />
+          <End Role="Trainer" Type="Self.Trainer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nationality">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Trainer">
+              <PropertyRef Name="nationality" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trainer_qualification">
+          <End Role="qualification" Type="Self.qualification" Multiplicity="0..1" />
+          <End Role="Trainer" Type="Self.Trainer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="qualification">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Trainer">
+              <PropertyRef Name="qualification" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_user_id">
+          <End Role="permission" Type="Self.permission" Multiplicity="0..1" />
+          <End Role="user" Type="Self.user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="permission">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="user">
+              <PropertyRef Name="permioi_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="semster_student_student_id">
+          <End Role="student" Type="Self.student" Multiplicity="0..1" />
+          <End Role="semster_student" Type="Self.semster_student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="student">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="semster_student">
+              <PropertyRef Name="student_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="semster_student_year_id">
+          <End Role="Year" Type="Self.Year" Multiplicity="0..1" />
+          <End Role="semster_student" Type="Self.semster_student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Year">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="semster_student">
+              <PropertyRef Name="year_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="semster_student_main_cours_main_cours_id">
+          <End Role="main_course" Type="Self.main_course" Multiplicity="0..1" />
+          <End Role="semster_student_main_cours" Type="Self.semster_student_main_cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="main_course">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="semster_student_main_cours">
+              <PropertyRef Name="main_cours_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="semster_student_main_cours_semster_student_id">
+          <End Role="semster_student" Type="Self.semster_student" Multiplicity="0..1" />
+          <End Role="semster_student_main_cours" Type="Self.semster_student_main_cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="semster_student">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="semster_student_main_cours">
+              <PropertyRef Name="semster_student_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="get_main_cours_student" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="std_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="get_main_cours_student_grade1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="year_id" Type="int" Mode="In" />
+          <Parameter Name="main_cours_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="get_main_cours_student_year" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="std_id" Type="int" Mode="In" />
+          <Parameter Name="year_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="get_main_cours_student_year1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="std_id" Type="int" Mode="In" />
+          <Parameter Name="year_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="get_main_cours_student_year3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="std_id" Type="int" Mode="In" />
+          <Parameter Name="year_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="get_main_cours_student_year5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="std_id" Type="int" Mode="In" />
+          <Parameter Name="year_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="main_course_rel_semster1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="StloadDataPage_Faculty_member3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="StloadDataPage_getsemster_by_dep" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dep_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="StloadDataPage_Semester1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="StloadDataPage_Semester12" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="StloadDataPage_student1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="StloadDataPage_study_Group1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="StloadDataPage_trainer1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="tbl_insert_semster_student_main_cours" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="year_id" Type="int" Mode="In" />
+          <Parameter Name="student_id" Type="int" Mode="In" />
+          <Parameter Name="main_cours_id" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="DB_CCTTModelStoreContainer">
+          <EntitySet Name="affiliated_entity" EntityType="Self.affiliated_entity" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="course_student" EntityType="Self.course_student" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="degree" EntityType="Self.degree" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="extra_Course" EntityType="Self.extra_Course" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Faculty_member" EntityType="Self.Faculty_member" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="main_course" EntityType="Self.main_course" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="main_course_rel_semster" EntityType="Self.main_course_rel_semster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="major" EntityType="Self.major" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="nationality" EntityType="Self.nationality" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="num_semster" EntityType="Self.num_semster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="permission" EntityType="Self.permission" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="qualification" EntityType="Self.qualification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Semester" EntityType="Self.Semester" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="semster_student" EntityType="Self.semster_student" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="semster_student_main_cours" EntityType="Self.semster_student_main_cours" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="study_Group" EntityType="Self.study_Group" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trainer" EntityType="Self.Trainer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Year" EntityType="Self.Year" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_course student_affiliate_id" Association="Self.FK_course student_affiliate_id">
+            <End Role="affiliated_entity" EntitySet="affiliated_entity" />
+            <End Role="course_student" EntitySet="course_student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_extra Course_trainer_id" Association="Self.FK_extra Course_trainer_id">
+            <End Role="Trainer" EntitySet="Trainer" />
+            <End Role="extra_Course" EntitySet="extra_Course" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Faculty member_degree" Association="Self.FK_Faculty member_degree">
+            <End Role="degree" EntitySet="degree" />
+            <End Role="Faculty_member" EntitySet="Faculty_member" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Faculty member_department" Association="Self.FK_Faculty member_department">
+            <End Role="department" EntitySet="department" />
+            <End Role="Faculty_member" EntitySet="Faculty_member" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Faculty member_Major" Association="Self.FK_Faculty member_Major">
+            <End Role="major" EntitySet="major" />
+            <End Role="Faculty_member" EntitySet="Faculty_member" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Faculty member_nationality" Association="Self.FK_Faculty member_nationality">
+            <End Role="nationality" EntitySet="nationality" />
+            <End Role="Faculty_member" EntitySet="Faculty_member" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Faculty member_qualification" Association="Self.FK_Faculty member_qualification">
+            <End Role="qualification" EntitySet="qualification" />
+            <End Role="Faculty_member" EntitySet="Faculty_member" />
+          </AssociationSet>
+          <AssociationSet Name="FK_main_course_reliability" Association="Self.FK_main_course_reliability">
+            <End Role="main_course" EntitySet="main_course" />
+            <End Role="main_course1" EntitySet="main_course" />
+          </AssociationSet>
+          <AssociationSet Name="FK_main_course_substitute_for" Association="Self.FK_main_course_substitute_for">
+            <End Role="main_course" EntitySet="main_course" />
+            <End Role="main_course1" EntitySet="main_course" />
+          </AssociationSet>
+          <AssociationSet Name="FK_main_course_rel_semster_department_id" Association="Self.FK_main_course_rel_semster_department_id">
+            <End Role="department" EntitySet="department" />
+            <End Role="main_course_rel_semster" EntitySet="main_course_rel_semster" />
+          </AssociationSet>
+          <AssociationSet Name="FK_main_course_rel_semster_main_cours_id" Association="Self.FK_main_course_rel_semster_main_cours_id">
+            <End Role="main_course" EntitySet="main_course" />
+            <End Role="main_course_rel_semster" EntitySet="main_course_rel_semster" />
+          </AssociationSet>
+          <AssociationSet Name="FK_main_course_rel_semster_semster_id" Association="Self.FK_main_course_rel_semster_semster_id">
+            <End Role="Semester" EntitySet="Semester" />
+            <End Role="main_course_rel_semster" EntitySet="main_course_rel_semster" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Semester_id" Association="Self.FK_Semester_id">
+            <End Role="department" EntitySet="department" />
+            <End Role="Semester" EntitySet="Semester" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Semester_id_num_semster_r" Association="Self.FK_Semester_id_num_semster_r">
+            <End Role="num_semster" EntitySet="num_semster" />
+            <End Role="Semester" EntitySet="Semester" />
+          </AssociationSet>
+          <AssociationSet Name="FK_semster_student_department_id" Association="Self.FK_semster_student_department_id">
+            <End Role="department" EntitySet="department" />
+            <End Role="semster_student" EntitySet="semster_student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_student_nationality" Association="Self.FK_student_nationality">
+            <End Role="nationality" EntitySet="nationality" />
+            <End Role="student" EntitySet="student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_student_semester" Association="Self.FK_student_semester">
+            <End Role="Semester" EntitySet="Semester" />
+            <End Role="student" EntitySet="student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_student_semster_of_joining" Association="Self.FK_student_semster_of_joining">
+            <End Role="Semester" EntitySet="Semester" />
+            <End Role="student" EntitySet="student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_student_study_group" Association="Self.FK_student_study_group">
+            <End Role="study_Group" EntitySet="study_Group" />
+            <End Role="student" EntitySet="student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_study_Group_department" Association="Self.FK_study_Group_department">
+            <End Role="department" EntitySet="department" />
+            <End Role="study_Group" EntitySet="study_Group" />
+          </AssociationSet>
+          <AssociationSet Name="FK_study_Group_semster" Association="Self.FK_study_Group_semster">
+            <End Role="Semester" EntitySet="Semester" />
+            <End Role="study_Group" EntitySet="study_Group" />
+          </AssociationSet>
+          <AssociationSet Name="FK_study_Group_year" Association="Self.FK_study_Group_year">
+            <End Role="Year" EntitySet="Year" />
+            <End Role="study_Group" EntitySet="study_Group" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trainer_degree" Association="Self.FK_Trainer_degree">
+            <End Role="degree" EntitySet="degree" />
+            <End Role="Trainer" EntitySet="Trainer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trainer_major" Association="Self.FK_Trainer_major">
+            <End Role="major" EntitySet="major" />
+            <End Role="Trainer" EntitySet="Trainer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trainer_nationality" Association="Self.FK_Trainer_nationality">
+            <End Role="nationality" EntitySet="nationality" />
+            <End Role="Trainer" EntitySet="Trainer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trainer_qualification" Association="Self.FK_Trainer_qualification">
+            <End Role="qualification" EntitySet="qualification" />
+            <End Role="Trainer" EntitySet="Trainer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_user_id" Association="Self.FK_user_id">
+            <End Role="permission" EntitySet="permission" />
+            <End Role="user" EntitySet="user" />
+          </AssociationSet>
+          <AssociationSet Name="semster_student_student_id" Association="Self.semster_student_student_id">
+            <End Role="student" EntitySet="student" />
+            <End Role="semster_student" EntitySet="semster_student" />
+          </AssociationSet>
+          <AssociationSet Name="semster_student_year_id" Association="Self.semster_student_year_id">
+            <End Role="Year" EntitySet="Year" />
+            <End Role="semster_student" EntitySet="semster_student" />
+          </AssociationSet>
+          <AssociationSet Name="semster_student_main_cours_main_cours_id" Association="Self.semster_student_main_cours_main_cours_id">
+            <End Role="main_course" EntitySet="main_course" />
+            <End Role="semster_student_main_cours" EntitySet="semster_student_main_cours" />
+          </AssociationSet>
+          <AssociationSet Name="semster_student_main_cours_semster_student_id" Association="Self.semster_student_main_cours_semster_student_id">
+            <End Role="semster_student" EntitySet="semster_student" />
+            <End Role="semster_student_main_cours" EntitySet="semster_student_main_cours" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_CCTTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="nationality">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nationilty" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Trainer" Relationship="DB_CCTTModel.FK_Trainer_nationality" FromRole="nationality" ToRole="Trainer" />
+          <NavigationProperty Name="Faculty_member" Relationship="DB_CCTTModel.FK_Faculty_member_nationality" FromRole="nationality" ToRole="Faculty_member" />
+          <NavigationProperty Name="students" Relationship="DB_CCTTModel.FK_student_nationality" FromRole="nationality" ToRole="student" />
+        </EntityType>
+        <EntityContainer Name="DB_CCTTEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="nationality" EntityType="Self.nationality" />
+          <EntitySet Name="department" EntityType="DB_CCTTModel.department" />
+          <EntitySet Name="Year" EntityType="DB_CCTTModel.Year" />
+          <EntitySet Name="Semester" EntityType="DB_CCTTModel.Semester" />
+          <AssociationSet Name="FK_Semester_id" Association="DB_CCTTModel.FK_Semester_id">
+            <End Role="department" EntitySet="department" />
+            <End Role="Semester" EntitySet="Semester" />
+          </AssociationSet>
+          <EntitySet Name="degree" EntityType="DB_CCTTModel.degree" />
+          <EntitySet Name="major" EntityType="DB_CCTTModel.major" />
+          <EntitySet Name="qualification" EntityType="DB_CCTTModel.qualification" />
+          <EntitySet Name="Trainer" EntityType="DB_CCTTModel.Trainer" />
+          <AssociationSet Name="FK_Trainer_degree" Association="DB_CCTTModel.FK_Trainer_degree">
+            <End Role="degree" EntitySet="degree" />
+            <End Role="Trainer" EntitySet="Trainer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trainer_major" Association="DB_CCTTModel.FK_Trainer_major">
+            <End Role="major" EntitySet="major" />
+            <End Role="Trainer" EntitySet="Trainer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trainer_nationality" Association="DB_CCTTModel.FK_Trainer_nationality">
+            <End Role="nationality" EntitySet="nationality" />
+            <End Role="Trainer" EntitySet="Trainer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trainer_qualification" Association="DB_CCTTModel.FK_Trainer_qualification">
+            <End Role="qualification" EntitySet="qualification" />
+            <End Role="Trainer" EntitySet="Trainer" />
+          </AssociationSet>
+          <FunctionImport Name="StloadDataPage_Semester" ReturnType="Collection(DB_CCTTModel.StloadDataPage_Semester_Result)" />
+          <FunctionImport Name="StloadDataPage_Semester1" ReturnType="Collection(DB_CCTTModel.StloadDataPage_Semester1_Result)" />
+          <FunctionImport Name="StloadDataPage_trainer" ReturnType="Collection(DB_CCTTModel.StloadDataPage_trainer_Result)" />
+          <FunctionImport Name="StloadDataPage_trainer1" ReturnType="Collection(DB_CCTTModel.StloadDataPage_trainer1_Result)" />
+          <FunctionImport Name="StloadDataPage_Semester2" ReturnType="Collection(DB_CCTTModel.StloadDataPage_Semester2_Result)" />
+          <FunctionImport Name="StloadDataPage_Semester11" ReturnType="Collection(DB_CCTTModel.StloadDataPage_Semester11_Result)" />
+          <FunctionImport Name="StloadDataPage_Faculty_member" ReturnType="Collection(DB_CCTTModel.StloadDataPage_Faculty_member_Result)" />
+          <EntitySet Name="Faculty_member" EntityType="DB_CCTTModel.Faculty_member" />
+          <AssociationSet Name="FK_Faculty_member_degree" Association="DB_CCTTModel.FK_Faculty_member_degree">
+            <End Role="degree" EntitySet="degree" />
+            <End Role="Faculty_member" EntitySet="Faculty_member" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Faculty_member_department" Association="DB_CCTTModel.FK_Faculty_member_department">
+            <End Role="department" EntitySet="department" />
+            <End Role="Faculty_member" EntitySet="Faculty_member" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Faculty_member_Major" Association="DB_CCTTModel.FK_Faculty_member_Major">
+            <End Role="major" EntitySet="major" />
+            <End Role="Faculty_member" EntitySet="Faculty_member" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Faculty_member_nationality" Association="DB_CCTTModel.FK_Faculty_member_nationality">
+            <End Role="nationality" EntitySet="nationality" />
+            <End Role="Faculty_member" EntitySet="Faculty_member" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Faculty_member_qualification" Association="DB_CCTTModel.FK_Faculty_member_qualification">
+            <End Role="qualification" EntitySet="qualification" />
+            <End Role="Faculty_member" EntitySet="Faculty_member" />
+          </AssociationSet>
+          <FunctionImport Name="StloadDataPage_Faculty_member1" ReturnType="Collection(DB_CCTTModel.StloadDataPage_Faculty_member1_Result)" />
+          <FunctionImport Name="StloadDataPage_Faculty_member2" ReturnType="Collection(DB_CCTTModel.StloadDataPage_Faculty_member2_Result)" />
+          <FunctionImport Name="StloadDataPage_Faculty_member3" ReturnType="Collection(DB_CCTTModel.StloadDataPage_Faculty_member3_Result)" />
+          <EntitySet Name="main_course" EntityType="DB_CCTTModel.main_course" />
+          <EntitySet Name="study_Group" EntityType="DB_CCTTModel.study_Group" />
+          <AssociationSet Name="FK_main_course_reliability" Association="DB_CCTTModel.FK_main_course_reliability">
+            <End Role="main_course" EntitySet="main_course" />
+            <End Role="main_course1" EntitySet="main_course" />
+          </AssociationSet>
+          <AssociationSet Name="FK_main_course_substitute_for" Association="DB_CCTTModel.FK_main_course_substitute_for">
+            <End Role="main_course" EntitySet="main_course" />
+            <End Role="main_course1" EntitySet="main_course" />
+          </AssociationSet>
+          <AssociationSet Name="FK_study_Group_semster" Association="DB_CCTTModel.FK_study_Group_semster">
+            <End Role="Semester" EntitySet="Semester" />
+            <End Role="study_Group" EntitySet="study_Group" />
+          </AssociationSet>
+          <AssociationSet Name="FK_study_Group_year" Association="DB_CCTTModel.FK_study_Group_year">
+            <End Role="Year" EntitySet="Year" />
+            <End Role="study_Group" EntitySet="study_Group" />
+          </AssociationSet>
+          <FunctionImport Name="StloadDataPage_Semester12" ReturnType="Collection(DB_CCTTModel.StloadDataPage_Semester12_Result)" />
+          <FunctionImport Name="StloadDataPage_Faculty_member31" ReturnType="Collection(DB_CCTTModel.StloadDataPage_Faculty_member31_Result)" />
+          <AssociationSet Name="FK_study_Group_department" Association="DB_CCTTModel.FK_study_Group_department">
+            <End Role="department" EntitySet="department" />
+            <End Role="study_Group" EntitySet="study_Group" />
+          </AssociationSet>
+          <EntitySet Name="students" EntityType="DB_CCTTModel.student" />
+          <AssociationSet Name="FK_student_nationality" Association="DB_CCTTModel.FK_student_nationality">
+            <End Role="nationality" EntitySet="nationality" />
+            <End Role="student" EntitySet="students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_student_semester" Association="DB_CCTTModel.FK_student_semester">
+            <End Role="Semester" EntitySet="Semester" />
+            <End Role="student" EntitySet="students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_student_semster_of_joining" Association="DB_CCTTModel.FK_student_semster_of_joining">
+            <End Role="Semester" EntitySet="Semester" />
+            <End Role="student" EntitySet="students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_student_study_group" Association="DB_CCTTModel.FK_student_study_group">
+            <End Role="study_Group" EntitySet="study_Group" />
+            <End Role="student" EntitySet="students" />
+          </AssociationSet>
+          <FunctionImport Name="StloadDataPage_student1" ReturnType="Collection(DB_CCTTModel.StloadDataPage_student1_Result)" />
+          <FunctionImport Name="StloadDataPage_study_Group1" ReturnType="Collection(DB_CCTTModel.StloadDataPage_study_Group1_Result)" />
+          <FunctionImport Name="StloadDataPage_getsemster_by_dep" ReturnType="Collection(String)">
+          <Parameter Name="dep_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="main_course_rel_semster1" ReturnType="Collection(DB_CCTTModel.main_course_rel_semster1_Result)" />
+          <EntitySet Name="num_semster" EntityType="DB_CCTTModel.num_semster" />
+          <AssociationSet Name="FK_Semester_id_num_semster_r" Association="DB_CCTTModel.FK_Semester_id_num_semster_r">
+            <End Role="num_semster" EntitySet="num_semster" />
+            <End Role="Semester" EntitySet="Semester" />
+          </AssociationSet>
+          <EntitySet Name="main_course_rel_semster" EntityType="DB_CCTTModel.main_course_rel_semster" />
+          <AssociationSet Name="FK_main_course_rel_semster_department_id" Association="DB_CCTTModel.FK_main_course_rel_semster_department_id">
+            <End Role="department" EntitySet="department" />
+            <End Role="main_course_rel_semster" EntitySet="main_course_rel_semster" />
+          </AssociationSet>
+          <AssociationSet Name="FK_main_course_rel_semster_main_cours_id" Association="DB_CCTTModel.FK_main_course_rel_semster_main_cours_id">
+            <End Role="main_course" EntitySet="main_course" />
+            <End Role="main_course_rel_semster" EntitySet="main_course_rel_semster" />
+          </AssociationSet>
+          <AssociationSet Name="FK_main_course_rel_semster_semster_id" Association="DB_CCTTModel.FK_main_course_rel_semster_semster_id">
+            <End Role="Semester" EntitySet="Semester" />
+            <End Role="main_course_rel_semster" EntitySet="main_course_rel_semster" />
+          </AssociationSet>
+          <FunctionImport Name="get_main_cours_student" ReturnType="Collection(DB_CCTTModel.get_main_cours_student_Result)">
+          <Parameter Name="std_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="semster_student" EntityType="DB_CCTTModel.semster_student" />
+          <AssociationSet Name="FK_semster_student_department_id" Association="DB_CCTTModel.FK_semster_student_department_id">
+            <End Role="department" EntitySet="department" />
+            <End Role="semster_student" EntitySet="semster_student" />
+          </AssociationSet>
+          <AssociationSet Name="semster_student_student_id" Association="DB_CCTTModel.semster_student_student_id">
+            <End Role="student" EntitySet="students" />
+            <End Role="semster_student" EntitySet="semster_student" />
+          </AssociationSet>
+          <AssociationSet Name="semster_student_year_id" Association="DB_CCTTModel.semster_student_year_id">
+            <End Role="Year" EntitySet="Year" />
+            <End Role="semster_student" EntitySet="semster_student" />
+          </AssociationSet>
+          <EntitySet Name="semster_student_main_cours" EntityType="DB_CCTTModel.semster_student_main_cours" />
+          <AssociationSet Name="semster_student_main_cours_main_cours_id" Association="DB_CCTTModel.semster_student_main_cours_main_cours_id">
+            <End Role="main_course" EntitySet="main_course" />
+            <End Role="semster_student_main_cours" EntitySet="semster_student_main_cours" />
+          </AssociationSet>
+          <AssociationSet Name="semster_student_main_cours_semster_student_id" Association="DB_CCTTModel.semster_student_main_cours_semster_student_id">
+            <End Role="semster_student" EntitySet="semster_student" />
+            <End Role="semster_student_main_cours" EntitySet="semster_student_main_cours" />
+          </AssociationSet>
+          <FunctionImport Name="get_main_cours_student_year" ReturnType="Collection(Int32)">
+            <Parameter Name="std_id" Mode="In" Type="Int32" />
+            <Parameter Name="year_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="get_main_cours_student_year1" ReturnType="Collection(Int32)">
+            <Parameter Name="std_id" Mode="In" Type="Int32" />
+            <Parameter Name="year_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="get_main_cours_student_year5">
+            <Parameter Name="std_id" Mode="In" Type="Int32" />
+            <Parameter Name="year_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="StloadDataPage_Semester13" ReturnType="Collection(DB_CCTTModel.StloadDataPage_Semester13_Result)" />
+          <FunctionImport Name="tbl_insert_semster_student_main_cours">
+            <Parameter Name="year_id" Mode="In" Type="Int32" />
+            <Parameter Name="student_id" Mode="In" Type="Int32" />
+            <Parameter Name="main_cours_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="get_main_cours_student_grade1" ReturnType="Collection(DB_CCTTModel.get_main_cours_student_grade1_Result)">
+            <Parameter Name="year_id" Mode="In" Type="Int32" />
+            <Parameter Name="main_cours_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="affiliated_entity" EntityType="DB_CCTTModel.affiliated_entity" />
+          <EntitySet Name="course_student" EntityType="DB_CCTTModel.course_student" />
+          <AssociationSet Name="FK_course_student_affiliate_id" Association="DB_CCTTModel.FK_course_student_affiliate_id">
+            <End Role="affiliated_entity" EntitySet="affiliated_entity" />
+            <End Role="course_student" EntitySet="course_student" />
+          </AssociationSet>
+          <EntitySet Name="extra_Course" EntityType="DB_CCTTModel.extra_Course" />
+          <AssociationSet Name="FK_extra_Course_trainer_id" Association="DB_CCTTModel.FK_extra_Course_trainer_id">
+            <End Role="Trainer" EntitySet="Trainer" />
+            <End Role="extra_Course" EntitySet="extra_Course" />
+          </AssociationSet>
+          <EntitySet Name="permissions" EntityType="DB_CCTTModel.permission" />
+          <EntitySet Name="users" EntityType="DB_CCTTModel.user" />
+          <AssociationSet Name="FK_user_id" Association="DB_CCTTModel.FK_user_id">
+            <End Role="permission" EntitySet="permissions" />
+            <End Role="user" EntitySet="users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="department_details" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Semester" Relationship="DB_CCTTModel.FK_Semester_id" FromRole="department" ToRole="Semester" />
+          <NavigationProperty Name="Faculty_member" Relationship="DB_CCTTModel.FK_Faculty_member_department" FromRole="department" ToRole="Faculty_member" />
+          <NavigationProperty Name="study_Group" Relationship="DB_CCTTModel.FK_study_Group_department" FromRole="department" ToRole="study_Group" />
+          <NavigationProperty Name="main_course_rel_semster" Relationship="DB_CCTTModel.FK_main_course_rel_semster_department_id" FromRole="department" ToRole="main_course_rel_semster" />
+          <NavigationProperty Name="semster_student" Relationship="DB_CCTTModel.FK_semster_student_department_id" FromRole="department" ToRole="semster_student" />
+        </EntityType>
+        <EntityType Name="Year">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="year1" Type="Int32" Nullable="false" />
+          <Property Name="season" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="study_Group" Relationship="DB_CCTTModel.FK_study_Group_year" FromRole="Year" ToRole="study_Group" />
+          <Property Name="year_serch" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="semster_student" Relationship="DB_CCTTModel.semster_student_year_id" FromRole="Year" ToRole="semster_student" />
+        </EntityType>
+        <EntityType Name="Semester">
+          <Key>
+            <PropertyRef Name="sem_id" />
+          </Key>
+          <Property Name="sem_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="semester1" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="id" Type="Int32" />
+          <NavigationProperty Name="department" Relationship="DB_CCTTModel.FK_Semester_id" FromRole="Semester" ToRole="department" />
+          <NavigationProperty Name="study_Group" Relationship="DB_CCTTModel.FK_study_Group_semster" FromRole="Semester" ToRole="study_Group" />
+          <NavigationProperty Name="students" Relationship="DB_CCTTModel.FK_student_semester" FromRole="Semester" ToRole="student" />
+          <NavigationProperty Name="students1" Relationship="DB_CCTTModel.FK_student_semster_of_joining" FromRole="Semester" ToRole="student" />
+          <Property Name="id_num_semster_r" Type="Int32" />
+          <NavigationProperty Name="num_semster" Relationship="DB_CCTTModel.FK_Semester_id_num_semster_r" FromRole="Semester" ToRole="num_semster" />
+          <NavigationProperty Name="main_course_rel_semster" Relationship="DB_CCTTModel.FK_main_course_rel_semster_semster_id" FromRole="Semester" ToRole="main_course_rel_semster" />
+        </EntityType>
+        <Association Name="FK_Semester_id">
+          <End Type="DB_CCTTModel.department" Role="department" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.Semester" Role="Semester" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Semester">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="degree">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="degree1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Trainer" Relationship="DB_CCTTModel.FK_Trainer_degree" FromRole="degree" ToRole="Trainer" />
+          <NavigationProperty Name="Faculty_member" Relationship="DB_CCTTModel.FK_Faculty_member_degree" FromRole="degree" ToRole="Faculty_member" />
+        </EntityType>
+        <EntityType Name="major">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="major1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Trainer" Relationship="DB_CCTTModel.FK_Trainer_major" FromRole="major" ToRole="Trainer" />
+          <NavigationProperty Name="Faculty_member" Relationship="DB_CCTTModel.FK_Faculty_member_Major" FromRole="major" ToRole="Faculty_member" />
+        </EntityType>
+        <EntityType Name="qualification">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="qualification1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Trainer" Relationship="DB_CCTTModel.FK_Trainer_qualification" FromRole="qualification" ToRole="Trainer" />
+          <NavigationProperty Name="Faculty_member" Relationship="DB_CCTTModel.FK_Faculty_member_qualification" FromRole="qualification" ToRole="Faculty_member" />
+        </EntityType>
+        <EntityType Name="Trainer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="faculty_member_id" Type="Int32" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="BOD" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="major" Type="Int32" Nullable="false" />
+          <Property Name="qualification" Type="Int32" />
+          <Property Name="degree" Type="Int32" />
+          <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="phone_num" Type="Int32" />
+          <Property Name="address" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="national_id" Type="Int64" Nullable="false" />
+          <Property Name="nationality" Type="Int32" Nullable="false" />
+          <Property Name="gender" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="degree1" Relationship="DB_CCTTModel.FK_Trainer_degree" FromRole="Trainer" ToRole="degree" />
+          <NavigationProperty Name="major1" Relationship="DB_CCTTModel.FK_Trainer_major" FromRole="Trainer" ToRole="major" />
+          <NavigationProperty Name="nationality1" Relationship="DB_CCTTModel.FK_Trainer_nationality" FromRole="Trainer" ToRole="nationality" />
+          <NavigationProperty Name="qualification1" Relationship="DB_CCTTModel.FK_Trainer_qualification" FromRole="Trainer" ToRole="qualification" />
+          <NavigationProperty Name="extra_Course" Relationship="DB_CCTTModel.FK_extra_Course_trainer_id" FromRole="Trainer" ToRole="extra_Course" />
+        </EntityType>
+        <Association Name="FK_Trainer_degree">
+          <End Type="DB_CCTTModel.degree" Role="degree" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.Trainer" Role="Trainer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="degree">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Trainer">
+              <PropertyRef Name="degree" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trainer_major">
+          <End Type="DB_CCTTModel.major" Role="major" Multiplicity="1" />
+          <End Type="DB_CCTTModel.Trainer" Role="Trainer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="major">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Trainer">
+              <PropertyRef Name="major" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trainer_nationality">
+          <End Type="DB_CCTTModel.nationality" Role="nationality" Multiplicity="1" />
+          <End Type="DB_CCTTModel.Trainer" Role="Trainer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nationality">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Trainer">
+              <PropertyRef Name="nationality" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trainer_qualification">
+          <End Type="DB_CCTTModel.qualification" Role="qualification" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.Trainer" Role="Trainer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="qualification">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Trainer">
+              <PropertyRef Name="qualification" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="StloadDataPage_Semester_Result">
+          <Property Type="Int32" Name="الرقم" Nullable="false" />
+          <Property Type="String" Name="الفصل" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="القسم" Nullable="true" MaxLength="15" />
+        </ComplexType>
+        <ComplexType Name="StloadDataPage_Semester1_Result">
+          <Property Type="Int32" Name="الرقم" Nullable="false" />
+          <Property Type="String" Name="الفصل" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="القسم" Nullable="true" MaxLength="15" />
+        </ComplexType>
+        <ComplexType Name="StloadDataPage_trainer_Result">
+          <Property Type="Int32" Name="رقم_المدرب" Nullable="false" />
+          <Property Type="String" Name="الاسم" Nullable="false" MaxLength="20" />
+          <Property Type="DateTime" Name="تاريخ_الميلاد" Nullable="false" />
+          <Property Type="String" Name="التخصص" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="المؤهل" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="الدرجة_العلمية" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ايميل" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="رفم_الهاتف" Nullable="true" />
+          <Property Type="String" Name="العنوان" Nullable="false" MaxLength="40" />
+          <Property Type="Int64" Name="الرقم_الوطني" Nullable="false" />
+          <Property Type="String" Name="الجنسية" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="الجنس" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="StloadDataPage_trainer1_Result">
+          <Property Type="Int32" Name="رقم_المدرب" Nullable="false" />
+          <Property Type="String" Name="الاسم" Nullable="false" MaxLength="20" />
+          <Property Type="DateTime" Name="تاريخ_الميلاد" Nullable="false" />
+          <Property Type="String" Name="التخصص" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="المؤهل" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="الدرجة_العلمية" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ايميل" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="رفم_الهاتف" Nullable="true" />
+          <Property Type="String" Name="العنوان" Nullable="false" MaxLength="40" />
+          <Property Type="Int64" Name="الرقم_الوطني" Nullable="false" />
+          <Property Type="String" Name="الجنسية" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="الجنس" Nullable="false" MaxLength="4" />
+        </ComplexType>
+        <ComplexType Name="StloadDataPage_Semester2_Result">
+          <Property Type="Int32" Name="الرقم" Nullable="false" />
+          <Property Type="String" Name="الفصل" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="القسم" Nullable="true" MaxLength="15" />
+        </ComplexType>
+        <ComplexType Name="StloadDataPage_Semester11_Result">
+          <Property Type="Int32" Name="الرقم" Nullable="false" />
+          <Property Type="String" Name="الفصل" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="القسم" Nullable="true" MaxLength="15" />
+        </ComplexType>
+        <ComplexType Name="StloadDataPage_Faculty_member_Result">
+          <Property Type="Int64" Name="رقم_" Nullable="false" />
+          <Property Type="String" Name="الاسم" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="تاريخ_الميلاد" Nullable="true" />
+          <Property Type="String" Name="التخصص" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="المؤهل" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="الدرجة_العلمية" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ايميل" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="رفم_الهاتف" Nullable="true" />
+          <Property Type="String" Name="العنوان" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="ايميل1" Nullable="true" />
+          <Property Type="Int32" Name="رفم_الهاتف1" Nullable="true" />
+          <Property Type="String" Name="العنوان1" Nullable="true" MaxLength="8" />
+          <Property Type="Int64" Name="الرقم_الوطني" Nullable="false" />
+          <Property Type="String" Name="الجنسية" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="الجنس" Nullable="false" MaxLength="4" />
+        </ComplexType>
+        <EntityType Name="Faculty_member">
+          <Key>
+            <PropertyRef Name="National_id" />
+          </Key>
+          <Property Name="National_id" Type="Int64" Nullable="false" />
+          <Property Name="qualification" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="degree" Type="Int32" />
+          <Property Name="BOD" Type="DateTime" Precision="0" />
+          <Property Name="phone_num" Type="Int32" />
+          <Property Name="address" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="start_work_Date" Type="DateTime" Precision="0" />
+          <Property Name="gender" Type="Int32" />
+          <Property Name="nationality" Type="Int32" />
+          <Property Name="job_id" Type="Int32" />
+          <Property Name="graduation_date" Type="DateTime" Precision="0" />
+          <Property Name="Major" Type="Int32" />
+          <Property Name="passport_id" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="personal_id" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="martial_status" Type="Int32" />
+          <Property Name="picture" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CV" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="certificate_place_of_origin" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="department" Type="Int32" />
+          <NavigationProperty Name="degree1" Relationship="DB_CCTTModel.FK_Faculty_member_degree" FromRole="Faculty_member" ToRole="degree" />
+          <NavigationProperty Name="department1" Relationship="DB_CCTTModel.FK_Faculty_member_department" FromRole="Faculty_member" ToRole="department" />
+          <NavigationProperty Name="major1" Relationship="DB_CCTTModel.FK_Faculty_member_Major" FromRole="Faculty_member" ToRole="major" />
+          <NavigationProperty Name="nationality1" Relationship="DB_CCTTModel.FK_Faculty_member_nationality" FromRole="Faculty_member" ToRole="nationality" />
+          <NavigationProperty Name="qualification1" Relationship="DB_CCTTModel.FK_Faculty_member_qualification" FromRole="Faculty_member" ToRole="qualification" />
+        </EntityType>
+        <Association Name="FK_Faculty_member_degree">
+          <End Type="DB_CCTTModel.degree" Role="degree" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.Faculty_member" Role="Faculty_member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="degree">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Faculty_member">
+              <PropertyRef Name="degree" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Faculty_member_department">
+          <End Type="DB_CCTTModel.department" Role="department" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.Faculty_member" Role="Faculty_member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Faculty_member">
+              <PropertyRef Name="department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Faculty_member_Major">
+          <End Type="DB_CCTTModel.major" Role="major" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.Faculty_member" Role="Faculty_member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="major">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Faculty_member">
+              <PropertyRef Name="Major" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Faculty_member_nationality">
+          <End Type="DB_CCTTModel.nationality" Role="nationality" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.Faculty_member" Role="Faculty_member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nationality">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Faculty_member">
+              <PropertyRef Name="nationality" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Faculty_member_qualification">
+          <End Type="DB_CCTTModel.qualification" Role="qualification" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.Faculty_member" Role="Faculty_member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="qualification">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Faculty_member">
+              <PropertyRef Name="qualification" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="StloadDataPage_Faculty_member1_Result">
+          <Property Type="Int64" Name="رقم_" Nullable="false" />
+          <Property Type="String" Name="الاسم" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="تاريخ_الميلاد" Nullable="true" />
+          <Property Type="String" Name="التخصص" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="المؤهل" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="الدرجة_العلمية" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ايميل" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="رفم_الهاتف" Nullable="true" />
+          <Property Type="String" Name="العنوان" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="ايميل1" Nullable="true" />
+          <Property Type="Int32" Name="رفم_الهاتف1" Nullable="true" />
+          <Property Type="String" Name="العنوان1" Nullable="true" MaxLength="8" />
+          <Property Type="Int64" Name="الرقم_الوطني" Nullable="false" />
+          <Property Type="String" Name="الجنسية" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="الجنس" Nullable="false" MaxLength="4" />
+        </ComplexType>
+        <ComplexType Name="StloadDataPage_Faculty_member2_Result">
+          <Property Type="Int64" Name="رقم_" Nullable="false" />
+          <Property Type="String" Name="الاسم" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="تاريخ_الميلاد" Nullable="true" />
+          <Property Type="String" Name="التخصص" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="المؤهل" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="الدرجة_العلمية" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ايميل" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="رفم_الهاتف" Nullable="true" />
+          <Property Type="String" Name="العنوان" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="بداية_العمل" Nullable="true" />
+          <Property Type="Int32" Name="رفم_الوظفيفي" Nullable="true" />
+          <Property Type="String" Name="رقم_الجواز" Nullable="true" MaxLength="8" />
+          <Property Type="Int64" Name="الرقم_الوطني" Nullable="false" />
+          <Property Type="String" Name="الجنسية" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="الجنس" Nullable="false" MaxLength="4" />
+        </ComplexType>
+        <ComplexType Name="StloadDataPage_Faculty_member3_Result">
+          <Property Type="Int64" Name="رقم_" Nullable="false" />
+          <Property Type="String" Name="الاسم" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="تاريخ_الميلاد" Nullable="true" />
+          <Property Type="String" Name="التخصص" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="المؤهل" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="الدرجة_العلمية" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ايميل" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="رفم_الهاتف" Nullable="true" />
+          <Property Type="String" Name="العنوان" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="بداية_العمل" Nullable="true" />
+          <Property Type="Int32" Name="رفم_الوظفيفي" Nullable="true" />
+          <Property Type="String" Name="رقم_الجواز" Nullable="true" MaxLength="8" />
+          <Property Type="Int64" Name="الرقم_الوطني" Nullable="false" />
+          <Property Type="String" Name="الجنسية" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="الجنس" Nullable="false" MaxLength="4" />
+        </ComplexType>
+        <EntityType Name="main_course">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="code_id" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="course_name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="units" Type="Int32" />
+          <Property Name="hours" Type="Int32" />
+          <Property Name="reliability" Type="Int32" />
+          <Property Name="substitute_for" Type="Int32" />
+          <NavigationProperty Name="main_course1" Relationship="DB_CCTTModel.FK_main_course_reliability" FromRole="main_course" ToRole="main_course1" />
+          <NavigationProperty Name="main_course2" Relationship="DB_CCTTModel.FK_main_course_reliability" FromRole="main_course1" ToRole="main_course" />
+          <NavigationProperty Name="main_course11" Relationship="DB_CCTTModel.FK_main_course_substitute_for" FromRole="main_course" ToRole="main_course1" />
+          <NavigationProperty Name="main_course3" Relationship="DB_CCTTModel.FK_main_course_substitute_for" FromRole="main_course1" ToRole="main_course" />
+          <Property Name="type" Type="Int32" />
+          <NavigationProperty Name="main_course_rel_semster" Relationship="DB_CCTTModel.FK_main_course_rel_semster_main_cours_id" FromRole="main_course" ToRole="main_course_rel_semster" />
+          <NavigationProperty Name="semster_student_main_cours" Relationship="DB_CCTTModel.semster_student_main_cours_main_cours_id" FromRole="main_course" ToRole="semster_student_main_cours" />
+        </EntityType>
+        <EntityType Name="study_Group">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="max_student_count" Type="Int32" Nullable="false" />
+          <Property Name="semster" Type="Int32" Nullable="false" />
+          <Property Name="year" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Semester" Relationship="DB_CCTTModel.FK_study_Group_semster" FromRole="study_Group" ToRole="Semester" />
+          <NavigationProperty Name="Year1" Relationship="DB_CCTTModel.FK_study_Group_year" FromRole="study_Group" ToRole="Year" />
+          <Property Name="department" Type="Int32" />
+          <NavigationProperty Name="department1" Relationship="DB_CCTTModel.FK_study_Group_department" FromRole="study_Group" ToRole="department" />
+          <NavigationProperty Name="students" Relationship="DB_CCTTModel.FK_student_study_group" FromRole="study_Group" ToRole="student" />
+        </EntityType>
+        <Association Name="FK_main_course_reliability">
+          <End Type="DB_CCTTModel.main_course" Role="main_course" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.main_course" Role="main_course1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="main_course">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="main_course1">
+              <PropertyRef Name="reliability" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_main_course_substitute_for">
+          <End Type="DB_CCTTModel.main_course" Role="main_course" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.main_course" Role="main_course1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="main_course">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="main_course1">
+              <PropertyRef Name="substitute_for" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_study_Group_semster">
+          <End Type="DB_CCTTModel.Semester" Role="Semester" Multiplicity="1" />
+          <End Type="DB_CCTTModel.study_Group" Role="study_Group" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Semester">
+              <PropertyRef Name="sem_id" />
+            </Principal>
+            <Dependent Role="study_Group">
+              <PropertyRef Name="semster" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_study_Group_year">
+          <End Type="DB_CCTTModel.Year" Role="Year" Multiplicity="1" />
+          <End Type="DB_CCTTModel.study_Group" Role="study_Group" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Year">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="study_Group">
+              <PropertyRef Name="year" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="StloadDataPage_Semester12_Result">
+          <Property Type="Int32" Name="الرقم" Nullable="false" />
+          <Property Type="String" Name="الفصل" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="القسم" Nullable="true" MaxLength="15" />
+        </ComplexType>
+        <ComplexType Name="StloadDataPage_Faculty_member31_Result">
+          <Property Type="Int64" Name="رقم_" Nullable="false" />
+          <Property Type="String" Name="الاسم" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="تاريخ_الميلاد" Nullable="true" />
+          <Property Type="String" Name="التخصص" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="المؤهل" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="الدرجة_العلمية" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ايميل" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="رفم_الهاتف" Nullable="true" />
+          <Property Type="String" Name="العنوان" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="بداية_العمل" Nullable="true" />
+          <Property Type="Int32" Name="رفم_الوظفيفي" Nullable="true" />
+          <Property Type="String" Name="رقم_الجواز" Nullable="true" MaxLength="8" />
+          <Property Type="Int64" Name="الرقم_الوطني" Nullable="false" />
+          <Property Type="String" Name="الجنسية" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="الجنس" Nullable="false" MaxLength="4" />
+        </ComplexType>
+        <Association Name="FK_study_Group_department">
+          <End Type="DB_CCTTModel.department" Role="department" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.study_Group" Role="study_Group" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="study_Group">
+              <PropertyRef Name="department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="BOD" Type="DateTime" Precision="0" />
+          <Property Name="gender" Type="Int32" />
+          <Property Name="nationality" Type="Int32" />
+          <Property Name="place_of_birth" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="national_num" Type="Int32" />
+          <Property Name="phone_num" Type="Int32" />
+          <Property Name="parent_phone_num" Type="Int32" />
+          <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="picture" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="certificate_type" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="certifcate_grade" Type="Double" />
+          <Property Name="certificate_place_of_origin" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="major" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="year_of_joining" Type="Int32" />
+          <Property Name="semster_of_joining" Type="Int32" />
+          <Property Name="year_of_graduation" Type="Int32" />
+          <Property Name="learning_system" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="file_id" Type="Int32" />
+          <Property Name="parent_name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="family_paper_id" Type="Int32" />
+          <Property Name="study_group" Type="Int32" />
+          <Property Name="semester" Type="Int32" />
+          <NavigationProperty Name="nationality1" Relationship="DB_CCTTModel.FK_student_nationality" FromRole="student" ToRole="nationality" />
+          <NavigationProperty Name="Semester1" Relationship="DB_CCTTModel.FK_student_semester" FromRole="student" ToRole="Semester" />
+          <NavigationProperty Name="Semester2" Relationship="DB_CCTTModel.FK_student_semster_of_joining" FromRole="student" ToRole="Semester" />
+          <NavigationProperty Name="study_Group1" Relationship="DB_CCTTModel.FK_student_study_group" FromRole="student" ToRole="study_Group" />
+          <Property Name="state_sem" Type="Int32" />
+          <NavigationProperty Name="semster_student" Relationship="DB_CCTTModel.semster_student_student_id" FromRole="student" ToRole="semster_student" />
+          <Property Name="state_id" Type="Int32" />
+          <Property Name="idColge" Type="Int32" />
+        </EntityType>
+        <Association Name="FK_student_nationality">
+          <End Type="DB_CCTTModel.nationality" Role="nationality" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.student" Role="student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nationality">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="student">
+              <PropertyRef Name="nationality" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_student_semester">
+          <End Type="DB_CCTTModel.Semester" Role="Semester" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.student" Role="student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Semester">
+              <PropertyRef Name="sem_id" />
+            </Principal>
+            <Dependent Role="student">
+              <PropertyRef Name="semester" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_student_semster_of_joining">
+          <End Type="DB_CCTTModel.Semester" Role="Semester" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.student" Role="student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Semester">
+              <PropertyRef Name="sem_id" />
+            </Principal>
+            <Dependent Role="student">
+              <PropertyRef Name="semster_of_joining" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_student_study_group">
+          <End Type="DB_CCTTModel.study_Group" Role="study_Group" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.student" Role="student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="study_Group">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="student">
+              <PropertyRef Name="study_group" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="StloadDataPage_student1_Result">
+          <Property Type="Int32" Name="رقم_القيد" Nullable="false" />
+          <Property Type="String" Name="الاسم" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="تاريخ_الميلاد" Nullable="true" />
+          <Property Type="Int32" Name="رفم_الهاتف" Nullable="true" />
+          <Property Type="String" Name="العنوان" Nullable="true" MaxLength="40" />
+        </ComplexType>
+        <ComplexType Name="StloadDataPage_study_Group1_Result">
+          <Property Type="Int32" Name="الرقم" Nullable="false" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="الفصل" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="القسم" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="year" Nullable="true" />
+          <Property Type="Int32" Name="max_student_count" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="main_course_rel_semster1_Result">
+          <Property Type="Int32" Name="الرقم" Nullable="false" />
+          <Property Type="String" Name="المادة" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="القسم" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="الفصل" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <EntityType Name="num_semster">
+          <Key>
+            <PropertyRef Name="id_num_semster" />
+          </Key>
+          <Property Name="id_num_semster" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="number_sem" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="name_sem" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Semesters" Relationship="DB_CCTTModel.FK_Semester_id_num_semster_r" FromRole="num_semster" ToRole="Semester" />
+        </EntityType>
+        <Association Name="FK_Semester_id_num_semster_r">
+          <End Type="DB_CCTTModel.num_semster" Role="num_semster" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.Semester" Role="Semester" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="num_semster">
+              <PropertyRef Name="id_num_semster" />
+            </Principal>
+            <Dependent Role="Semester">
+              <PropertyRef Name="id_num_semster_r" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="main_course_rel_semster">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="department_id" Type="Int32" />
+          <Property Name="main_cours_id" Type="Int32" />
+          <Property Name="semster_id" Type="Int32" />
+          <NavigationProperty Name="department" Relationship="DB_CCTTModel.FK_main_course_rel_semster_department_id" FromRole="main_course_rel_semster" ToRole="department" />
+          <NavigationProperty Name="main_course" Relationship="DB_CCTTModel.FK_main_course_rel_semster_main_cours_id" FromRole="main_course_rel_semster" ToRole="main_course" />
+          <NavigationProperty Name="Semester" Relationship="DB_CCTTModel.FK_main_course_rel_semster_semster_id" FromRole="main_course_rel_semster" ToRole="Semester" />
+        </EntityType>
+        <Association Name="FK_main_course_rel_semster_department_id">
+          <End Type="DB_CCTTModel.department" Role="department" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.main_course_rel_semster" Role="main_course_rel_semster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="main_course_rel_semster">
+              <PropertyRef Name="department_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_main_course_rel_semster_main_cours_id">
+          <End Type="DB_CCTTModel.main_course" Role="main_course" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.main_course_rel_semster" Role="main_course_rel_semster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="main_course">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="main_course_rel_semster">
+              <PropertyRef Name="main_cours_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_main_course_rel_semster_semster_id">
+          <End Type="DB_CCTTModel.Semester" Role="Semester" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.main_course_rel_semster" Role="main_course_rel_semster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Semester">
+              <PropertyRef Name="sem_id" />
+            </Principal>
+            <Dependent Role="main_course_rel_semster">
+              <PropertyRef Name="semster_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="get_main_cours_student_Result">
+          <Property Type="Int32" Name="الرقم" Nullable="false" />
+          <Property Type="String" Name="رمز_المادة" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="المادة" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="عدد_الوحدات" Nullable="true" />
+          <Property Type="String" Name="عدد_السيمستر" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <EntityType Name="semster_student">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="year_id" Type="Int32" />
+          <Property Name="student_id" Type="Int32" />
+          <Property Name="department_id" Type="Int32" />
+          <NavigationProperty Name="department" Relationship="DB_CCTTModel.FK_semster_student_department_id" FromRole="semster_student" ToRole="department" />
+          <NavigationProperty Name="student" Relationship="DB_CCTTModel.semster_student_student_id" FromRole="semster_student" ToRole="student" />
+          <NavigationProperty Name="Year" Relationship="DB_CCTTModel.semster_student_year_id" FromRole="semster_student" ToRole="Year" />
+          <NavigationProperty Name="semster_student_main_cours" Relationship="DB_CCTTModel.semster_student_main_cours_semster_student_id" FromRole="semster_student" ToRole="semster_student_main_cours" />
+        </EntityType>
+        <Association Name="FK_semster_student_department_id">
+          <End Type="DB_CCTTModel.department" Role="department" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.semster_student" Role="semster_student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="semster_student">
+              <PropertyRef Name="department_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="semster_student_student_id">
+          <End Type="DB_CCTTModel.student" Role="student" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.semster_student" Role="semster_student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="student">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="semster_student">
+              <PropertyRef Name="student_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="semster_student_year_id">
+          <End Type="DB_CCTTModel.Year" Role="Year" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.semster_student" Role="semster_student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Year">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="semster_student">
+              <PropertyRef Name="year_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="semster_student_main_cours">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="semster_student_id" Type="Int32" />
+          <Property Name="main_cours_id" Type="Int32" />
+          <Property Name="final_only" Type="Int32" />
+          <Property Name="halfe_grade" Type="Int32" />
+          <Property Name="final_grade" Type="Int32" />
+          <Property Name="state_rate" Type="Int32" />
+          <NavigationProperty Name="main_course" Relationship="DB_CCTTModel.semster_student_main_cours_main_cours_id" FromRole="semster_student_main_cours" ToRole="main_course" />
+          <NavigationProperty Name="semster_student" Relationship="DB_CCTTModel.semster_student_main_cours_semster_student_id" FromRole="semster_student_main_cours" ToRole="semster_student" />
+        </EntityType>
+        <Association Name="semster_student_main_cours_main_cours_id">
+          <End Type="DB_CCTTModel.main_course" Role="main_course" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.semster_student_main_cours" Role="semster_student_main_cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="main_course">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="semster_student_main_cours">
+              <PropertyRef Name="main_cours_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="semster_student_main_cours_semster_student_id">
+          <End Type="DB_CCTTModel.semster_student" Role="semster_student" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.semster_student_main_cours" Role="semster_student_main_cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="semster_student">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="semster_student_main_cours">
+              <PropertyRef Name="semster_student_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="StloadDataPage_Semester13_Result">
+          <Property Type="Int32" Name="الرقم" Nullable="false" />
+          <Property Type="String" Name="الفصل" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="القسم" Nullable="true" MaxLength="15" />
+        </ComplexType>
+        <ComplexType Name="get_main_cours_student_grade1_Result">
+          <Property Type="Int32" Name="الرقم" Nullable="true" />
+          <Property Type="String" Name="اسم_الطالب" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="درجة_اعمال_الفصل_" Nullable="true" />
+          <Property Type="Int32" Name="درجة_الامتحان_النهائي" Nullable="true" />
+          <Property Type="Int32" Name="الدرجة_النهائية" Nullable="true" />
+          <Property Type="Int32" Name="uid" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="affiliated_entity">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="affiliated_entity_name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="course_student" Relationship="DB_CCTTModel.FK_course_student_affiliate_id" FromRole="affiliated_entity" ToRole="course_student" />
+        </EntityType>
+        <EntityType Name="course_student">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="BOD" Type="DateTime" Precision="0" />
+          <Property Name="affiliate_id" Type="Int32" />
+          <Property Name="national_id" Type="Int64" />
+          <Property Name="phone_num" Type="Int32" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="affiliated_entity" Relationship="DB_CCTTModel.FK_course_student_affiliate_id" FromRole="course_student" ToRole="affiliated_entity" />
+        </EntityType>
+        <Association Name="FK_course_student_affiliate_id">
+          <End Type="DB_CCTTModel.affiliated_entity" Role="affiliated_entity" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.course_student" Role="course_student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="affiliated_entity">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="course_student">
+              <PropertyRef Name="affiliate_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="extra_Course">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="course_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="course_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="course_information" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="trainer_id" Type="Int32" />
+          <Property Name="max_student_count" Type="Int32" />
+          <Property Name="start_date" Type="DateTime" Precision="0" />
+          <Property Name="hours" Type="Int32" />
+          <Property Name="days" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="course_status" Type="Int32" />
+          <NavigationProperty Name="Trainer" Relationship="DB_CCTTModel.FK_extra_Course_trainer_id" FromRole="extra_Course" ToRole="Trainer" />
+        </EntityType>
+        <Association Name="FK_extra_Course_trainer_id">
+          <End Type="DB_CCTTModel.Trainer" Role="Trainer" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.extra_Course" Role="extra_Course" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trainer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="extra_Course">
+              <PropertyRef Name="trainer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="permission">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="type" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="users" Relationship="DB_CCTTModel.FK_user_id" FromRole="permission" ToRole="user" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="permioi_type" Type="Int32" />
+          <NavigationProperty Name="permission" Relationship="DB_CCTTModel.FK_user_id" FromRole="user" ToRole="permission" />
+          <Property Name="password" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_user_id">
+          <End Type="DB_CCTTModel.permission" Role="permission" Multiplicity="0..1" />
+          <End Type="DB_CCTTModel.user" Role="user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="permission">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="user">
+              <PropertyRef Name="permioi_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_CCTTModelStoreContainer" CdmEntityContainer="DB_CCTTEntities">
+          <EntitySetMapping Name="nationality">
+            <EntityTypeMapping TypeName="DB_CCTTModel.nationality">
+              <MappingFragment StoreEntitySet="nationality">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nationilty" ColumnName="nationilty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="department">
+            <EntityTypeMapping TypeName="DB_CCTTModel.department">
+              <MappingFragment StoreEntitySet="department">
+                <ScalarProperty Name="department_details" ColumnName="department_details" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Year">
+            <EntityTypeMapping TypeName="DB_CCTTModel.Year">
+              <MappingFragment StoreEntitySet="Year">
+                <ScalarProperty Name="year_serch" ColumnName="year_serch" />
+                <ScalarProperty Name="season" ColumnName="season" />
+                <ScalarProperty Name="year1" ColumnName="year" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Semester">
+            <EntityTypeMapping TypeName="DB_CCTTModel.Semester">
+              <MappingFragment StoreEntitySet="Semester">
+                <ScalarProperty Name="id_num_semster_r" ColumnName="id_num_semster_r" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="semester1" ColumnName="semester" />
+                <ScalarProperty Name="sem_id" ColumnName="sem_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="degree">
+            <EntityTypeMapping TypeName="DB_CCTTModel.degree">
+              <MappingFragment StoreEntitySet="degree">
+                <ScalarProperty Name="degree1" ColumnName="degree" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="major">
+            <EntityTypeMapping TypeName="DB_CCTTModel.major">
+              <MappingFragment StoreEntitySet="major">
+                <ScalarProperty Name="major1" ColumnName="major" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="qualification">
+            <EntityTypeMapping TypeName="DB_CCTTModel.qualification">
+              <MappingFragment StoreEntitySet="qualification">
+                <ScalarProperty Name="qualification1" ColumnName="qualification" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trainer">
+            <EntityTypeMapping TypeName="DB_CCTTModel.Trainer">
+              <MappingFragment StoreEntitySet="Trainer">
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="nationality" ColumnName="nationality" />
+                <ScalarProperty Name="national_id" ColumnName="national_id" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="phone_num" ColumnName="phone_num" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="degree" ColumnName="degree" />
+                <ScalarProperty Name="qualification" ColumnName="qualification" />
+                <ScalarProperty Name="major" ColumnName="major" />
+                <ScalarProperty Name="BOD" ColumnName="BOD" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="faculty_member_id" ColumnName="faculty_member_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="StloadDataPage_trainer1" FunctionName="DB_CCTTModel.Store.StloadDataPage_trainer1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_CCTTModel.StloadDataPage_trainer1_Result">
+                <ScalarProperty Name="رقم_المدرب" ColumnName="رقم المدرب" />
+                <ScalarProperty Name="الاسم" ColumnName="الاسم" />
+                <ScalarProperty Name="تاريخ_الميلاد" ColumnName="تاريخ الميلاد" />
+                <ScalarProperty Name="التخصص" ColumnName="التخصص" />
+                <ScalarProperty Name="المؤهل" ColumnName="المؤهل" />
+                <ScalarProperty Name="الدرجة_العلمية" ColumnName="الدرجة العلمية" />
+                <ScalarProperty Name="ايميل" ColumnName="ايميل" />
+                <ScalarProperty Name="رفم_الهاتف" ColumnName="رفم الهاتف" />
+                <ScalarProperty Name="العنوان" ColumnName="العنوان" />
+                <ScalarProperty Name="الرقم_الوطني" ColumnName="الرقم الوطني" />
+                <ScalarProperty Name="الجنسية" ColumnName="الجنسية" />
+                <ScalarProperty Name="الجنس" ColumnName="الجنس" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Faculty_member">
+            <EntityTypeMapping TypeName="DB_CCTTModel.Faculty_member">
+              <MappingFragment StoreEntitySet="Faculty_member">
+                <ScalarProperty Name="department" ColumnName="department" />
+                <ScalarProperty Name="certificate_place_of_origin" ColumnName="certificate_place_of_origin" />
+                <ScalarProperty Name="CV" ColumnName="CV" />
+                <ScalarProperty Name="picture" ColumnName="picture" />
+                <ScalarProperty Name="martial_status" ColumnName="martial_status" />
+                <ScalarProperty Name="personal_id" ColumnName="personal_id" />
+                <ScalarProperty Name="passport_id" ColumnName="passport_id" />
+                <ScalarProperty Name="Major" ColumnName="Major" />
+                <ScalarProperty Name="graduation_date" ColumnName="graduation_date" />
+                <ScalarProperty Name="job_id" ColumnName="job_id" />
+                <ScalarProperty Name="nationality" ColumnName="nationality" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="start_work_Date" ColumnName="start_work_Date" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="phone_num" ColumnName="phone_num" />
+                <ScalarProperty Name="BOD" ColumnName="BOD" />
+                <ScalarProperty Name="degree" ColumnName="degree" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="qualification" ColumnName="qualification" />
+                <ScalarProperty Name="National_id" ColumnName="National_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="main_course">
+            <EntityTypeMapping TypeName="DB_CCTTModel.main_course">
+              <MappingFragment StoreEntitySet="main_course">
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="substitute_for" ColumnName="substitute_for" />
+                <ScalarProperty Name="reliability" ColumnName="reliability" />
+                <ScalarProperty Name="hours" ColumnName="hours" />
+                <ScalarProperty Name="units" ColumnName="units" />
+                <ScalarProperty Name="course_name" ColumnName="course_name" />
+                <ScalarProperty Name="code_id" ColumnName="code_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="study_Group">
+            <EntityTypeMapping TypeName="DB_CCTTModel.study_Group">
+              <MappingFragment StoreEntitySet="study_Group">
+                <ScalarProperty Name="department" ColumnName="department" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="semster" ColumnName="semster" />
+                <ScalarProperty Name="max_student_count" ColumnName="max_student_count" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="StloadDataPage_Semester12" FunctionName="DB_CCTTModel.Store.StloadDataPage_Semester12">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_CCTTModel.StloadDataPage_Semester12_Result">
+                <ScalarProperty Name="الرقم" ColumnName="الرقم" />
+                <ScalarProperty Name="الفصل" ColumnName="الفصل" />
+                <ScalarProperty Name="القسم" ColumnName="القسم" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="StloadDataPage_Faculty_member31" FunctionName="DB_CCTTModel.Store.StloadDataPage_Faculty_member3">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_CCTTModel.StloadDataPage_Faculty_member31_Result">
+                <ScalarProperty Name="رقم_" ColumnName="رقم " />
+                <ScalarProperty Name="الاسم" ColumnName="الاسم" />
+                <ScalarProperty Name="تاريخ_الميلاد" ColumnName="تاريخ الميلاد" />
+                <ScalarProperty Name="التخصص" ColumnName="التخصص" />
+                <ScalarProperty Name="المؤهل" ColumnName="المؤهل" />
+                <ScalarProperty Name="الدرجة_العلمية" ColumnName="الدرجة العلمية" />
+                <ScalarProperty Name="ايميل" ColumnName="ايميل" />
+                <ScalarProperty Name="رفم_الهاتف" ColumnName="رفم الهاتف" />
+                <ScalarProperty Name="العنوان" ColumnName="العنوان" />
+                <ScalarProperty Name="بداية_العمل" ColumnName="بداية العمل" />
+                <ScalarProperty Name="رفم_الوظفيفي" ColumnName="رفم الوظفيفي" />
+                <ScalarProperty Name="رقم_الجواز" ColumnName="رقم الجواز" />
+                <ScalarProperty Name="الرقم_الوطني" ColumnName="الرقم الوطني" />
+                <ScalarProperty Name="الجنسية" ColumnName="الجنسية" />
+                <ScalarProperty Name="الجنس" ColumnName="الجنس" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="students">
+            <EntityTypeMapping TypeName="DB_CCTTModel.student">
+              <MappingFragment StoreEntitySet="student">
+                <ScalarProperty Name="idColge" ColumnName="idColge" />
+                <ScalarProperty Name="state_id" ColumnName="state_id" />
+                <ScalarProperty Name="state_sem" ColumnName="state_sem" />
+                <ScalarProperty Name="semester" ColumnName="semester" />
+                <ScalarProperty Name="study_group" ColumnName="study_group" />
+                <ScalarProperty Name="family_paper_id" ColumnName="family_paper_id" />
+                <ScalarProperty Name="parent_name" ColumnName="parent_name" />
+                <ScalarProperty Name="file_id" ColumnName="file_id" />
+                <ScalarProperty Name="learning_system" ColumnName="learning_system" />
+                <ScalarProperty Name="year_of_graduation" ColumnName="year_of_graduation" />
+                <ScalarProperty Name="semster_of_joining" ColumnName="semster_of_joining" />
+                <ScalarProperty Name="year_of_joining" ColumnName="year_of_joining" />
+                <ScalarProperty Name="major" ColumnName="major" />
+                <ScalarProperty Name="certificate_place_of_origin" ColumnName="certificate_place_of_origin" />
+                <ScalarProperty Name="certifcate_grade" ColumnName="certifcate_grade" />
+                <ScalarProperty Name="certificate_type" ColumnName="certificate_type" />
+                <ScalarProperty Name="picture" ColumnName="picture" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="parent_phone_num" ColumnName="parent_phone_num" />
+                <ScalarProperty Name="phone_num" ColumnName="phone_num" />
+                <ScalarProperty Name="national_num" ColumnName="national_num" />
+                <ScalarProperty Name="place_of_birth" ColumnName="place_of_birth" />
+                <ScalarProperty Name="nationality" ColumnName="nationality" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="BOD" ColumnName="BOD" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="StloadDataPage_student1" FunctionName="DB_CCTTModel.Store.StloadDataPage_student1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_CCTTModel.StloadDataPage_student1_Result">
+                <ScalarProperty Name="رقم_القيد" ColumnName="رقم القيد" />
+                <ScalarProperty Name="الاسم" ColumnName="الاسم" />
+                <ScalarProperty Name="تاريخ_الميلاد" ColumnName="تاريخ الميلاد" />
+                <ScalarProperty Name="رفم_الهاتف" ColumnName="رفم الهاتف" />
+                <ScalarProperty Name="العنوان" ColumnName="العنوان" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="StloadDataPage_study_Group1" FunctionName="DB_CCTTModel.Store.StloadDataPage_study_Group1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_CCTTModel.StloadDataPage_study_Group1_Result">
+                <ScalarProperty Name="الرقم" ColumnName="الرقم" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="الفصل" ColumnName="الفصل" />
+                <ScalarProperty Name="القسم" ColumnName="القسم" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="max_student_count" ColumnName="max_student_count" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="StloadDataPage_getsemster_by_dep" FunctionName="DB_CCTTModel.Store.StloadDataPage_getsemster_by_dep" />
+          <FunctionImportMapping FunctionImportName="main_course_rel_semster1" FunctionName="DB_CCTTModel.Store.main_course_rel_semster1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_CCTTModel.main_course_rel_semster1_Result">
+                <ScalarProperty Name="الرقم" ColumnName="الرقم" />
+                <ScalarProperty Name="المادة" ColumnName="المادة" />
+                <ScalarProperty Name="القسم" ColumnName="القسم" />
+                <ScalarProperty Name="الفصل" ColumnName="الفصل" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="num_semster">
+            <EntityTypeMapping TypeName="DB_CCTTModel.num_semster">
+              <MappingFragment StoreEntitySet="num_semster">
+                <ScalarProperty Name="name_sem" ColumnName="name_sem" />
+                <ScalarProperty Name="number_sem" ColumnName="number_sem" />
+                <ScalarProperty Name="id_num_semster" ColumnName="id_num_semster" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="main_course_rel_semster">
+            <EntityTypeMapping TypeName="DB_CCTTModel.main_course_rel_semster">
+              <MappingFragment StoreEntitySet="main_course_rel_semster">
+                <ScalarProperty Name="semster_id" ColumnName="semster_id" />
+                <ScalarProperty Name="main_cours_id" ColumnName="main_cours_id" />
+                <ScalarProperty Name="department_id" ColumnName="department_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="get_main_cours_student" FunctionName="DB_CCTTModel.Store.get_main_cours_student">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_CCTTModel.get_main_cours_student_Result">
+                <ScalarProperty Name="الرقم" ColumnName="الرقم" />
+                <ScalarProperty Name="رمز_المادة" ColumnName="رمز المادة" />
+                <ScalarProperty Name="المادة" ColumnName="المادة" />
+                <ScalarProperty Name="عدد_الوحدات" ColumnName="عدد الوحدات" />
+                <ScalarProperty Name="عدد_السيمستر" ColumnName="عدد السيمستر" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="semster_student">
+            <EntityTypeMapping TypeName="DB_CCTTModel.semster_student">
+              <MappingFragment StoreEntitySet="semster_student">
+                <ScalarProperty Name="department_id" ColumnName="department_id" />
+                <ScalarProperty Name="student_id" ColumnName="student_id" />
+                <ScalarProperty Name="year_id" ColumnName="year_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="semster_student_main_cours">
+            <EntityTypeMapping TypeName="DB_CCTTModel.semster_student_main_cours">
+              <MappingFragment StoreEntitySet="semster_student_main_cours">
+                <ScalarProperty Name="state_rate" ColumnName="state_rate" />
+                <ScalarProperty Name="final_grade" ColumnName="final_grade" />
+                <ScalarProperty Name="halfe_grade" ColumnName="halfe_grade" />
+                <ScalarProperty Name="final_only" ColumnName="final_only" />
+                <ScalarProperty Name="main_cours_id" ColumnName="main_cours_id" />
+                <ScalarProperty Name="semster_student_id" ColumnName="semster_student_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="get_main_cours_student_year" FunctionName="DB_CCTTModel.Store.get_main_cours_student_year" />
+          <FunctionImportMapping FunctionImportName="get_main_cours_student_year1" FunctionName="DB_CCTTModel.Store.get_main_cours_student_year1" />
+          <FunctionImportMapping FunctionImportName="get_main_cours_student_year5" FunctionName="DB_CCTTModel.Store.get_main_cours_student_year5" />
+          <FunctionImportMapping FunctionImportName="StloadDataPage_Semester13" FunctionName="DB_CCTTModel.Store.StloadDataPage_Semester1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_CCTTModel.StloadDataPage_Semester13_Result">
+                <ScalarProperty Name="الرقم" ColumnName="الرقم" />
+                <ScalarProperty Name="الفصل" ColumnName="الفصل" />
+                <ScalarProperty Name="القسم" ColumnName="القسم" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="tbl_insert_semster_student_main_cours" FunctionName="DB_CCTTModel.Store.tbl_insert_semster_student_main_cours" />
+          <FunctionImportMapping FunctionImportName="get_main_cours_student_grade1" FunctionName="DB_CCTTModel.Store.get_main_cours_student_grade1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_CCTTModel.get_main_cours_student_grade1_Result">
+                <ScalarProperty Name="الرقم" ColumnName="الرقم" />
+                <ScalarProperty Name="اسم_الطالب" ColumnName="اسم الطالب" />
+                <ScalarProperty Name="درجة_اعمال_الفصل_" ColumnName="درجة اعمال الفصل " />
+                <ScalarProperty Name="درجة_الامتحان_النهائي" ColumnName="درجة الامتحان النهائي" />
+                <ScalarProperty Name="الدرجة_النهائية" ColumnName="الدرجة النهائية" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="affiliated_entity">
+            <EntityTypeMapping TypeName="DB_CCTTModel.affiliated_entity">
+              <MappingFragment StoreEntitySet="affiliated_entity">
+                <ScalarProperty Name="affiliated_entity_name" ColumnName="affiliated_entity_name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="course_student">
+            <EntityTypeMapping TypeName="DB_CCTTModel.course_student">
+              <MappingFragment StoreEntitySet="course_student">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="phone_num" ColumnName="phone_num" />
+                <ScalarProperty Name="national_id" ColumnName="national_id" />
+                <ScalarProperty Name="affiliate_id" ColumnName="affiliate_id" />
+                <ScalarProperty Name="BOD" ColumnName="BOD" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="extra_Course">
+            <EntityTypeMapping TypeName="DB_CCTTModel.extra_Course">
+              <MappingFragment StoreEntitySet="extra_Course">
+                <ScalarProperty Name="course_status" ColumnName="course_status" />
+                <ScalarProperty Name="days" ColumnName="days" />
+                <ScalarProperty Name="hours" ColumnName="hours" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="max_student_count" ColumnName="max_student_count" />
+                <ScalarProperty Name="trainer_id" ColumnName="trainer_id" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="course_information" ColumnName="course_information" />
+                <ScalarProperty Name="course_name" ColumnName="course_name" />
+                <ScalarProperty Name="course_code" ColumnName="course_code" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="permissions">
+            <EntityTypeMapping TypeName="DB_CCTTModel.permission">
+              <MappingFragment StoreEntitySet="permission">
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="DB_CCTTModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="permioi_type" ColumnName="permioi_type" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

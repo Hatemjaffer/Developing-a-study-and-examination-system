@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50A0268D-2218-4FB1-8256-518CDD672A1E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CCTT</RootNamespace>
+    <AssemblyName>CCTT</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Desktop\مشروع تطوير منضومة الدراسة والامتحانات خاصة بادورت ودبلوم التخصصي\0تكنو\المنجز-1\تكنو-كورس برامج إدارة المبيعات بتقنية Entity framework\Bunifu ui مهكره\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.2" />
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v20.2" />
+    <Reference Include="DevExpress.Data.v20.2" />
+    <Reference Include="DevExpress.DataAccess.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.2.Core" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.2" />
+    <Reference Include="DevExpress.Utils.v20.2.UI, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.2" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.2" />
+    <Reference Include="DevExpress.XtraGauges.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.2.Extensions, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddPage\Add_user_pwoer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPage\Add_user_pwoer.Designer.cs">
+      <DependentUpon>Add_user_pwoer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="affiliated_entity.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BL\Methods.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="course_student.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_CCTTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_CCTTDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_CCTTDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_CCTTDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_CCTTDataSet2.cs">
+      <DependentUpon>DB_CCTTDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_CCTTDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_CCTTDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_CCTTModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_CCTTModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB_CCTTModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB_CCTTModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_CCTTModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="degree.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="department.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EPL\Diailog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EPL\Diailog.Designer.cs">
+      <DependentUpon>Diailog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EPL\Toast_Deleted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EPL\Toast_Deleted.Designer.cs">
+      <DependentUpon>Toast_Deleted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EPL\Toast_Succeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EPL\Toast_Succeed.Designer.cs">
+      <DependentUpon>Toast_Succeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EPL\Toast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EPL\Toast.Designer.cs">
+      <DependentUpon>Toast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="extra_Course.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty_member.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_About.Designer.cs">
+      <DependentUpon>FRM_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Login.Designer.cs">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Setting.Designer.cs">
+      <DependentUpon>FRM_Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Start.Designer.cs">
+      <DependentUpon>FRM_Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="get_main_cours_student_grade1_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="get_main_cours_student_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_course.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="main_course_rel_semster.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="main_course_rel_semster1_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="major.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="nationality.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="num_semster.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_Backup.Designer.cs">
+      <DependentUpon>Page_Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_Course.Designer.cs">
+      <DependentUpon>Page_Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_grades_Course.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_grades_Course.Designer.cs">
+      <DependentUpon>Page_grades_Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_ID_Student.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_ID_Student.Designer.cs">
+      <DependentUpon>Page_ID_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Material_download.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_Material_download.Designer.cs">
+      <DependentUpon>Page_Material_download.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Home or this.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_Home or this.Designer.cs">
+      <DependentUpon>Page_Home or this.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Home_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_Home_3.Designer.cs">
+      <DependentUpon>Page_Home_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_grades.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_grades.Designer.cs">
+      <DependentUpon>Page_grades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Restore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_Restore.Designer.cs">
+      <DependentUpon>Page_Restore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_test_tetcher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_test_tetcher.Designer.cs">
+      <DependentUpon>Page_test_tetcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page__Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Page__Backup.Designer.cs">
+      <DependentUpon>Page__Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_Home.Designer.cs">
+      <DependentUpon>Page_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Student.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_Student.Designer.cs">
+      <DependentUpon>Page_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_CourseStudents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_CourseStudents.Designer.cs">
+      <DependentUpon>Page_CourseStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_department.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_department.Designer.cs">
+      <DependentUpon>Page_department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Semester.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_Semester.Designer.cs">
+      <DependentUpon>Page_Semester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Subject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_Subject.Designer.cs">
+      <DependentUpon>Page_Subject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Teacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_Teacher.Designer.cs">
+      <DependentUpon>Page_Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_trainers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_trainers.Designer.cs">
+      <DependentUpon>Page_trainers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page__Course.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page__Course.Designer.cs">
+      <DependentUpon>Page__Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Material_distribution.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_Material_distribution.Designer.cs">
+      <DependentUpon>Page_Material_distribution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page__Group.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page__Group.Designer.cs">
+      <DependentUpon>Page__Group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page__Stadyyear.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page__Stadyyear.Designer.cs">
+      <DependentUpon>Page__Stadyyear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page__Users.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page__Users.Designer.cs">
+      <DependentUpon>Page__Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages_LinkLable\Page_Address.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages_LinkLable\Page_Address.Designer.cs">
+      <DependentUpon>Page_Address.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages_LinkLable\Page_degree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages_LinkLable\Page_degree.Designer.cs">
+      <DependentUpon>Page_degree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages_LinkLable\Page_follow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages_LinkLable\Page_follow.Designer.cs">
+      <DependentUpon>Page_follow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages_LinkLable\Page_britdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages_LinkLable\Page_britdate.Designer.cs">
+      <DependentUpon>Page_britdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages_LinkLable\Page_qualification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages_LinkLable\Page_qualification.Designer.cs">
+      <DependentUpon>Page_qualification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages_LinkLable\Page_major.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages_LinkLable\Page_major.Designer.cs">
+      <DependentUpon>Page_major.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages_LinkLable\Page_nationality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages_LinkLable\Page_nationality.Designer.cs">
+      <DependentUpon>Page_nationality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="permission.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="qualification.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport2.Designer.cs">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport3.Designer.cs">
+      <DependentUpon>XtraReport3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport4.Designer.cs">
+      <DependentUpon>XtraReport4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport5.Designer.cs">
+      <DependentUpon>XtraReport5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport6.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport6.Designer.cs">
+      <DependentUpon>XtraReport6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Semester.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="semster_student.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="semster_student_main_cours.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_Faculty_member1_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_Faculty_member2_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_Faculty_member31_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_Faculty_member3_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_Faculty_member_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_Semester11_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_Semester12_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_Semester13_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_Semester1_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_Semester2_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_Semester_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_student1_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_study_Group1_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_trainer1_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StloadDataPage_trainer_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="student.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="study_Group.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Trainer.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport9.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport9.Designer.cs">
+      <DependentUpon>XtraReport9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Year.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddPage\Add_user_pwoer.resx">
+      <DependentUpon>Add_user_pwoer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EPL\Diailog.resx">
+      <DependentUpon>Diailog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EPL\Toast_Deleted.resx">
+      <DependentUpon>Toast_Deleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EPL\Toast_Succeed.resx">
+      <DependentUpon>Toast_Succeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EPL\Toast.resx">
+      <DependentUpon>Toast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_About.resx">
+      <DependentUpon>FRM_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Login.resx">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Setting.resx">
+      <DependentUpon>FRM_Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Start.resx">
+      <DependentUpon>FRM_Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_BACKUP.resx">
+      <DependentUpon>Page_Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_Course.resx">
+      <DependentUpon>Page_Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_grades_Course.resx">
+      <DependentUpon>Page_grades_Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_ID_Student.resx">
+      <DependentUpon>Page_ID_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_Material_download.resx">
+      <DependentUpon>Page_Material_download.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_Home or this.resx">
+      <DependentUpon>Page_Home or this.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_Home_3.resx">
+      <DependentUpon>Page_Home_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_grades.resx">
+      <DependentUpon>Page_grades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_Restore.resx">
+      <DependentUpon>Page_Restore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_test_tetcher.resx">
+      <DependentUpon>Page_test_tetcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page__Backup.resx">
+      <DependentUpon>Page__Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_Home.resx">
+      <DependentUpon>Page_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_Student.resx">
+      <DependentUpon>Page_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_CourseStudents.resx">
+      <DependentUpon>Page_CourseStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_department.resx">
+      <DependentUpon>Page_department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_Semester.resx">
+      <DependentUpon>Page_Semester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_Subject.resx">
+      <DependentUpon>Page_Subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_Teacher.resx">
+      <DependentUpon>Page_Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_trainers.resx">
+      <DependentUpon>Page_trainers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page__Course.resx">
+      <DependentUpon>Page__Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_Material_distribution.resx">
+      <DependentUpon>Page_Material_distribution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page__Group.resx">
+      <DependentUpon>Page__Group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page__Stadyyear.resx">
+      <DependentUpon>Page__Stadyyear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page__Users.resx">
+      <DependentUpon>Page__Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages_LinkLable\Page_Address.resx">
+      <DependentUpon>Page_Address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages_LinkLable\Page_degree.resx">
+      <DependentUpon>Page_degree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages_LinkLable\Page_follow.resx">
+      <DependentUpon>Page_follow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages_LinkLable\Page_britdate.resx">
+      <DependentUpon>Page_britdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages_LinkLable\Page_qualification.resx">
+      <DependentUpon>Page_qualification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages_LinkLable\Page_major.resx">
+      <DependentUpon>Page_major.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages_LinkLable\Page_nationality.resx">
+      <DependentUpon>Page_nationality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport2.resx">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport3.resx">
+      <DependentUpon>XtraReport3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport4.resx">
+      <DependentUpon>XtraReport4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport5.resx">
+      <DependentUpon>XtraReport5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport6.resx">
+      <DependentUpon>XtraReport6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport9.resx">
+      <DependentUpon>XtraReport9.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <EntityDeploy Include="DB_CCTTModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB_CCTTModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DB_CCTTDataSet.xsc">
+      <DependentUpon>DB_CCTTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_CCTTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_CCTTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_CCTTDataSet.xss">
+      <DependentUpon>DB_CCTTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_CCTTDataSet1.xsc">
+      <DependentUpon>DB_CCTTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DB_CCTTDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_CCTTDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_CCTTDataSet1.xss">
+      <DependentUpon>DB_CCTTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DB_CCTTDataSet2.xsc">
+      <DependentUpon>DB_CCTTDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DB_CCTTDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_CCTTDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_CCTTDataSet2.xss">
+      <DependentUpon>DB_CCTTDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DB_CCTTModel.edmx.diagram">
+      <DependentUpon>DB_CCTTModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\get_main_cours_student_grade1_Result.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student_registration_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users_settings_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_group_woman_man_2_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_group_woman_man_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_file_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_users_2_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_users_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تعاع.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data_backup_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student_male_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unit_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB_CCTTModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_CCTTModel.edmx</DependentUpon>
+      <LastGenOutput>DB_CCTTModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB_CCTTModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_CCTTModel.edmx</DependentUpon>
+      <LastGenOutput>DB_CCTTModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="icon.ico" />
+    <None Include="Resources\male_user_500px.png" />
+    <None Include="Resources\ok_128px.png" />
+    <None Include="Resources\delete_128px.png" />
+    <None Include="Resources\ok_40px.png" />
+    <None Include="Resources\delete_40px.png" />
+    <None Include="Resources\Suppliers.png" />
+    <None Include="Resources\Report.jpg" />
+    <None Include="Resources\man.png" />
+    <None Include="Resources\flag.png" />
+    <None Include="Resources\category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

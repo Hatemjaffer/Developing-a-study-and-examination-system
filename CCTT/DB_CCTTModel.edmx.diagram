@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b24b20f8e0ec4dd588616a100d765b4f" Name="Diagram1" ZoomLevel="65">
+        <EntityTypeShape EntityType="DB_CCTTModel.nationality" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_CCTTModel.department" Width="1.5" PointX="3.875" PointY="0.5" />
+        <EntityTypeShape EntityType="DB_CCTTModel.Year" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DB_CCTTModel.Semester" Width="1.5" PointX="5.625" PointY="4.5" />
+        <AssociationConnector Association="DB_CCTTModel.FK_Semester_id" />
+        <EntityTypeShape EntityType="DB_CCTTModel.degree" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_CCTTModel.major" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="DB_CCTTModel.qualification" Width="1.5" PointX="7.75" PointY="8.125" />
+        <EntityTypeShape EntityType="DB_CCTTModel.Trainer" Width="1.5" PointX="8" PointY="2.375" />
+        <AssociationConnector Association="DB_CCTTModel.FK_Trainer_degree" />
+        <AssociationConnector Association="DB_CCTTModel.FK_Trainer_major" />
+        <AssociationConnector Association="DB_CCTTModel.FK_Trainer_nationality" />
+        <AssociationConnector Association="DB_CCTTModel.FK_Trainer_qualification" />
+        <EntityTypeShape EntityType="DB_CCTTModel.Faculty_member" Width="1.5" PointX="11" PointY="2.375" />
+        <AssociationConnector Association="DB_CCTTModel.FK_Faculty_member_degree" />
+        <AssociationConnector Association="DB_CCTTModel.FK_Faculty_member_department" />
+        <AssociationConnector Association="DB_CCTTModel.FK_Faculty_member_Major" />
+        <AssociationConnector Association="DB_CCTTModel.FK_Faculty_member_nationality" />
+        <AssociationConnector Association="DB_CCTTModel.FK_Faculty_member_qualification" />
+        <EntityTypeShape EntityType="DB_CCTTModel.main_course" Width="1.5" PointX="5.375" PointY="9.375" />
+        <EntityTypeShape EntityType="DB_CCTTModel.study_Group" Width="1.5" PointX="12.75" PointY="0.5" />
+        <AssociationConnector Association="DB_CCTTModel.FK_main_course_reliability" />
+        <AssociationConnector Association="DB_CCTTModel.FK_main_course_substitute_for" />
+        <AssociationConnector Association="DB_CCTTModel.FK_study_Group_semster" />
+        <AssociationConnector Association="DB_CCTTModel.FK_study_Group_year" />
+        <AssociationConnector Association="DB_CCTTModel.FK_study_Group_department" />
+        <EntityTypeShape EntityType="DB_CCTTModel.student" Width="1.5" PointX="15" PointY="0.75" />
+        <AssociationConnector Association="DB_CCTTModel.FK_student_nationality" />
+        <AssociationConnector Association="DB_CCTTModel.FK_student_semester" />
+        <AssociationConnector Association="DB_CCTTModel.FK_student_semster_of_joining" />
+        <AssociationConnector Association="DB_CCTTModel.FK_student_study_group" />
+        <EntityTypeShape EntityType="DB_CCTTModel.num_semster" Width="1.5" PointX="0.75" PointY="10.875" />
+        <AssociationConnector Association="DB_CCTTModel.FK_Semester_id_num_semster_r" />
+        <EntityTypeShape EntityType="DB_CCTTModel.main_course_rel_semster" Width="1.5" PointX="10.875" PointY="10.25" />
+        <AssociationConnector Association="DB_CCTTModel.FK_main_course_rel_semster_department_id" />
+        <AssociationConnector Association="DB_CCTTModel.FK_main_course_rel_semster_main_cours_id" />
+        <AssociationConnector Association="DB_CCTTModel.FK_main_course_rel_semster_semster_id" />
+        <EntityTypeShape EntityType="DB_CCTTModel.semster_student" Width="1.5" PointX="17.25" PointY="1.125" />
+        <AssociationConnector Association="DB_CCTTModel.FK_semster_student_department_id" />
+        <AssociationConnector Association="DB_CCTTModel.semster_student_student_id" />
+        <AssociationConnector Association="DB_CCTTModel.semster_student_year_id" />
+        <EntityTypeShape EntityType="DB_CCTTModel.semster_student_main_cours" Width="1.5" PointX="22" PointY="6.375" />
+        <AssociationConnector Association="DB_CCTTModel.semster_student_main_cours_main_cours_id" />
+        <AssociationConnector Association="DB_CCTTModel.semster_student_main_cours_semster_student_id" />
+        <EntityTypeShape EntityType="DB_CCTTModel.affiliated_entity" Width="1.5" PointX="7.375" PointY="10.75" />
+        <EntityTypeShape EntityType="DB_CCTTModel.course_student" Width="1.5" PointX="9.625" PointY="14.625" />
+        <AssociationConnector Association="DB_CCTTModel.FK_course_student_affiliate_id" />
+        <EntityTypeShape EntityType="DB_CCTTModel.extra_Course" Width="1.5" PointX="10.25" PointY="18.625" />
+        <AssociationConnector Association="DB_CCTTModel.FK_extra_Course_trainer_id" />
+        <EntityTypeShape EntityType="DB_CCTTModel.permission" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="DB_CCTTModel.user" Width="1.5" PointX="3" PointY="13.75" />
+        <AssociationConnector Association="DB_CCTTModel.FK_user_id" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
