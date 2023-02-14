@@ -18,10 +18,10 @@ namespace CCTT
         public department()
         {
             this.Semester = new HashSet<Semester>();
-            this.Faculty_member = new HashSet<Faculty_member>();
             this.study_Group = new HashSet<study_Group>();
             this.main_course_rel_semster = new HashSet<main_course_rel_semster>();
             this.semster_student = new HashSet<semster_student>();
+            this.Faculty_member = new HashSet<Faculty_member>();
         }
     
         public int id { get; set; }
@@ -31,12 +31,12 @@ namespace CCTT
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Semester> Semester { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Faculty_member> Faculty_member { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<study_Group> study_Group { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<main_course_rel_semster> main_course_rel_semster { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<semster_student> semster_student { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Faculty_member> Faculty_member { get; set; }
     }
 }

@@ -300,7 +300,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("29LT Bukra", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(209, 283);
+            this.label4.Location = new System.Drawing.Point(199, 283);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 20);
             this.label4.TabIndex = 6;
@@ -358,11 +358,11 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("29LT Bukra Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(209, 20);
+            this.label1.Location = new System.Drawing.Point(199, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 20);
+            this.label1.Size = new System.Drawing.Size(105, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = " درجة علمية";
+            this.label1.Text = " درجة العلمية";
             // 
             // txt_degree
             // 
@@ -370,7 +370,7 @@
             this.txt_degree.Font = new System.Drawing.Font("LBC", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_degree.Location = new System.Drawing.Point(3, 18);
             this.txt_degree.Name = "txt_degree";
-            this.txt_degree.Size = new System.Drawing.Size(200, 24);
+            this.txt_degree.Size = new System.Drawing.Size(190, 24);
             this.txt_degree.TabIndex = 0;
             this.txt_degree.Enter += new System.EventHandler(this.txt_degree_Enter);
             this.txt_degree.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_degree_KeyDown);

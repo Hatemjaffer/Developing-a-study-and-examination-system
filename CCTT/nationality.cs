@@ -18,8 +18,8 @@ namespace CCTT
         public nationality()
         {
             this.Trainer = new HashSet<Trainer>();
-            this.Faculty_member = new HashSet<Faculty_member>();
             this.students = new HashSet<student>();
+            this.Faculty_member = new HashSet<Faculty_member>();
         }
     
         public int id { get; set; }
@@ -28,8 +28,8 @@ namespace CCTT
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Trainer> Trainer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Faculty_member> Faculty_member { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<student> students { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Faculty_member> Faculty_member { get; set; }
     }
 }

@@ -25,6 +25,7 @@ namespace CCTT
         public int year1 { get; set; }
         public string season { get; set; }
         public string year_serch { get; set; }
+        public Nullable<int> idcolge { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<study_Group> study_Group { get; set; }

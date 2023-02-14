@@ -35,6 +35,7 @@ namespace CCTT
         public string CV { get; set; }
         public string certificate_place_of_origin { get; set; }
         public Nullable<int> department { get; set; }
+        public int idFac { get; set; }
     
         public virtual degree degree1 { get; set; }
         public virtual department department1 { get; set; }

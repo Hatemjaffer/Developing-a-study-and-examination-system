@@ -22,6 +22,7 @@ namespace CCTT.Pages_LinkLable
 
        // Page_Student page_Studen = new Page_Student();
         Page_trainers page_trainers = new Page_trainers();
+        Page_Teacher page_Teacher = new Page_Teacher();
 
         int ID;
         public Page_qualification(Page_trainers page_trainers1)
@@ -32,7 +33,14 @@ namespace CCTT.Pages_LinkLable
             
             
         }
+        public Page_qualification(Page_Teacher pageTeacher)
+        {
+            InitializeComponent();
+            LoadData();
+            page_Teacher = pageTeacher;
 
+
+        }
 
         public void LoadData()
         {
@@ -173,6 +181,7 @@ namespace CCTT.Pages_LinkLable
         private void Page_qualification_FormClosed(object sender, FormClosedEventArgs e)
         {
             page_trainers.txt_trainer_qualifications.DataSource = db.qualification.Select(x => x.qualification1).ToList();
+            page_Teacher.txt_teacher_qualification.DataSource = db.qualification.Select(x => x.qualification1).ToList();
 
         }
 

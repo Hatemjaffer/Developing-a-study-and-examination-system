@@ -30,87 +30,388 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.DataAccess.EntityFramework.EFConnectionParameters efConnectionParameters1 = new DevExpress.DataAccess.EntityFramework.EFConnectionParameters();
-            DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo efStoredProcedureInfo1 = new DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo();
-            DevExpress.DataAccess.EntityFramework.EFParameter efParameter1 = new DevExpress.DataAccess.EntityFramework.EFParameter();
-            DevExpress.DataAccess.EntityFramework.EFParameter efParameter2 = new DevExpress.DataAccess.EntityFramework.EFParameter();
-            DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo efStoredProcedureInfo2 = new DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo();
-            DevExpress.DataAccess.EntityFramework.EFParameter efParameter3 = new DevExpress.DataAccess.EntityFramework.EFParameter();
-            DevExpress.DataAccess.EntityFramework.EFParameter efParameter4 = new DevExpress.DataAccess.EntityFramework.EFParameter();
-            DevExpress.DataAccess.EntityFramework.EFConnectionParameters efConnectionParameters2 = new DevExpress.DataAccess.EntityFramework.EFConnectionParameters();
-            DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo efStoredProcedureInfo3 = new DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo();
-            DevExpress.DataAccess.EntityFramework.EFParameter efParameter5 = new DevExpress.DataAccess.EntityFramework.EFParameter();
-            DevExpress.DataAccess.EntityFramework.EFParameter efParameter6 = new DevExpress.DataAccess.EntityFramework.EFParameter();
+            this.get_main_cours_student_grade1TableAdapter = new CCTT.DB_CCTTDataSet2TableAdapters.get_main_cours_student_grade1TableAdapter();
+            this.get_main_cours_student_grade1TableAdapter1 = new CCTT.DB_CCTTDataSet1TableAdapters.get_main_cours_student_grade1TableAdapter();
+            this.getTestTableAdapter = new CCTT.DB_CCTTDataSet1TableAdapters.getTestTableAdapter();
+            this.getSemTableAdapter = new CCTT.DB_CCTTDataSet1TableAdapters.getSemTableAdapter();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.GroupHeader2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.GroupHeader3 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.GroupHeader4 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-            this.efDataSource1 = new DevExpress.DataAccess.EntityFramework.EFDataSource(this.components);
+            this.DetailReport = new DevExpress.XtraReports.UI.DetailReportBand();
+            this.pageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.pageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.label1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.table1 = new DevExpress.XtraReports.UI.XRTable();
+            this.tableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.table2 = new DevExpress.XtraReports.UI.XRTable();
+            this.tableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.table3 = new DevExpress.XtraReports.UI.XRTable();
+            this.tableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.table4 = new DevExpress.XtraReports.UI.XRTable();
+            this.tableRow4 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.GroupHeader5 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.Detail1 = new DevExpress.XtraReports.UI.DetailBand();
+            this.table5 = new DevExpress.XtraReports.UI.XRTable();
+            this.tableRow5 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.table6 = new DevExpress.XtraReports.UI.XRTable();
+            this.tableRow6 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Title = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.GroupCaption2 = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.GroupData2 = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.GroupCaption1 = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.GroupData1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DetailCaption2 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DetailData2 = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.GroupFooterBackground3 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DetailData3_Odd = new DevExpress.XtraReports.UI.XRControlStyle();
             this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.dB_CCTTDataSet21 = new CCTT.DB_CCTTDataSet2();
-            this.get_main_cours_student_grade1TableAdapter = new CCTT.DB_CCTTDataSet2TableAdapters.get_main_cours_student_grade1TableAdapter();
-            this.dB_CCTTDataSet22 = new CCTT.DB_CCTTDataSet2();
-            this.get_main_cours_student_grade1TableAdapter1 = new CCTT.DB_CCTTDataSet1TableAdapters.get_main_cours_student_grade1TableAdapter();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.std_idP = new DevExpress.XtraReports.Parameters.Parameter();
-            this.efDataSource2 = new DevExpress.DataAccess.EntityFramework.EFDataSource(this.components);
+            this.efDataSource1 = new DevExpress.DataAccess.EntityFramework.EFDataSource(this.components);
+            this.parameter2 = new DevExpress.XtraReports.Parameters.Parameter();
+            ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efDataSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_CCTTDataSet21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_CCTTDataSet22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efDataSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // get_main_cours_student_grade1TableAdapter
+            // 
+            this.get_main_cours_student_grade1TableAdapter.ClearBeforeFill = true;
+            // 
+            // get_main_cours_student_grade1TableAdapter1
+            // 
+            this.get_main_cours_student_grade1TableAdapter1.ClearBeforeFill = true;
+            // 
+            // getTestTableAdapter
+            // 
+            this.getTestTableAdapter.ClearBeforeFill = true;
+            // 
+            // getSemTableAdapter
+            // 
+            this.getSemTableAdapter.ClearBeforeFill = true;
             // 
             // TopMargin
             // 
-            this.TopMargin.HeightF = 50F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
             // 
-            this.BottomMargin.HeightF = 50F;
+            this.BottomMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.pageInfo1,
+            this.pageInfo2});
             this.BottomMargin.Name = "BottomMargin";
+            // 
+            // ReportHeader
+            // 
+            this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.label1});
+            this.ReportHeader.HeightF = 60F;
+            this.ReportHeader.Name = "ReportHeader";
+            // 
+            // GroupHeader1
+            // 
+            this.GroupHeader1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table1});
+            this.GroupHeader1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("student.name", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            this.GroupHeader1.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
+            this.GroupHeader1.HeightF = 27F;
+            this.GroupHeader1.Name = "GroupHeader1";
+            // 
+            // GroupHeader2
+            // 
+            this.GroupHeader2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table2});
+            this.GroupHeader2.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("Year.year_serch", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            this.GroupHeader2.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
+            this.GroupHeader2.HeightF = 27F;
+            this.GroupHeader2.Level = 1;
+            this.GroupHeader2.Name = "GroupHeader2";
+            // 
+            // GroupHeader3
+            // 
+            this.GroupHeader3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table3});
+            this.GroupHeader3.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("rate_semster", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            this.GroupHeader3.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
+            this.GroupHeader3.HeightF = 27F;
+            this.GroupHeader3.Level = 2;
+            this.GroupHeader3.Name = "GroupHeader3";
+            // 
+            // GroupHeader4
+            // 
+            this.GroupHeader4.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table4});
+            this.GroupHeader4.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("gpa", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            this.GroupHeader4.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
+            this.GroupHeader4.HeightF = 27F;
+            this.GroupHeader4.Level = 3;
+            this.GroupHeader4.Name = "GroupHeader4";
             // 
             // Detail
             // 
             this.Detail.HeightF = 0F;
+            this.Detail.KeepTogether = true;
             this.Detail.Name = "Detail";
             // 
-            // efDataSource1
+            // DetailReport
             // 
-            efConnectionParameters1.ConnectionString = "";
-            efConnectionParameters1.ConnectionStringName = "DB_CCTTEntities";
-            efConnectionParameters1.Source = typeof(CCTT.DB_CCTTEntities);
-            this.efDataSource1.ConnectionParameters = efConnectionParameters1;
-            this.efDataSource1.Name = "efDataSource1";
-            efStoredProcedureInfo1.Name = "get_main_cours_student_year1";
-            efParameter1.Name = "std_id";
-            efParameter1.Type = typeof(int);
-            efParameter1.ValueInfo = "0";
-            efParameter2.Name = "year_id";
-            efParameter2.Type = typeof(int);
-            efParameter2.ValueInfo = "0";
-            efStoredProcedureInfo1.Parameters.AddRange(new DevExpress.DataAccess.EntityFramework.EFParameter[] {
-            efParameter1,
-            efParameter2});
-            efStoredProcedureInfo2.Name = "get_main_cours_student_year";
-            efParameter3.Name = "std_id";
-            efParameter3.Type = typeof(int);
-            efParameter4.Name = "year_id";
-            efParameter4.Type = typeof(int);
-            efStoredProcedureInfo2.Parameters.AddRange(new DevExpress.DataAccess.EntityFramework.EFParameter[] {
-            efParameter3,
-            efParameter4});
-            this.efDataSource1.StoredProcedures.AddRange(new DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo[] {
-            efStoredProcedureInfo1,
-            efStoredProcedureInfo2});
+            this.DetailReport.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+            this.GroupHeader5,
+            this.Detail1});
+            this.DetailReport.DataSource = this.efDataSource1;
+            this.DetailReport.Level = 0;
+            this.DetailReport.Name = "DetailReport";
+            // 
+            // pageInfo1
+            // 
+            this.pageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.pageInfo1.Name = "pageInfo1";
+            this.pageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
+            this.pageInfo1.SizeF = new System.Drawing.SizeF(325F, 23F);
+            this.pageInfo1.StyleName = "PageInfo";
+            // 
+            // pageInfo2
+            // 
+            this.pageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(325F, 0F);
+            this.pageInfo2.Name = "pageInfo2";
+            this.pageInfo2.SizeF = new System.Drawing.SizeF(325F, 23F);
+            this.pageInfo2.StyleName = "PageInfo";
+            this.pageInfo2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.pageInfo2.TextFormatString = "Page {0} of {1}";
+            // 
+            // label1
+            // 
+            this.label1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.label1.Name = "label1";
+            this.label1.SizeF = new System.Drawing.SizeF(650F, 24.19433F);
+            this.label1.StyleName = "Title";
+            this.label1.Text = "kk";
+            // 
+            // table1
+            // 
+            this.table1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2F);
+            this.table1.Name = "table1";
+            this.table1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.tableRow1});
+            this.table1.SizeF = new System.Drawing.SizeF(650F, 25F);
+            // 
+            // tableRow1
+            // 
+            this.tableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.tableCell1,
+            this.tableCell2});
+            this.tableRow1.Name = "tableRow1";
+            this.tableRow1.Weight = 1D;
+            // 
+            // tableCell1
+            // 
+            this.tableCell1.Name = "tableCell1";
+            this.tableCell1.StyleName = "GroupCaption1";
+            this.tableCell1.Text = "STUDENT NAME";
+            this.tableCell1.Weight = 0.15235206017127403D;
+            // 
+            // tableCell2
+            // 
+            this.tableCell2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[student.name]")});
+            this.tableCell2.Name = "tableCell2";
+            this.tableCell2.StyleName = "GroupData1";
+            this.tableCell2.Weight = 0.84764798677884612D;
+            // 
+            // table2
+            // 
+            this.table2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2F);
+            this.table2.Name = "table2";
+            this.table2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.tableRow2});
+            this.table2.SizeF = new System.Drawing.SizeF(650F, 25F);
+            // 
+            // tableRow2
+            // 
+            this.tableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.tableCell3,
+            this.tableCell4});
+            this.tableRow2.Name = "tableRow2";
+            this.tableRow2.Weight = 1D;
+            // 
+            // tableCell3
+            // 
+            this.tableCell3.Name = "tableCell3";
+            this.tableCell3.StyleName = "GroupCaption1";
+            this.tableCell3.Text = "YEAR YEAR SERCH";
+            this.tableCell3.Weight = 0.18176395122821515D;
+            // 
+            // tableCell4
+            // 
+            this.tableCell4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Year.year_serch]")});
+            this.tableCell4.Name = "tableCell4";
+            this.tableCell4.StyleName = "GroupData1";
+            this.tableCell4.Weight = 0.818236083984375D;
+            // 
+            // table3
+            // 
+            this.table3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2F);
+            this.table3.Name = "table3";
+            this.table3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.tableRow3});
+            this.table3.SizeF = new System.Drawing.SizeF(650F, 25F);
+            // 
+            // tableRow3
+            // 
+            this.tableRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.tableCell5,
+            this.tableCell6});
+            this.tableRow3.Name = "tableRow3";
+            this.tableRow3.Weight = 1D;
+            // 
+            // tableCell5
+            // 
+            this.tableCell5.Name = "tableCell5";
+            this.tableCell5.StyleName = "GroupCaption1";
+            this.tableCell5.Text = "RATE SEMSTER";
+            this.tableCell5.Weight = 0.15040676410381609D;
+            // 
+            // tableCell6
+            // 
+            this.tableCell6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[rate_semster]")});
+            this.tableCell6.Name = "tableCell6";
+            this.tableCell6.StyleName = "GroupData1";
+            this.tableCell6.Weight = 0.84959322415865379D;
+            // 
+            // table4
+            // 
+            this.table4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2F);
+            this.table4.Name = "table4";
+            this.table4.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.tableRow4});
+            this.table4.SizeF = new System.Drawing.SizeF(650F, 25F);
+            // 
+            // tableRow4
+            // 
+            this.tableRow4.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.tableCell7,
+            this.tableCell8});
+            this.tableRow4.Name = "tableRow4";
+            this.tableRow4.Weight = 1D;
+            // 
+            // tableCell7
+            // 
+            this.tableCell7.Name = "tableCell7";
+            this.tableCell7.StyleName = "GroupCaption1";
+            this.tableCell7.Text = "GPA";
+            this.tableCell7.Weight = 0.050507865318885216D;
+            // 
+            // tableCell8
+            // 
+            this.tableCell8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[gpa]")});
+            this.tableCell8.Name = "tableCell8";
+            this.tableCell8.StyleName = "GroupData1";
+            this.tableCell8.Weight = 0.94949209359975961D;
+            // 
+            // GroupHeader5
+            // 
+            this.GroupHeader5.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table5});
+            this.GroupHeader5.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
+            this.GroupHeader5.HeightF = 28F;
+            this.GroupHeader5.Name = "GroupHeader5";
+            // 
+            // Detail1
+            // 
+            this.Detail1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.table6});
+            this.Detail1.HeightF = 25F;
+            this.Detail1.Name = "Detail1";
+            // 
+            // table5
+            // 
+            this.table5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.table5.Name = "table5";
+            this.table5.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.tableRow5});
+            this.table5.SizeF = new System.Drawing.SizeF(650F, 28F);
+            // 
+            // tableRow5
+            // 
+            this.tableRow5.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.tableCell9,
+            this.tableCell10});
+            this.tableRow5.Name = "tableRow5";
+            this.tableRow5.Weight = 1D;
+            // 
+            // tableCell9
+            // 
+            this.tableCell9.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.tableCell9.Name = "tableCell9";
+            this.tableCell9.StyleName = "DetailCaption2";
+            this.tableCell9.StylePriority.UseBorders = false;
+            this.tableCell9.Text = "main cours id";
+            this.tableCell9.Weight = 0.55154094989483171D;
+            // 
+            // tableCell10
+            // 
+            this.tableCell10.Name = "tableCell10";
+            this.tableCell10.StyleName = "DetailCaption2";
+            this.tableCell10.Text = "final grade";
+            this.tableCell10.Weight = 0.44845905010516829D;
+            // 
+            // table6
+            // 
+            this.table6.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.table6.Name = "table6";
+            this.table6.OddStyleName = "DetailData3_Odd";
+            this.table6.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.tableRow6});
+            this.table6.SizeF = new System.Drawing.SizeF(650F, 25F);
+            // 
+            // tableRow6
+            // 
+            this.tableRow6.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.tableCell11,
+            this.tableCell12});
+            this.tableRow6.Name = "tableRow6";
+            this.tableRow6.Weight = 11.5D;
+            // 
+            // tableCell11
+            // 
+            this.tableCell11.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.tableCell11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[main_cours_id]")});
+            this.tableCell11.Name = "tableCell11";
+            this.tableCell11.StyleName = "DetailData2";
+            this.tableCell11.StylePriority.UseBorders = false;
+            this.tableCell11.Weight = 0.55154094989483171D;
+            // 
+            // tableCell12
+            // 
+            this.tableCell12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[final_grade]")});
+            this.tableCell12.Name = "tableCell12";
+            this.tableCell12.StyleName = "DetailData2";
+            this.tableCell12.Weight = 0.44845905010516829D;
             // 
             // Title
             // 
@@ -123,29 +424,29 @@
             this.Title.Name = "Title";
             this.Title.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100F);
             // 
-            // GroupCaption2
+            // GroupCaption1
             // 
-            this.GroupCaption2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            this.GroupCaption2.BorderColor = System.Drawing.Color.White;
-            this.GroupCaption2.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.GroupCaption2.BorderWidth = 2F;
-            this.GroupCaption2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.GroupCaption2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            this.GroupCaption2.Name = "GroupCaption2";
-            this.GroupCaption2.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 2, 0, 0, 100F);
-            this.GroupCaption2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.GroupCaption1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.GroupCaption1.BorderColor = System.Drawing.Color.White;
+            this.GroupCaption1.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.GroupCaption1.BorderWidth = 2F;
+            this.GroupCaption1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.GroupCaption1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
+            this.GroupCaption1.Name = "GroupCaption1";
+            this.GroupCaption1.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 2, 0, 0, 100F);
+            this.GroupCaption1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // GroupData2
+            // GroupData1
             // 
-            this.GroupData2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            this.GroupData2.BorderColor = System.Drawing.Color.White;
-            this.GroupData2.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.GroupData2.BorderWidth = 2F;
-            this.GroupData2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.GroupData2.ForeColor = System.Drawing.Color.White;
-            this.GroupData2.Name = "GroupData2";
-            this.GroupData2.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 2, 0, 0, 100F);
-            this.GroupData2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.GroupData1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.GroupData1.BorderColor = System.Drawing.Color.White;
+            this.GroupData1.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.GroupData1.BorderWidth = 2F;
+            this.GroupData1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.GroupData1.ForeColor = System.Drawing.Color.White;
+            this.GroupData1.Name = "GroupData1";
+            this.GroupData1.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 2, 0, 0, 100F);
+            this.GroupData1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // DetailCaption2
             // 
@@ -170,18 +471,6 @@
             this.DetailData2.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100F);
             this.DetailData2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // GroupFooterBackground3
-            // 
-            this.GroupFooterBackground3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(131)))), ((int)(((byte)(131)))));
-            this.GroupFooterBackground3.BorderColor = System.Drawing.Color.White;
-            this.GroupFooterBackground3.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.GroupFooterBackground3.BorderWidth = 2F;
-            this.GroupFooterBackground3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.GroupFooterBackground3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            this.GroupFooterBackground3.Name = "GroupFooterBackground3";
-            this.GroupFooterBackground3.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 2, 0, 0, 100F);
-            this.GroupFooterBackground3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
             // DetailData3_Odd
             // 
             this.DetailData3_Odd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
@@ -201,122 +490,113 @@
             this.PageInfo.Name = "PageInfo";
             this.PageInfo.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100F);
             // 
-            // dB_CCTTDataSet21
+            // efDataSource1
             // 
-            this.dB_CCTTDataSet21.DataSetName = "DB_CCTTDataSet2";
-            this.dB_CCTTDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            efConnectionParameters1.ConnectionString = "";
+            efConnectionParameters1.ConnectionStringName = "CCTT.Properties.Settings.DB_CCTTConnectionString1123";
+            efConnectionParameters1.Source = typeof(CCTT.DB_CCTTEntities);
+            this.efDataSource1.ConnectionParameters = efConnectionParameters1;
+            this.efDataSource1.Name = "efDataSource1";
             // 
-            // get_main_cours_student_grade1TableAdapter
+            // parameter2
             // 
-            this.get_main_cours_student_grade1TableAdapter.ClearBeforeFill = true;
-            // 
-            // dB_CCTTDataSet22
-            // 
-            this.dB_CCTTDataSet22.DataSetName = "DB_CCTTDataSet2";
-            this.dB_CCTTDataSet22.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // get_main_cours_student_grade1TableAdapter1
-            // 
-            this.get_main_cours_student_grade1TableAdapter1.ClearBeforeFill = true;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(CCTT.get_main_cours_student_grade1_Result);
-            // 
-            // bindingSource2
-            // 
-            this.bindingSource2.DataSource = typeof(CCTT.get_main_cours_student_grade1_Result);
-            // 
-            // std_idP
-            // 
-            this.std_idP.Name = "std_idP";
-            this.std_idP.Type = typeof(int);
-            this.std_idP.ValueInfo = "0";
-            // 
-            // efDataSource2
-            // 
-            efConnectionParameters2.ConnectionString = "";
-            efConnectionParameters2.ConnectionStringName = "DB_CCTTEntities";
-            efConnectionParameters2.Source = typeof(CCTT.DB_CCTTEntities);
-            this.efDataSource2.ConnectionParameters = efConnectionParameters2;
-            this.efDataSource2.Name = "efDataSource2";
-            efStoredProcedureInfo3.Name = "get_main_cours_student_year";
-            efParameter5.Name = "std_id";
-            efParameter5.Type = typeof(int);
-            efParameter5.ValueInfo = "0";
-            efParameter6.Name = "year_id";
-            efParameter6.Type = typeof(int);
-            efParameter6.ValueInfo = "0";
-            efStoredProcedureInfo3.Parameters.AddRange(new DevExpress.DataAccess.EntityFramework.EFParameter[] {
-            efParameter5,
-            efParameter6});
-            this.efDataSource2.StoredProcedures.AddRange(new DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo[] {
-            efStoredProcedureInfo3});
+            this.parameter2.AllowNull = true;
+            this.parameter2.Description = "Parameter2";
+            this.parameter2.Name = "parameter2";
+            this.parameter2.Type = typeof(int);
+            this.parameter2.ValueInfo = "0";
             // 
             // XtraReport5
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.TopMargin,
             this.BottomMargin,
-            this.Detail});
+            this.ReportHeader,
+            this.GroupHeader1,
+            this.GroupHeader2,
+            this.GroupHeader3,
+            this.GroupHeader4,
+            this.Detail,
+            this.DetailReport});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
-            this.efDataSource1,
-            this.dB_CCTTDataSet21,
-            this.dB_CCTTDataSet22,
-            this.bindingSource1,
-            this.bindingSource2,
-            this.efDataSource2});
+            this.efDataSource1});
             this.DataAdapter = this.get_main_cours_student_grade1TableAdapter;
-            this.DataMember = "nationality";
+            this.DataMember = "semster_student";
             this.DataSource = this.efDataSource1;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(50, 50, 50, 50);
-            this.PageHeight = 1169;
-            this.PageWidth = 827;
-            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
-            this.std_idP});
+            this.parameter2});
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.Title,
-            this.GroupCaption2,
-            this.GroupData2,
+            this.GroupCaption1,
+            this.GroupData1,
             this.DetailCaption2,
             this.DetailData2,
-            this.GroupFooterBackground3,
             this.DetailData3_Odd,
             this.PageInfo});
             this.Version = "20.2";
+            ((System.ComponentModel.ISupportInitialize)(this.table1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efDataSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_CCTTDataSet21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_CCTTDataSet22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efDataSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
 
         #endregion
-
+        private DB_CCTTDataSet2TableAdapters.get_main_cours_student_grade1TableAdapter get_main_cours_student_grade1TableAdapter;
+        private DB_CCTTDataSet1TableAdapters.get_main_cours_student_grade1TableAdapter get_main_cours_student_grade1TableAdapter1;
+        private DB_CCTTDataSet1TableAdapters.getTestTableAdapter getTestTableAdapter;
+        private DB_CCTTDataSet1TableAdapters.getSemTableAdapter getSemTableAdapter;
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
+        private DevExpress.XtraReports.UI.XRPageInfo pageInfo1;
+        private DevExpress.XtraReports.UI.XRPageInfo pageInfo2;
+        private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
+        private DevExpress.XtraReports.UI.XRLabel label1;
+        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
+        private DevExpress.XtraReports.UI.XRTable table1;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow1;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell1;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell2;
+        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader2;
+        private DevExpress.XtraReports.UI.XRTable table2;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow2;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell3;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell4;
+        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader3;
+        private DevExpress.XtraReports.UI.XRTable table3;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow3;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell5;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell6;
+        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader4;
+        private DevExpress.XtraReports.UI.XRTable table4;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow4;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell7;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell8;
         private DevExpress.XtraReports.UI.DetailBand Detail;
-        private DevExpress.DataAccess.EntityFramework.EFDataSource efDataSource1;
+        private DevExpress.XtraReports.UI.DetailReportBand DetailReport;
+        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader5;
+        private DevExpress.XtraReports.UI.XRTable table5;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow5;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell9;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell10;
+        private DevExpress.XtraReports.UI.DetailBand Detail1;
+        private DevExpress.XtraReports.UI.XRTable table6;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow6;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell11;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell12;
         private DevExpress.XtraReports.UI.XRControlStyle Title;
-        private DevExpress.XtraReports.UI.XRControlStyle GroupCaption2;
-        private DevExpress.XtraReports.UI.XRControlStyle GroupData2;
+        private DevExpress.XtraReports.UI.XRControlStyle GroupCaption1;
+        private DevExpress.XtraReports.UI.XRControlStyle GroupData1;
         private DevExpress.XtraReports.UI.XRControlStyle DetailCaption2;
         private DevExpress.XtraReports.UI.XRControlStyle DetailData2;
-        private DevExpress.XtraReports.UI.XRControlStyle GroupFooterBackground3;
         private DevExpress.XtraReports.UI.XRControlStyle DetailData3_Odd;
         private DevExpress.XtraReports.UI.XRControlStyle PageInfo;
-        private DB_CCTTDataSet2 dB_CCTTDataSet21;
-        private DB_CCTTDataSet2TableAdapters.get_main_cours_student_grade1TableAdapter get_main_cours_student_grade1TableAdapter;
-        private DB_CCTTDataSet2 dB_CCTTDataSet22;
-        private DB_CCTTDataSet1TableAdapters.get_main_cours_student_grade1TableAdapter get_main_cours_student_grade1TableAdapter1;
-        private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.BindingSource bindingSource2;
-        private DevExpress.XtraReports.Parameters.Parameter std_idP;
-        private DevExpress.DataAccess.EntityFramework.EFDataSource efDataSource2;
+        private DevExpress.XtraReports.Parameters.Parameter parameter2;
+        public DevExpress.DataAccess.EntityFramework.EFDataSource efDataSource1;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Data;
+using System.Data.Entity;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace CCTT.Pages
     {
         DB_CCTTEntities db = new DB_CCTTEntities();
         study_Group tbstudy_Group = new study_Group();
-
+        int ID;
         public Page__Group()
         {
             InitializeComponent();
@@ -29,26 +30,34 @@ namespace CCTT.Pages
             // Bind data to control when loading complete
               gridControl1.DataSource = dbContext.StloadDataPage_study_Group1();
 
-            txt_group_stadyyear.DataSource = db.Year.Select(x => x.year_serch).ToList();
-
-            txt_group_class.DataSource = db.Semester.Select(x => x.semester1).ToList();
-
-            txt_group_department.DataSource = db.department.Select(x => x.name).ToList();
+              try
+              {   //جلب مجال اسماء للكمبو بوكس سنة الدرسية
+                  txt_group_stadyyear.DataSource = db.Year.Select(x => x.year_serch).ToList();
+                  //فصل الدرسي
+                  txt_group_class.DataSource = db.Semester.Select(x => x.semester1).ToList();
+                  // قسم
+                  txt_group_department.DataSource = db.department.Select(x => x.name).ToList();
+            }
+              catch (Exception e)
+              {
+                  Console.WriteLine(e);
+                  throw;
+              }
 
         }
 
         private void Add()
         {
-            if (txt_group_name.Text == "")
+            if (txt_group_name.Text == "" || txt_group_code.Text == "" || txt_group_class.Text==""||txt_group_department.Text == "")
             {
                 MessageBox.Show("الحقل مطلوب", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
             else
             {
 
                 AddData();
                 LoadData();
+                ClearDaat();
             }
         }
         // دالة اضافة
@@ -81,6 +90,12 @@ namespace CCTT.Pages
                 MessageBox.Show(e.Message);
             }
         }
+
+        public void ClearDaat()
+        {
+            txt_group_class.Text = txt_group_code.Text = txt_group_department.Text =
+                txt_group_max_student.Text = txt_group_name.Text = txt_group_stadyyear.Text = "";
+        }
 private void txt_group_class_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -90,6 +105,87 @@ private void txt_group_class_SelectedIndexChanged(object sender, EventArgs e)
         {
             Add();
         }
+       
+
+
+        private void btn_edt_click_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                ID = Convert.ToInt32(gridView1.GetFocusedRowCellValue("id"));
+                if (ID > 0)
+                {
+
+                    tbstudy_Group = db.study_Group.Where(x => x.id == ID).FirstOrDefault();
+                    tbstudy_Group.id = ID;
+                  
+                    //tbYear.season = txt_stadyyear_yeartype.SelectedItem.ToString();
+                    //if (txt_stady_year_year.Text != "")
+                    //    tbYear.year1 = Convert.ToInt32(txt_stady_year_year.Text);
+
+
+                    db.Entry(tbstudy_Group).State = EntityState.Modified;
+                    db.SaveChanges();
+                    MessageBox.Show("تم تعديل البيانات بالنجاح", "عملية تعديل", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("لا يوجد بيانات لتعديلها");
+                }
+            }
+
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+           
+            var rs = MessageBox.Show("هل انت متأكد من هذا الاجراء , لايمكن استرجاع البيانات", "اجراء حدف", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (rs == DialogResult.Yes)
+            {
+
+                try
+                {
+                    ID = Convert.ToInt32(gridView1.GetFocusedRowCellValue("id"));
+                    if (ID > 0)
+                    {
+                        db = new DB_CCTTEntities();
+                        tbstudy_Group = db.study_Group.Where(x => x.id == ID).FirstOrDefault();
+
+                        db.Entry(tbstudy_Group).State = EntityState.Deleted;
+                        db.SaveChanges();
+
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("لا يوجد بيانات لحدفها");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+            gridControl1.ShowPrintPreview();
+        }
+        
+        
         // Deseing
         private void txt_group_code_Enter(object sender, EventArgs e)
         {
@@ -178,6 +274,7 @@ private void txt_group_class_SelectedIndexChanged(object sender, EventArgs e)
                 e.Handled = true;
             }
         }
+        
         // tap enter لكل الحقول
         private void txt_group_code_KeyDown(object sender, KeyEventArgs e)
         {
@@ -189,6 +286,23 @@ private void txt_group_class_SelectedIndexChanged(object sender, EventArgs e)
             {
                 return;
             }
+        }
+
+        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {// يحتاج الي جلب الاسماء من edmx
+            //txt_group_code.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "").ToString();
+            txt_group_class.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "الفصل").ToString();
+            txt_group_department.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "القسم").ToString();
+            txt_group_max_student.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "max_student_count").ToString();
+            if(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "yera")==null)
+            txt_group_stadyyear.Text = "";
+            else
+            {
+                txt_group_stadyyear.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "yera").ToString();
+            }
+            txt_group_name.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "name").ToString();
+           
+
         }
     }
 }

@@ -13,9 +13,11 @@ namespace CCTT.AddPage
 {
     public partial class Add_user_pwoer : DevExpress.XtraEditors.XtraForm
     {
+         DB_CCTTEntities db;
         public Add_user_pwoer()
         {
             InitializeComponent();
+           // txt_users.DataSource = db.users.Select(x => x.name).ToList();
         }
     }
 }

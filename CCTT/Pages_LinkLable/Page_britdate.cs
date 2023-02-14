@@ -18,7 +18,7 @@ namespace CCTT.Pages_LinkLable
     {
         // جلب قاعدة البيانات وجدول الجنسية
         DB_CCTTEntities db = new DB_CCTTEntities();
-        nationality tbNationality = new nationality();
+        place_of_birth tbplace_of_birth = new place_of_birth();
 
         Page_Student page_Studen = new Page_Student();
         Page_Teacher page_Teacher = new Page_Teacher();
@@ -48,10 +48,10 @@ namespace CCTT.Pages_LinkLable
         {
             // Instantiate a new DBContext
             CCTT.DB_CCTTEntities dbContext = new CCTT.DB_CCTTEntities();
-            dbContext.nationality.LoadAsync().ContinueWith(loadTask =>
+            dbContext.place_of_birth.LoadAsync().ContinueWith(loadTask =>
             {
                 // Bind data to control when loading complete
-                gridControl1.DataSource = dbContext.nationality.Local.ToBindingList();
+                gridControl1.DataSource = dbContext.place_of_birth.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
             txt_brit_site.Select();
         }
@@ -77,10 +77,10 @@ namespace CCTT.Pages_LinkLable
             try
             {
                 db = new DB_CCTTEntities();
-                tbNationality = new nationality();
+                tbplace_of_birth = new place_of_birth();
 
-                tbNationality.nationilty = txt_brit_site.Text;
-                db.Entry(tbNationality).State = System.Data.Entity.EntityState.Added;
+                tbplace_of_birth.place = txt_brit_site.Text;
+                db.Entry(tbplace_of_birth).State = System.Data.Entity.EntityState.Added;
                 db.SaveChanges();
                 MessageBox.Show("تمت الاضافة بنجاح", "اضافة");
             }
@@ -105,11 +105,11 @@ namespace CCTT.Pages_LinkLable
                 ID = Convert.ToInt32(gridView1.GetFocusedRowCellValue("id"));
                 if (ID > 0)
                 {
-                    tbNationality = db.nationality.Where(x => x.id == ID).FirstOrDefault();
-                    tbNationality.id = ID;
-                    tbNationality.nationilty = txt_brit_site.Text;
+                    tbplace_of_birth = db.place_of_birth.Where(x => x.id == ID).FirstOrDefault();
+                    tbplace_of_birth.id = ID;
+                    tbplace_of_birth.place = txt_brit_site.Text;
 
-                    db.Entry(tbNationality).State = EntityState.Modified;
+                    db.Entry(tbplace_of_birth).State = EntityState.Modified;
                     // db.Set<TB_Student>().AddOrUpdate(tb);
                     db.SaveChanges();
                     MessageBox.Show("تم تعديل البيانات بالنجاح", "عملية تعديل", MessageBoxButtons.OK,
@@ -142,9 +142,9 @@ namespace CCTT.Pages_LinkLable
                     if (ID > 0)
                     {
                         db = new DB_CCTTEntities();
-                        tbNationality = db.nationality.Where(x => x.id == ID).FirstOrDefault();
+                        tbplace_of_birth = db.place_of_birth.Where(x => x.id == ID).FirstOrDefault();
 
-                        db.Entry(tbNationality).State = EntityState.Deleted;
+                        db.Entry(tbplace_of_birth).State = EntityState.Deleted;
                         db.SaveChanges();
 
                         LoadData(); 
@@ -170,7 +170,7 @@ namespace CCTT.Pages_LinkLable
         //لجلب الحقول من جدول الي مربع النص
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            txt_brit_site.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "nationilty").ToString();
+            txt_brit_site.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "place").ToString();
         }
 
         // مدخل في حروف  فقط
@@ -184,11 +184,13 @@ namespace CCTT.Pages_LinkLable
 
         private void Page_nationality_FormClosed(object sender, FormClosedEventArgs e)
         {
-            page_Studen.txt_student_nationality.DataSource = db.nationality.Select(x => x.nationilty).ToList();
-            page_Teacher.txt_teacher_nationality.DataSource = db.nationality.Select(x => x.nationilty).ToList();
-            page_trainers.txt_trainer_specialty.DataSource = db.nationality.Select(x => x.nationilty).ToList();
+            page_Studen.txt_student_placeofbirth.DataSource = db.place_of_birth.Select(x => x.place).ToList();
+            page_Studen.txt_student_address.DataSource = db.place_of_birth.Select(x => x.place).ToList();
 
-            
+            // page_Teacher.txt_teacher_nationality.DataSource = db.place_of_birth.Select(x => x.place).ToList();
+            // page_trainers.txt_trainer_specialty.DataSource = db.nationality.Select(x => x.nationilty).ToList();
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -21,6 +21,8 @@ namespace CCTT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+           // Application.Run(new FRM_Login());
+            
             Application.Run(new Main());
             //Page_major(page_trainers1: new Page_trainers()
         }

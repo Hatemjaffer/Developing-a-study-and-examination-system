@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Page_nationality));
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colnationilty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
             this.btn_edt_click = new DevExpress.XtraEditors.SimpleButton();
@@ -193,9 +191,6 @@
             this.gridView1.Appearance.ViewCaption.Options.UseTextOptions = true;
             this.gridView1.Appearance.ViewCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.ViewCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colid,
-            this.colnationilty});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gridView1.Name = "gridView1";
@@ -206,27 +201,8 @@
             this.gridView1.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             // 
-            // colid
-            // 
-            this.colid.Caption = "ر.م";
-            this.colid.FieldName = "id";
-            this.colid.Name = "colid";
-            this.colid.OptionsColumn.AllowEdit = false;
-            this.colid.Visible = true;
-            this.colid.VisibleIndex = 0;
-            // 
-            // colnationilty
-            // 
-            this.colnationilty.Caption = "الجنسية";
-            this.colnationilty.FieldName = "nationilty";
-            this.colnationilty.Name = "colnationilty";
-            this.colnationilty.OptionsColumn.AllowEdit = false;
-            this.colnationilty.Visible = true;
-            this.colnationilty.VisibleIndex = 1;
-            // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(CCTT.nationality);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(3, 3);
             this.gridControl1.MainView = this.gridView1;
@@ -431,8 +407,6 @@
         private DevExpress.XtraEditors.SimpleButton btn_update;
         private DevExpress.XtraEditors.SimpleButton btn_Add;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private DevExpress.XtraGrid.Columns.GridColumn colid;
-        private DevExpress.XtraGrid.Columns.GridColumn colnationilty;
         public System.Windows.Forms.TextBox txt_nationality;
     }
 }

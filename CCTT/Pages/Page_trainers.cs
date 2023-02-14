@@ -30,12 +30,8 @@ namespace CCTT.Pages
         public void LoadData()
         {
             CCTT.DB_CCTTEntities dbContext = new CCTT.DB_CCTTEntities();
-            dbContext.Trainer.LoadAsync().ContinueWith(loadTask =>
-            {
-                // Bind data to control when loading complete
-                gridControl1.DataSource = dbContext.StloadDataPage_trainer1();
-            }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
 
+            gridControl1.DataSource = stloadDataPage_trainer1TableAdapter.GetData();
 
 
             //تعبئة حقل الجنسية
@@ -49,6 +45,7 @@ namespace CCTT.Pages
 
             //تعبئة حقل الدرجة العبمية
             txt_trainer_Degree.DataSource = db.degree.Select(x => x.degree1).ToList();
+            txt_trainer_address.DataSource = db.place_of_birth.Select(x => x.place).ToList();
 
         }
 
@@ -92,7 +89,7 @@ namespace CCTT.Pages
 
                   tbTrainer.address = txt_trainer_address.Text;
                   if (txt_trainer_id.Text != "")
-                      tbTrainer.national_id = Convert.ToInt32(txt_trainer_id.Text);
+                      tbTrainer.national_id = Convert.ToInt64(txt_trainer_id.Text);
 
                   var iddep = db.nationality.Where(x => x.nationilty == txt_trainer_nationality.SelectedItem.ToString()).Select(x => x.id).FirstOrDefault();
                   tbTrainer.nationality = iddep;
@@ -130,7 +127,7 @@ namespace CCTT.Pages
 
         private void linkLabel_nationality_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Page_nationality page = new Page_nationality(this);
+            Page_britdate page = new Page_britdate(this);
             page.ShowDialog();
         }
 
@@ -338,6 +335,133 @@ namespace CCTT.Pages
         {
             txt_trainer_email.BackColor = Color.White;
 
+        }
+
+        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            txt_trainer_code.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "رقم المدرب").ToString();
+            txt_trainer_fullname.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "الاسم").ToString();
+            if (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "تاريخ الميلاد") == null)
+                txt_trainer_brithday.Text = "";
+            else
+            {
+                txt_trainer_brithday.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "تاريخ الميلاد").ToString();
+            }
+            txt_trainer_sex.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "الجنس").ToString();
+            txt_trainer_nationality.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "الجنسية").ToString();
+            txt_trainer_id.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "الرقم الوطني").ToString();
+            if (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "رفم الهاتف") == null)
+                txt_trainer_phone.Text = "";
+            else
+            {
+                txt_trainer_phone.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "رفم الهاتف").ToString();
+            }
+            txt_trainer_address.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "العنوان").ToString();
+            txt_trainer_specialty.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "التخصص").ToString();
+            txt_trainer_qualifications.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "الدرجة العلمية").ToString();
+            txt_trainer_email.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ايميل").ToString();
+
+        }
+
+        private void btn_edt_click_Click(object sender, EventArgs e)
+        {
+            int ID;
+            try
+            {
+                ID = Convert.ToInt32(gridView1.GetFocusedRowCellValue("رقم المدرب"));
+
+                if (ID > 0)
+                {
+                    tbTrainer = db.Trainer.Where(x => x.id == ID).FirstOrDefault();
+                    tbTrainer.id = ID;
+
+
+
+                    tbTrainer.name = txt_trainer_fullname.Text;
+                    tbTrainer.BOD = txt_trainer_brithday.Value;
+
+                    // tbTrainer.major = txt_trainer_specialty.SelectedItem.ToString();
+                    var id1 = db.major.Where(x => x.major1 == txt_trainer_specialty.SelectedItem.ToString()).Select(x => x.id).FirstOrDefault();
+                    tbTrainer.major = id1;
+                    var id2 = db.qualification.Where(x => x.qualification1 == txt_trainer_qualifications.SelectedItem.ToString()).Select(x => x.id).FirstOrDefault();
+
+                    tbTrainer.qualification = id2;
+                    var id3 = db.degree.Where(x => x.degree1 == txt_trainer_Degree.SelectedItem.ToString()).Select(x => x.id).FirstOrDefault();
+
+                    tbTrainer.degree = id3;
+
+                    tbTrainer.email = txt_trainer_email.Text;
+                    if (txt_trainer_phone.Text != "")
+                        tbTrainer.phone_num = Convert.ToInt32(txt_trainer_phone.Text);
+
+                    tbTrainer.address = txt_trainer_address.Text;
+                    if (txt_trainer_id.Text != "")
+                        tbTrainer.national_id = Convert.ToInt64(txt_trainer_id.Text);
+
+                    var iddep = db.nationality.Where(x => x.nationilty == txt_trainer_nationality.SelectedItem.ToString()).Select(x => x.id).FirstOrDefault();
+                    tbTrainer.nationality = iddep;
+
+
+                    //علاش مديرها انتجر في داتا بيز
+                    if (txt_trainer_sex.Text == "ذكر")
+                        tbTrainer.gender = 1;
+                    if (txt_trainer_sex.Text == "انثي")
+                        tbTrainer.gender = 2;
+
+
+
+
+                    db.Entry(tbTrainer).State = EntityState.Modified;
+                    db.SaveChanges();
+                    MessageBox.Show("تم تعديل البيانات بالنجاح", "عملية تعديل", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("لا يوجد بيانات لتعديلها");
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            var rs = MessageBox.Show("هل انت متأكد من هذا الاجراء , لايمكن استرجاع البيانات", "اجراء حدف", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (rs == DialogResult.Yes)
+            {
+                int ID;
+
+                try
+                {
+                    ID = Convert.ToInt32(gridView1.GetFocusedRowCellValue("رقم المدرب"));
+                    if (ID > 0)
+                    {
+                        db = new DB_CCTTEntities();
+                        tbTrainer = db.Trainer.Where(x => x.id == ID).FirstOrDefault();
+
+                        db.Entry(tbTrainer).State = EntityState.Deleted;
+                        db.SaveChanges();
+
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("لا يوجد بيانات لحدفها");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

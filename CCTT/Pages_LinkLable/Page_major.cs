@@ -22,6 +22,7 @@ namespace CCTT.Pages_LinkLable
 
         Page_Student page_Studen = new Page_Student();
         Page_trainers page_trainers = new Page_trainers();
+        Page_Teacher page_Teacher = new Page_Teacher();
 
         int ID;
         public Page_major(Page_trainers page_trainers1)
@@ -29,6 +30,12 @@ namespace CCTT.Pages_LinkLable
             InitializeComponent();
             LoadData();
             page_trainers = page_trainers1;
+        }
+        public Page_major(Page_Teacher page_Teacher)
+        {
+            InitializeComponent();
+            LoadData();
+            page_Teacher = page_Teacher;
         }
 
 
@@ -182,6 +189,7 @@ namespace CCTT.Pages_LinkLable
         private void Page_major_FormClosed(object sender, FormClosedEventArgs e)
         {
             page_trainers.txt_trainer_specialty.DataSource = db.major.Select(x => x.major1).ToList();
+            page_Teacher.txt_teacher_specialty.DataSource = db.major.Select(x => x.major1).ToList();
 
         }
 

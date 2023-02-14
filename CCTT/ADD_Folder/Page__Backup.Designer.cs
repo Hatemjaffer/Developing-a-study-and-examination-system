@@ -44,9 +44,10 @@
             this.btn_save.Appearance.Options.UseFont = true;
             this.btn_save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.ImageOptions.Image")));
             this.btn_save.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_save.Location = new System.Drawing.Point(34, 163);
+            this.btn_save.Location = new System.Drawing.Point(40, 201);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(225, 48);
+            this.btn_save.Size = new System.Drawing.Size(262, 59);
             this.btn_save.TabIndex = 7;
             this.btn_save.Text = "حفظ";
             // 
@@ -56,9 +57,11 @@
             this.groupBox2.Controls.Add(this.btn_restore);
             this.groupBox2.Controls.Add(this.btn_backup);
             this.groupBox2.Font = new System.Drawing.Font("LBC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(34, 17);
+            this.groupBox2.Location = new System.Drawing.Point(40, 21);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(523, 112);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(610, 138);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "اعدادات قاعدة البيانات";
@@ -67,9 +70,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(148, 26);
+            this.label4.Location = new System.Drawing.Point(173, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(225, 25);
+            this.label4.Size = new System.Drawing.Size(295, 31);
             this.label4.TabIndex = 6;
             this.label4.Text = "يجب تشغيل البرنامج كامسؤل";
             // 
@@ -79,9 +82,10 @@
             this.btn_restore.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_restore.Appearance.Options.UseFont = true;
             this.btn_restore.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_restore.Location = new System.Drawing.Point(6, 55);
+            this.btn_restore.Location = new System.Drawing.Point(7, 68);
+            this.btn_restore.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_restore.Name = "btn_restore";
-            this.btn_restore.Size = new System.Drawing.Size(238, 48);
+            this.btn_restore.Size = new System.Drawing.Size(278, 59);
             this.btn_restore.TabIndex = 5;
             this.btn_restore.Text = "استعادة النسخة الاحطياطية";
             // 
@@ -91,9 +95,10 @@
             this.btn_backup.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_backup.Appearance.Options.UseFont = true;
             this.btn_backup.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_backup.Location = new System.Drawing.Point(273, 55);
+            this.btn_backup.Location = new System.Drawing.Point(318, 68);
+            this.btn_backup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_backup.Name = "btn_backup";
-            this.btn_backup.Size = new System.Drawing.Size(225, 48);
+            this.btn_backup.Size = new System.Drawing.Size(262, 59);
             this.btn_backup.TabIndex = 5;
             this.btn_backup.Text = "اخد نسخة احطياطية";
             // 
@@ -101,11 +106,12 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 223);
+            this.ClientSize = new System.Drawing.Size(689, 274);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.groupBox2);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Page__Backup";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;

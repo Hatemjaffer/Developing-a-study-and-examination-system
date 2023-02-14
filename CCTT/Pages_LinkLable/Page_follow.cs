@@ -36,10 +36,7 @@ namespace CCTT.Pages_LinkLable
         public void LoadData()
         {
             CCTT.DB_CCTTEntities dbContext = new CCTT.DB_CCTTEntities();
-            dbContext.affiliated_entity.LoadAsync().ContinueWith(loadTask =>
-            {
-                gridControl1.DataSource = dbContext.affiliated_entity.Local.ToBindingList();
-            }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+            gridControl1.DataSource = getaffiliated_entityTableAdapter.GetData();
             txt_follow.Select();
         }
 
@@ -87,7 +84,7 @@ namespace CCTT.Pages_LinkLable
         {
             try
             {
-                ID = Convert.ToInt32(gridView1.GetFocusedRowCellValue("id"));
+                ID = Convert.ToInt32(gridView1.GetFocusedRowCellValue("الرقم"));
                 if (ID > 0)
                 {
                     tbaffiliated_entity = db.affiliated_entity.Where(x => x.id == ID).FirstOrDefault();
@@ -122,7 +119,7 @@ namespace CCTT.Pages_LinkLable
                 
                 try
                 {
-                    ID = Convert.ToInt32(gridView1.GetFocusedRowCellValue("id"));
+                    ID = Convert.ToInt32(gridView1.GetFocusedRowCellValue("الرقم"));
                     if (ID > 0)
                     {
                         db = new DB_CCTTEntities();
@@ -154,7 +151,8 @@ namespace CCTT.Pages_LinkLable
         //لجلب الحقول من جدول الي مربع النص
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            txt_follow.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "follow_name").ToString();
+            txt_follow.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "الجهة التابع لها").ToString();
+            MessageBox.Show("fdg");
 
         }
         
@@ -193,6 +191,13 @@ namespace CCTT.Pages_LinkLable
             {
                 return;
             }
+        }
+
+        private void Page_follow_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dB_CCTTDataSet2.getaffiliated_entity' table. You can move, or remove it, as needed.
+            this.getaffiliated_entityTableAdapter.Fill(this.dB_CCTTDataSet2.getaffiliated_entity);
+
         }
     }
 }

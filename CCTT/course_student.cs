@@ -14,6 +14,12 @@ namespace CCTT
     
     public partial class course_student
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public course_student()
+        {
+            this.Course_inStudent = new HashSet<Course_inStudent>();
+        }
+    
         public int id { get; set; }
         public string Name { get; set; }
         public Nullable<System.DateTime> BOD { get; set; }
@@ -23,5 +29,7 @@ namespace CCTT
         public string Email { get; set; }
     
         public virtual affiliated_entity affiliated_entity { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Course_inStudent> Course_inStudent { get; set; }
     }
 }

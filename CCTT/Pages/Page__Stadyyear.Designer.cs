@@ -226,12 +226,13 @@
             // 
             // colid
             // 
-            this.colid.Caption = "رمز السنة";
+            this.colid.Caption = "ر.م";
             this.colid.FieldName = "id";
             this.colid.Name = "colid";
             this.colid.OptionsColumn.AllowEdit = false;
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
+            this.colid.Width = 84;
             // 
             // colseason
             // 
@@ -241,6 +242,7 @@
             this.colseason.OptionsColumn.AllowEdit = false;
             this.colseason.Visible = true;
             this.colseason.VisibleIndex = 1;
+            this.colseason.Width = 257;
             // 
             // colyear1
             // 
@@ -250,6 +252,7 @@
             this.colyear1.OptionsColumn.AllowEdit = false;
             this.colyear1.Visible = true;
             this.colyear1.VisibleIndex = 2;
+            this.colyear1.Width = 262;
             // 
             // tableLayoutPanel1
             // 

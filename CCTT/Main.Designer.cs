@@ -37,24 +37,27 @@ namespace CCTT
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_department = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_add_student = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_add_id = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_deparment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_basc_data = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_semester = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_subject = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_teacher = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_group = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_stadyyear = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_Material_distribution = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_group = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_deparment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_add_id = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_add_student = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_teacher = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Monitor_scores = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_Material_download = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_Material_distribution = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_course = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_add_student_couress = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_add_trainers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_add_coures = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_grades_course = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_monyen_course = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_report = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_std_go = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_ = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_user_management = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_setting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -66,8 +69,10 @@ namespace CCTT
             this.txt_role = new DevExpress.XtraBars.BarStaticItem();
             this.btn_logout = new DevExpress.XtraBars.BarButtonItem();
             this.lb_xxx = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_efad_dwrat = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.fluentDesignFormControl1.SuspendLayout();
@@ -79,10 +84,10 @@ namespace CCTT
             this.pn_container.Appearance.BackColor = System.Drawing.Color.White;
             this.pn_container.Appearance.Options.UseBackColor = true;
             this.pn_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_container.Location = new System.Drawing.Point(207, 31);
+            this.pn_container.Location = new System.Drawing.Point(233, 31);
             this.pn_container.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pn_container.Name = "pn_container";
-            this.pn_container.Size = new System.Drawing.Size(983, 740);
+            this.pn_container.Size = new System.Drawing.Size(1000, 740);
             this.pn_container.TabIndex = 0;
             // 
             // accordionControl1
@@ -93,7 +98,6 @@ namespace CCTT
             this.btn_department,
             this.btn_course,
             this.btn_report,
-            this.btn_,
             this.btn_user_management,
             this.btn_setting,
             this.btn_about,
@@ -103,7 +107,7 @@ namespace CCTT
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(207, 740);
+            this.accordionControl1.Size = new System.Drawing.Size(233, 740);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -168,18 +172,11 @@ namespace CCTT
             this.btn_department.Appearance.Pressed.Options.UseFont = true;
             this.btn_department.Appearance.Pressed.Options.UseForeColor = true;
             this.btn_department.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.btn_basc_data,
             this.btn_add_student,
-            this.btn_add_id,
-            this.btn_deparment,
-            this.btn_semester,
-            this.btn_subject,
             this.btn_teacher,
-            this.btn_group,
-            this.btn_stadyyear,
             this.btn_Monitor_scores,
-            this.btn_Material_download,
-            this.btn_Material_distribution});
-            this.btn_department.Expanded = true;
+            this.btn_Material_download});
             this.btn_department.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
@@ -189,59 +186,30 @@ namespace CCTT
             this.btn_department.Text = "الدراسة والامتحانات";
             this.btn_department.Click += new System.EventHandler(this.btn_department_Click);
             // 
-            // btn_add_student
+            // btn_basc_data
             // 
-            this.btn_add_student.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add_student.Appearance.Hovered.Options.UseFont = true;
-            this.btn_add_student.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add_student.Appearance.Normal.Options.UseFont = true;
-            this.btn_add_student.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F);
-            this.btn_add_student.Appearance.Pressed.Options.UseFont = true;
-            this.btn_add_student.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            this.btn_basc_data.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_basc_data.Appearance.Hovered.Options.UseFont = true;
+            this.btn_basc_data.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_basc_data.Appearance.Normal.Options.UseFont = true;
+            this.btn_basc_data.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_basc_data.Appearance.Pressed.Options.UseFont = true;
+            this.btn_basc_data.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.btn_semester,
+            this.btn_subject,
+            this.btn_stadyyear,
+            this.btn_Material_distribution,
+            this.btn_group,
+            this.btn_deparment,
+            this.btn_add_id});
+            this.btn_basc_data.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
-            this.btn_add_student.Name = "btn_add_student";
-            this.btn_add_student.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_add_student.Text = "تسجيل طالب نظامي";
-            this.btn_add_student.Click += new System.EventHandler(this.btn_add_student_Click);
-            // 
-            // btn_add_id
-            // 
-            this.btn_add_id.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14F);
-            this.btn_add_id.Appearance.Hovered.Options.UseFont = true;
-            this.btn_add_id.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F);
-            this.btn_add_id.Appearance.Normal.Options.UseFont = true;
-            this.btn_add_id.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F);
-            this.btn_add_id.Appearance.Pressed.Options.UseFont = true;
-            this.btn_add_id.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
-            this.btn_add_id.Name = "btn_add_id";
-            this.btn_add_id.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_add_id.Text = "ادراج ارقام قيد   ";
-            this.btn_add_id.Click += new System.EventHandler(this.btn_add_id_Click);
-            // 
-            // btn_deparment
-            // 
-            this.btn_deparment.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14F);
-            this.btn_deparment.Appearance.Hovered.Options.UseFont = true;
-            this.btn_deparment.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_deparment.Appearance.Normal.Options.UseFont = true;
-            this.btn_deparment.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F);
-            this.btn_deparment.Appearance.Pressed.Options.UseFont = true;
-            this.btn_deparment.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
-            this.btn_deparment.Name = "btn_deparment";
-            this.btn_deparment.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_deparment.Text = "الاقسام   ";
-            this.btn_deparment.Click += new System.EventHandler(this.btn_deparment_Click);
+            this.btn_basc_data.Name = "btn_basc_data";
+            this.btn_basc_data.Text = "البيانات الاساسية  ";
+            this.btn_basc_data.Click += new System.EventHandler(this.btn_basc_data_Click);
             // 
             // btn_semester
             // 
@@ -279,24 +247,41 @@ namespace CCTT
             this.btn_subject.Text = "المقرارت الدراسية ";
             this.btn_subject.Click += new System.EventHandler(this.btn_subject_Click);
             // 
-            // btn_teacher
+            // btn_stadyyear
             // 
-            this.btn_teacher.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14F);
-            this.btn_teacher.Appearance.Hovered.Options.UseFont = true;
-            this.btn_teacher.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_teacher.Appearance.Normal.Options.UseFont = true;
-            this.btn_teacher.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F);
-            this.btn_teacher.Appearance.Pressed.Options.UseFont = true;
-            this.btn_teacher.Expanded = true;
-            this.btn_teacher.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            this.btn_stadyyear.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14F);
+            this.btn_stadyyear.Appearance.Hovered.Options.UseFont = true;
+            this.btn_stadyyear.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_stadyyear.Appearance.Normal.Options.UseFont = true;
+            this.btn_stadyyear.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F);
+            this.btn_stadyyear.Appearance.Pressed.Options.UseFont = true;
+            this.btn_stadyyear.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
-            this.btn_teacher.Name = "btn_teacher";
-            this.btn_teacher.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_teacher.Text = "أعضاء هيئة التدريس";
-            this.btn_teacher.Click += new System.EventHandler(this.btn_teacher_Click);
+            this.btn_stadyyear.Name = "btn_stadyyear";
+            this.btn_stadyyear.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_stadyyear.Text = "سنة الدراسة  ";
+            this.btn_stadyyear.Click += new System.EventHandler(this.btn_stadyyear_Click);
+            // 
+            // btn_Material_distribution
+            // 
+            this.btn_Material_distribution.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Material_distribution.Appearance.Hovered.Options.UseFont = true;
+            this.btn_Material_distribution.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F);
+            this.btn_Material_distribution.Appearance.Normal.Options.UseFont = true;
+            this.btn_Material_distribution.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F);
+            this.btn_Material_distribution.Appearance.Pressed.Options.UseFont = true;
+            this.btn_Material_distribution.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.btn_Material_distribution.Name = "btn_Material_distribution";
+            this.btn_Material_distribution.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_Material_distribution.Text = "توزيع المواد  ";
+            this.btn_Material_distribution.Click += new System.EventHandler(this.btn_Material_distribution_Click);
             // 
             // btn_group
             // 
@@ -316,23 +301,78 @@ namespace CCTT
             this.btn_group.Text = "مجموعات الدراسية";
             this.btn_group.Click += new System.EventHandler(this.btn_group_Click);
             // 
-            // btn_stadyyear
+            // btn_deparment
             // 
-            this.btn_stadyyear.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14F);
-            this.btn_stadyyear.Appearance.Hovered.Options.UseFont = true;
-            this.btn_stadyyear.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_stadyyear.Appearance.Normal.Options.UseFont = true;
-            this.btn_stadyyear.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F);
-            this.btn_stadyyear.Appearance.Pressed.Options.UseFont = true;
-            this.btn_stadyyear.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            this.btn_deparment.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14F);
+            this.btn_deparment.Appearance.Hovered.Options.UseFont = true;
+            this.btn_deparment.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deparment.Appearance.Normal.Options.UseFont = true;
+            this.btn_deparment.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F);
+            this.btn_deparment.Appearance.Pressed.Options.UseFont = true;
+            this.btn_deparment.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
-            this.btn_stadyyear.Name = "btn_stadyyear";
-            this.btn_stadyyear.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_stadyyear.Text = "سنة الدراسة  ";
-            this.btn_stadyyear.Click += new System.EventHandler(this.btn_stadyyear_Click);
+            this.btn_deparment.Name = "btn_deparment";
+            this.btn_deparment.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_deparment.Text = "الاقسام   ";
+            this.btn_deparment.Click += new System.EventHandler(this.btn_deparment_Click);
+            // 
+            // btn_add_id
+            // 
+            this.btn_add_id.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14F);
+            this.btn_add_id.Appearance.Hovered.Options.UseFont = true;
+            this.btn_add_id.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F);
+            this.btn_add_id.Appearance.Normal.Options.UseFont = true;
+            this.btn_add_id.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F);
+            this.btn_add_id.Appearance.Pressed.Options.UseFont = true;
+            this.btn_add_id.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.btn_add_id.Name = "btn_add_id";
+            this.btn_add_id.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_add_id.Text = "ادراج ارقام قيد   ";
+            this.btn_add_id.Click += new System.EventHandler(this.btn_add_id_Click);
+            // 
+            // btn_add_student
+            // 
+            this.btn_add_student.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_student.Appearance.Hovered.Options.UseFont = true;
+            this.btn_add_student.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_student.Appearance.Normal.Options.UseFont = true;
+            this.btn_add_student.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F);
+            this.btn_add_student.Appearance.Pressed.Options.UseFont = true;
+            this.btn_add_student.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.btn_add_student.Name = "btn_add_student";
+            this.btn_add_student.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_add_student.Text = "تسجيل طالب نظامي";
+            this.btn_add_student.Click += new System.EventHandler(this.btn_add_student_Click);
+            // 
+            // btn_teacher
+            // 
+            this.btn_teacher.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14F);
+            this.btn_teacher.Appearance.Hovered.Options.UseFont = true;
+            this.btn_teacher.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_teacher.Appearance.Normal.Options.UseFont = true;
+            this.btn_teacher.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F);
+            this.btn_teacher.Appearance.Pressed.Options.UseFont = true;
+            this.btn_teacher.Expanded = true;
+            this.btn_teacher.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.btn_teacher.Name = "btn_teacher";
+            this.btn_teacher.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_teacher.Text = "أعضاء هيئة التدريس";
+            this.btn_teacher.Click += new System.EventHandler(this.btn_teacher_Click);
             // 
             // btn_Monitor_scores
             // 
@@ -370,24 +410,6 @@ namespace CCTT
             this.btn_Material_download.Text = "تنزيل المواد      ";
             this.btn_Material_download.Click += new System.EventHandler(this.btn_Material_download_Click);
             // 
-            // btn_Material_distribution
-            // 
-            this.btn_Material_distribution.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Material_distribution.Appearance.Hovered.Options.UseFont = true;
-            this.btn_Material_distribution.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F);
-            this.btn_Material_distribution.Appearance.Normal.Options.UseFont = true;
-            this.btn_Material_distribution.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F);
-            this.btn_Material_distribution.Appearance.Pressed.Options.UseFont = true;
-            this.btn_Material_distribution.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
-            this.btn_Material_distribution.Name = "btn_Material_distribution";
-            this.btn_Material_distribution.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_Material_distribution.Text = "توزيع المواد  ";
-            this.btn_Material_distribution.Click += new System.EventHandler(this.btn_Material_distribution_Click);
-            // 
             // btn_course
             // 
             this.btn_course.Appearance.Default.ForeColor = System.Drawing.Color.White;
@@ -400,10 +422,12 @@ namespace CCTT
             this.btn_course.Appearance.Pressed.Options.UseFont = true;
             this.btn_course.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btn_add_student_couress,
+            this.accordionControlElement5,
             this.btn_add_trainers,
             this.btn_add_coures,
             this.btn_grades_course,
             this.btn_monyen_course});
+            this.btn_course.Expanded = true;
             this.btn_course.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
@@ -428,8 +452,26 @@ namespace CCTT
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
             this.btn_add_student_couress.Name = "btn_add_student_couress";
             this.btn_add_student_couress.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_add_student_couress.Text = "تسجيل طالب دورة";
+            this.btn_add_student_couress.Text = "تسجيل طالب دورة      ";
             this.btn_add_student_couress.Click += new System.EventHandler(this.btn_add_student_couress_Click);
+            // 
+            // accordionControlElement5
+            // 
+            this.accordionControlElement5.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControlElement5.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement5.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F);
+            this.accordionControlElement5.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement5.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F);
+            this.accordionControlElement5.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement5.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.accordionControlElement5.Name = "accordionControlElement5";
+            this.accordionControlElement5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement5.Text = "تسجيل طالب في دورة     ";
+            this.accordionControlElement5.Click += new System.EventHandler(this.accordionControlElement5_Click);
             // 
             // btn_add_trainers
             // 
@@ -446,7 +488,7 @@ namespace CCTT
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
             this.btn_add_trainers.Name = "btn_add_trainers";
             this.btn_add_trainers.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_add_trainers.Text = "المدربين   ";
+            this.btn_add_trainers.Text = "المدربين         ";
             this.btn_add_trainers.Click += new System.EventHandler(this.btn_add_trainers_Click);
             // 
             // btn_add_coures
@@ -464,7 +506,7 @@ namespace CCTT
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
             this.btn_add_coures.Name = "btn_add_coures";
             this.btn_add_coures.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_add_coures.Text = " دوارت التدربية ";
+            this.btn_add_coures.Text = " دوارت التدربية       ";
             this.btn_add_coures.Click += new System.EventHandler(this.btn_add_coures_Click);
             // 
             // btn_grades_course
@@ -482,7 +524,8 @@ namespace CCTT
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
             this.btn_grades_course.Name = "btn_grades_course";
             this.btn_grades_course.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_grades_course.Text = "رصد الدرجات ";
+            this.btn_grades_course.Text = "رصد الدرجات       ";
+            this.btn_grades_course.Click += new System.EventHandler(this.btn_grades_course_Click);
             // 
             // btn_monyen_course
             // 
@@ -499,7 +542,7 @@ namespace CCTT
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
             this.btn_monyen_course.Name = "btn_monyen_course";
             this.btn_monyen_course.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btn_monyen_course.Text = "الاقساط المالية";
+            this.btn_monyen_course.Text = "الاقساط المالية      ";
             // 
             // btn_report
             // 
@@ -508,18 +551,42 @@ namespace CCTT
             this.btn_report.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_report.Appearance.Hovered.Options.UseFont = true;
             this.btn_report.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_report.Appearance.Normal.ForeColor = System.Drawing.Color.White;
             this.btn_report.Appearance.Normal.Options.UseFont = true;
+            this.btn_report.Appearance.Normal.Options.UseForeColor = true;
             this.btn_report.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F);
             this.btn_report.Appearance.Pressed.Options.UseFont = true;
+            this.btn_report.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.btn_std_go,
+            this.btn_,
+            this.btn_efad_dwrat});
+            this.btn_report.Expanded = true;
             this.btn_report.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
             this.btn_report.Name = "btn_report";
-            this.btn_report.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btn_report.Text = "التقارير  ";
             this.btn_report.Click += new System.EventHandler(this.btn_report_Click);
+            // 
+            // btn_std_go
+            // 
+            this.btn_std_go.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_std_go.Appearance.Hovered.Options.UseFont = true;
+            this.btn_std_go.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_std_go.Appearance.Normal.Options.UseFont = true;
+            this.btn_std_go.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_std_go.Appearance.Pressed.Options.UseFont = true;
+            this.btn_std_go.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.btn_std_go.Name = "btn_std_go";
+            this.btn_std_go.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_std_go.Text = "نتيجة طالب";
+            this.btn_std_go.Click += new System.EventHandler(this.btn_std_go_Click);
             // 
             // btn_
             // 
@@ -627,16 +694,18 @@ namespace CCTT
             this.txt_username,
             this.txt_role,
             this.btn_logout,
-            this.lb_xxx});
+            this.lb_xxx,
+            this.barStaticItem1});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1190, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1233, 31);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.txt_username);
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.txt_role);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barStaticItem1);
             // 
             // lb_state
             // 
@@ -656,7 +725,7 @@ namespace CCTT
             // txt_username
             // 
             this.txt_username.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.txt_username.Caption = ".............";
+            this.txt_username.Caption = "admin";
             this.txt_username.Id = 0;
             this.txt_username.ItemAppearance.Normal.Font = new System.Drawing.Font("29LT Bukra Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.ItemAppearance.Normal.Options.UseFont = true;
@@ -687,6 +756,14 @@ namespace CCTT
             this.lb_xxx.ItemAppearance.Normal.Options.UseFont = true;
             this.lb_xxx.Name = "lb_xxx";
             // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Caption = "منضومة الدرسة والامتحانات الخاصة بالدورات والدبلوم التخصصي";
+            this.barStaticItem1.Id = 5;
+            this.barStaticItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("LBC", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barStaticItem1.ItemAppearance.Normal.Options.UseFont = true;
+            this.barStaticItem1.Name = "barStaticItem1";
+            // 
             // fluentFormDefaultManager1
             // 
             this.fluentFormDefaultManager1.DockingEnabled = false;
@@ -695,8 +772,9 @@ namespace CCTT
             this.txt_username,
             this.txt_role,
             this.btn_logout,
-            this.lb_xxx});
-            this.fluentFormDefaultManager1.MaxItemId = 5;
+            this.lb_xxx,
+            this.barStaticItem1});
+            this.fluentFormDefaultManager1.MaxItemId = 6;
             // 
             // accordionControlElement8
             // 
@@ -713,6 +791,24 @@ namespace CCTT
             this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement8.Text = "المقرارت الدراسية";
             // 
+            // btn_efad_dwrat
+            // 
+            this.btn_efad_dwrat.Appearance.Hovered.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_efad_dwrat.Appearance.Hovered.Options.UseFont = true;
+            this.btn_efad_dwrat.Appearance.Normal.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_efad_dwrat.Appearance.Normal.Options.UseFont = true;
+            this.btn_efad_dwrat.Appearance.Pressed.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_efad_dwrat.Appearance.Pressed.Options.UseFont = true;
+            this.btn_efad_dwrat.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.btn_efad_dwrat.Name = "btn_efad_dwrat";
+            this.btn_efad_dwrat.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_efad_dwrat.Text = "ايفاد دورات    ";
+            this.btn_efad_dwrat.Click += new System.EventHandler(this.btn_efad_dwrat_Click);
+            // 
             // Main
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -720,7 +816,7 @@ namespace CCTT
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1190, 771);
+            this.ClientSize = new System.Drawing.Size(1233, 771);
             this.ControlContainer = this.pn_container;
             this.Controls.Add(this.pn_container);
             this.Controls.Add(this.accordionControl1);
@@ -734,8 +830,8 @@ namespace CCTT
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CCTT";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             this.fluentDesignFormControl1.ResumeLayout(false);
@@ -784,6 +880,11 @@ namespace CCTT
         public DevExpress.XtraBars.Navigation.AccordionControlElement btn_user_management;
         public DevExpress.XtraBars.BarStaticItem txt_username;
         public DevExpress.XtraBars.BarStaticItem txt_role;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btn_basc_data;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btn_std_go;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btn_efad_dwrat;
     }
 }
 

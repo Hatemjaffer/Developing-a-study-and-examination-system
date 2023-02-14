@@ -278,7 +278,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("29LT Bukra", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(160, 265);
+            this.label4.Location = new System.Drawing.Point(213, 265);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 20);
             this.label4.TabIndex = 6;
@@ -336,11 +336,11 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("29LT Bukra Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(160, 20);
+            this.label1.Location = new System.Drawing.Point(213, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 20);
+            this.label1.Size = new System.Drawing.Size(48, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = "مكان الميلاد";
+            this.label1.Text = "عنوان";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txt_brit_site
@@ -349,7 +349,7 @@
             this.txt_brit_site.Font = new System.Drawing.Font("LBC", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_brit_site.Location = new System.Drawing.Point(3, 18);
             this.txt_brit_site.Name = "txt_brit_site";
-            this.txt_brit_site.Size = new System.Drawing.Size(151, 24);
+            this.txt_brit_site.Size = new System.Drawing.Size(204, 24);
             this.txt_brit_site.TabIndex = 0;
             this.txt_brit_site.Enter += new System.EventHandler(this.txt_nationality_Enter);
             this.txt_brit_site.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nationality_KeyPress);
@@ -383,7 +383,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "أماكن الميلاد";
+            this.Text = "اماكن الميلاد";
             this.TopMost = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Page_nationality_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

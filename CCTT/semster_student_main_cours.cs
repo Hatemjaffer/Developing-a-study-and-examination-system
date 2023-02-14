@@ -21,6 +21,9 @@ namespace CCTT
         public Nullable<int> halfe_grade { get; set; }
         public Nullable<int> final_grade { get; set; }
         public Nullable<int> state_rate { get; set; }
+        public Nullable<int> lab_final { get; set; }
+        public Nullable<int> rate { get; set; }
+        public Nullable<int> unit { get; set; }
     
         public virtual main_course main_course { get; set; }
         public virtual semster_student semster_student { get; set; }

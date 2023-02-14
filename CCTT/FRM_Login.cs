@@ -108,6 +108,7 @@ namespace CCTT.AddPage
                        // if (add.permioi_type == "مستخدم") // تحتاج تحويل لان حقل هذا int
                        // {
                             //  main.ٍbtn.....Visible = false;
+
                        // }
                         // ادا كان مدير
 
@@ -118,8 +119,11 @@ namespace CCTT.AddPage
                         db.Entry(add).State = System.Data.Entity.EntityState.Modified;
 
 
-                      //  main.txt_username.Text = add.name;
-                      //  main.txt_role.Text = add.permioi_type;
+
+                        main.txt_username.Caption = add.name;
+
+                       // main.txt_role.Caption = add.permioi_type;
+
                         db.SaveChanges();
                         main.Show();
                         Hide();
@@ -142,6 +146,18 @@ namespace CCTT.AddPage
 
 
 
+        }
+
+        private void text_Name_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

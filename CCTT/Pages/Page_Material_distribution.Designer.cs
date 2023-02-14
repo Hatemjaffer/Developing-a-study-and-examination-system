@@ -39,10 +39,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_print = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_update = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_edt_click = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Add = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_update = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tableLayoutPanel1.SuspendLayout();
@@ -62,10 +60,11 @@
             this.tableLayoutPanel1.Controls.Add(this.gridControl1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1223, 720);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1427, 886);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -82,7 +81,8 @@
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 11);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(893, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1041, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 14;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -96,10 +96,10 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(327, 714);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(383, 878);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // txt_Matter
@@ -111,10 +111,11 @@
             this.txt_Matter.FormattingEnabled = true;
             this.txt_Matter.Items.AddRange(new object[] {
             ""});
-            this.txt_Matter.Location = new System.Drawing.Point(3, 3);
+            this.txt_Matter.Location = new System.Drawing.Point(3, 4);
+            this.txt_Matter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Matter.Name = "txt_Matter";
             this.txt_Matter.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txt_Matter.Size = new System.Drawing.Size(194, 24);
+            this.txt_Matter.Size = new System.Drawing.Size(218, 29);
             this.txt_Matter.TabIndex = 0;
             this.txt_Matter.Enter += new System.EventHandler(this.txt_Matter_Enter);
             this.txt_Matter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Matter_KeyDown);
@@ -129,10 +130,11 @@
             this.txt_department.FormattingEnabled = true;
             this.txt_department.Items.AddRange(new object[] {
             ""});
-            this.txt_department.Location = new System.Drawing.Point(3, 33);
+            this.txt_department.Location = new System.Drawing.Point(3, 41);
+            this.txt_department.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_department.Name = "txt_department";
             this.txt_department.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txt_department.Size = new System.Drawing.Size(194, 24);
+            this.txt_department.Size = new System.Drawing.Size(218, 29);
             this.txt_department.TabIndex = 1;
             this.txt_department.TextChanged += new System.EventHandler(this.txt_department_TextChanged);
             this.txt_department.Enter += new System.EventHandler(this.txt_department_Enter);
@@ -148,10 +150,11 @@
             this.txt_semster.FormattingEnabled = true;
             this.txt_semster.Items.AddRange(new object[] {
             ""});
-            this.txt_semster.Location = new System.Drawing.Point(3, 63);
+            this.txt_semster.Location = new System.Drawing.Point(3, 78);
+            this.txt_semster.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_semster.Name = "txt_semster";
             this.txt_semster.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txt_semster.Size = new System.Drawing.Size(194, 24);
+            this.txt_semster.Size = new System.Drawing.Size(218, 29);
             this.txt_semster.TabIndex = 2;
             this.txt_semster.Enter += new System.EventHandler(this.txt_semster_Enter);
             this.txt_semster.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Matter_KeyDown);
@@ -162,9 +165,9 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("29LT Bukra Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(203, 65);
+            this.label3.Location = new System.Drawing.Point(227, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 20);
+            this.label3.Size = new System.Drawing.Size(153, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "الفصل الدراسية";
             // 
@@ -173,9 +176,9 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("29LT Bukra Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(203, 5);
+            this.label5.Location = new System.Drawing.Point(227, 6);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 20);
+            this.label5.Size = new System.Drawing.Size(67, 25);
             this.label5.TabIndex = 6;
             this.label5.Text = "المادة";
             // 
@@ -184,9 +187,9 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("29LT Bukra Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(203, 35);
+            this.label6.Location = new System.Drawing.Point(227, 43);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 20);
+            this.label6.Size = new System.Drawing.Size(67, 25);
             this.label6.TabIndex = 6;
             this.label6.Text = "قسم";
             // 
@@ -195,21 +198,20 @@
             this.tableLayoutPanel4.ColumnCount = 5;
             this.tableLayoutPanel2.SetColumnSpan(this.tableLayoutPanel4, 2);
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 61F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
             this.tableLayoutPanel4.Controls.Add(this.btn_print, 4, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btn_delete, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btn_update, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btn_edt_click, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btn_Add, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btn_update, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 93);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 115);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(321, 76);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(377, 81);
             this.tableLayoutPanel4.TabIndex = 21;
             // 
             // btn_print
@@ -219,50 +221,13 @@
             this.btn_print.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_print.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_print.ImageOptions.Image")));
             this.btn_print.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btn_print.Location = new System.Drawing.Point(3, 3);
+            this.btn_print.Location = new System.Drawing.Point(3, 4);
+            this.btn_print.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_print.Name = "btn_print";
-            this.btn_print.Size = new System.Drawing.Size(56, 70);
+            this.btn_print.Size = new System.Drawing.Size(99, 73);
             this.btn_print.TabIndex = 5;
             this.btn_print.Text = "طباعة";
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Appearance.Options.UseFont = true;
-            this.btn_delete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.ImageOptions.Image")));
-            this.btn_delete.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btn_delete.Location = new System.Drawing.Point(127, 3);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(55, 70);
-            this.btn_delete.TabIndex = 3;
-            this.btn_delete.Text = "حدف";
-            // 
-            // btn_update
-            // 
-            this.btn_update.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.Appearance.Options.UseFont = true;
-            this.btn_update.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_update.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.ImageOptions.Image")));
-            this.btn_update.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btn_update.Location = new System.Drawing.Point(65, 3);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(56, 70);
-            this.btn_update.TabIndex = 4;
-            this.btn_update.Text = "تحديث";
-            // 
-            // btn_edt_click
-            // 
-            this.btn_edt_click.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edt_click.Appearance.Options.UseFont = true;
-            this.btn_edt_click.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_edt_click.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_edt_click.ImageOptions.Image")));
-            this.btn_edt_click.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btn_edt_click.Location = new System.Drawing.Point(188, 3);
-            this.btn_edt_click.Name = "btn_edt_click";
-            this.btn_edt_click.Size = new System.Drawing.Size(54, 70);
-            this.btn_edt_click.TabIndex = 2;
-            this.btn_edt_click.Text = "تعديل";
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
             // btn_Add
             // 
@@ -271,20 +236,38 @@
             this.btn_Add.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Add.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.ImageOptions.Image")));
             this.btn_Add.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btn_Add.Location = new System.Drawing.Point(248, 3);
+            this.btn_Add.Location = new System.Drawing.Point(247, 4);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(70, 70);
+            this.btn_Add.Size = new System.Drawing.Size(127, 73);
             this.btn_Add.TabIndex = 0;
             this.btn_Add.Text = "اضافة";
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
+            // btn_update
+            // 
+            this.btn_update.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update.Appearance.Options.UseFont = true;
+            this.btn_update.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_update.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.ImageOptions.Image")));
+            this.btn_update.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btn_update.Location = new System.Drawing.Point(116, 4);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(117, 73);
+            this.btn_update.TabIndex = 4;
+            this.btn_update.Text = "تحديث";
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(3, 3);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl1.Location = new System.Drawing.Point(3, 4);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(884, 714);
+            this.gridControl1.Size = new System.Drawing.Size(1032, 878);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -432,6 +415,7 @@
             this.gridView1.Appearance.ViewCaption.Options.UseTextOptions = true;
             this.gridView1.Appearance.ViewCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.ViewCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gridView1.Name = "gridView1";
@@ -445,12 +429,13 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Page_Material_distribution";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Size = new System.Drawing.Size(1223, 720);
+            this.Size = new System.Drawing.Size(1427, 886);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -469,9 +454,7 @@
         private System.Windows.Forms.ComboBox txt_Matter;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private DevExpress.XtraEditors.SimpleButton btn_print;
-        private DevExpress.XtraEditors.SimpleButton btn_delete;
         private DevExpress.XtraEditors.SimpleButton btn_update;
-        private DevExpress.XtraEditors.SimpleButton btn_edt_click;
         private DevExpress.XtraEditors.SimpleButton btn_Add;
         private System.Windows.Forms.ComboBox txt_department;
         private DevExpress.XtraGrid.GridControl gridControl1;

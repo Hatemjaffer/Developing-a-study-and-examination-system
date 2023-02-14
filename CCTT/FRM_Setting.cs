@@ -29,14 +29,17 @@ namespace CCTT
 
         }
 
-        private void Set_Setting()
+        public void Set_Setting()
         {
-            var collogename = Properties.Settings.Default.colloge_name;
-            var presidentname = Properties.Settings.Default.president_name;
-            var publicrecorder = Properties.Settings.Default.public_recorder;
+            var collogename = Properties.Settings.Default.colloge_name;//اسم كلية
+            var presidentname = Properties.Settings.Default.president_name;//اسم عميد
+            var coursesdepartment = Properties.Settings.Default.courses_department;//رئيس قسم دورات
+            var developmeny_manager = Properties.Settings.Default.developmeny_manager;//مدير تنمية الموارد
+
             txt_colloge_name.Text = collogename;
             txt_president_name.Text = presidentname;
-            txt_public_recorder.Text = publicrecorder;
+            txt_courese_dep.Text = coursesdepartment;
+            txt_developmeny_manager.Text = developmeny_manager;
 
             try
             {
@@ -52,9 +55,10 @@ namespace CCTT
 
         private void Save_Setting()
         {
-            Properties.Settings.Default.colloge_name = txt_colloge_name.Text;
-            Properties.Settings.Default.president_name = txt_president_name.Text;
-            Properties.Settings.Default.public_recorder = txt_public_recorder.Text;
+            Properties.Settings.Default.colloge_name = txt_colloge_name.Text;//اسم كلية
+            Properties.Settings.Default.president_name = txt_president_name.Text;//اسم العميد
+            Properties.Settings.Default.courses_department = txt_courese_dep.Text;//رئيس قسم دورات
+            Properties.Settings.Default.developmeny_manager = txt_developmeny_manager.Text;//مدير تنمية الموارد
 
             try
             {

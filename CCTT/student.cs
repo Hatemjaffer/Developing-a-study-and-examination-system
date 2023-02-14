@@ -26,7 +26,7 @@ namespace CCTT
         public Nullable<int> gender { get; set; }
         public Nullable<int> nationality { get; set; }
         public string place_of_birth { get; set; }
-        public Nullable<int> national_num { get; set; }
+        public Nullable<long> national_num { get; set; }
         public Nullable<int> phone_num { get; set; }
         public Nullable<int> parent_phone_num { get; set; }
         public string email { get; set; }
@@ -48,12 +48,14 @@ namespace CCTT
         public Nullable<int> state_sem { get; set; }
         public Nullable<int> state_id { get; set; }
         public Nullable<int> idColge { get; set; }
+        public byte[] image { get; set; }
+        public string student_search { get; set; }
     
         public virtual nationality nationality1 { get; set; }
         public virtual Semester Semester1 { get; set; }
         public virtual Semester Semester2 { get; set; }
-        public virtual study_Group study_Group1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<semster_student> semster_student { get; set; }
+        public virtual study_Group study_Group1 { get; set; }
     }
 }

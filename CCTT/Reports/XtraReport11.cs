@@ -6,9 +6,9 @@ using DevExpress.XtraReports.UI;
 
 namespace CCTT.Reports
 {
-    public partial class XtraReport6 : DevExpress.XtraReports.UI.XtraReport
+    public partial class XtraReport11 : DevExpress.XtraReports.UI.XtraReport
     {
-        public XtraReport6()
+        public XtraReport11()
         {
             InitializeComponent();
         }

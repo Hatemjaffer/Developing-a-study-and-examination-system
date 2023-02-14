@@ -61,12 +61,19 @@ namespace CCTT.Pages
             {
 
                 tbYear.season = txt_stadyyear_yeartype.SelectedItem.ToString();
-                if (txt_stady_year_year.Text != "")
-                {
+                
                 tbYear.year1 = Convert.ToInt32(txt_stady_year_year.Text);
                 tbYear.year_serch = txt_stadyyear_yeartype.SelectedItem.ToString()
                 +" "+txt_stady_year_year.Text;
-                }
+
+                int idcolg= Convert.ToInt32(txt_stady_year_year.Text);
+                idcolg = idcolg % 100;
+                if(txt_stadyyear_yeartype.SelectedItem.ToString() == "ربيعي")
+                idcolg = (idcolg *10+1)*1000;
+                if (txt_stadyyear_yeartype.SelectedItem.ToString() == "خريفي")
+                idcolg = (idcolg * 10 + 2) * 1000+1;
+
+                tbYear.idcolge = idcolg;
                 db.Entry(tbYear).State = System.Data.Entity.EntityState.Added;
                 db.SaveChanges();
                 MessageBox.Show("تمت الاضافة بنجاح", "اضافة");
@@ -149,6 +156,7 @@ namespace CCTT.Pages
         }
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
+            txt_stadyyear_yearcode.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "idcolge").ToString();
             txt_stadyyear_yeartype.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "season").ToString();
             txt_stady_year_year.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "year1").ToString();
 

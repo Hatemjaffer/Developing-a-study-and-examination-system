@@ -35,19 +35,21 @@ namespace CCTT
         public virtual DbSet<major> major { get; set; }
         public virtual DbSet<qualification> qualification { get; set; }
         public virtual DbSet<Trainer> Trainer { get; set; }
-        public virtual DbSet<Faculty_member> Faculty_member { get; set; }
         public virtual DbSet<main_course> main_course { get; set; }
         public virtual DbSet<study_Group> study_Group { get; set; }
-        public virtual DbSet<student> students { get; set; }
         public virtual DbSet<num_semster> num_semster { get; set; }
         public virtual DbSet<main_course_rel_semster> main_course_rel_semster { get; set; }
         public virtual DbSet<semster_student> semster_student { get; set; }
         public virtual DbSet<semster_student_main_cours> semster_student_main_cours { get; set; }
         public virtual DbSet<affiliated_entity> affiliated_entity { get; set; }
         public virtual DbSet<course_student> course_student { get; set; }
-        public virtual DbSet<extra_Course> extra_Course { get; set; }
         public virtual DbSet<permission> permissions { get; set; }
         public virtual DbSet<user> users { get; set; }
+        public virtual DbSet<place_of_birth> place_of_birth { get; set; }
+        public virtual DbSet<student> students { get; set; }
+        public virtual DbSet<Faculty_member> Faculty_member { get; set; }
+        public virtual DbSet<extra_Course> extra_Course { get; set; }
+        public virtual DbSet<Course_inStudent> Course_inStudent { get; set; }
     
         public virtual ObjectResult<StloadDataPage_Semester_Result> StloadDataPage_Semester()
         {
@@ -214,6 +216,347 @@ namespace CCTT
                 new ObjectParameter("main_cours_id", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_main_cours_student_grade1_Result>("get_main_cours_student_grade1", year_idParameter, main_cours_idParameter);
+        }
+    
+        public virtual ObjectResult<getnationality_Result> getnationality()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getnationality_Result>("getnationality");
+        }
+    
+        public virtual ObjectResult<get_student_idcollge_Result> get_student_idcollge()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_student_idcollge_Result>("get_student_idcollge");
+        }
+    
+        public virtual ObjectResult<string> get_student_idcollge1()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("get_student_idcollge1");
+        }
+    
+        public virtual ObjectResult<string> get_student_idcollge2()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("get_student_idcollge2");
+        }
+    
+        public virtual ObjectResult<string> get_student_idcollge5()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("get_student_idcollge5");
+        }
+    
+        public virtual ObjectResult<student_idcollge_Result> student_idcollge()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<student_idcollge_Result>("student_idcollge");
+        }
+    
+        public virtual int idCollgeinsert(Nullable<int> id_student, Nullable<int> year_id)
+        {
+            var id_studentParameter = id_student.HasValue ?
+                new ObjectParameter("id_student", id_student) :
+                new ObjectParameter("id_student", typeof(int));
+    
+            var year_idParameter = year_id.HasValue ?
+                new ObjectParameter("year_id", year_id) :
+                new ObjectParameter("year_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("idCollgeinsert", id_studentParameter, year_idParameter);
+        }
+    
+        public virtual ObjectResult<getMainCours_Result> getMainCours()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getMainCours_Result>("getMainCours");
+        }
+    
+        public virtual int checksemster_student(Nullable<int> id_student, Nullable<int> year_id)
+        {
+            var id_studentParameter = id_student.HasValue ?
+                new ObjectParameter("id_student", id_student) :
+                new ObjectParameter("id_student", typeof(int));
+    
+            var year_idParameter = year_id.HasValue ?
+                new ObjectParameter("year_id", year_id) :
+                new ObjectParameter("year_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("checksemster_student", id_studentParameter, year_idParameter);
+        }
+    
+        public virtual ObjectResult<get_main_cours_student_grade2_Result> get_main_cours_student_grade2(Nullable<int> year_id, Nullable<int> main_cours_id)
+        {
+            var year_idParameter = year_id.HasValue ?
+                new ObjectParameter("year_id", year_id) :
+                new ObjectParameter("year_id", typeof(int));
+    
+            var main_cours_idParameter = main_cours_id.HasValue ?
+                new ObjectParameter("main_cours_id", main_cours_id) :
+                new ObjectParameter("main_cours_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_main_cours_student_grade2_Result>("get_main_cours_student_grade2", year_idParameter, main_cours_idParameter);
+        }
+    
+        public virtual ObjectResult<get_main_cours_student_grade3_Result> get_main_cours_student_grade3(Nullable<int> year_id, Nullable<int> main_cours_id)
+        {
+            var year_idParameter = year_id.HasValue ?
+                new ObjectParameter("year_id", year_id) :
+                new ObjectParameter("year_id", typeof(int));
+    
+            var main_cours_idParameter = main_cours_id.HasValue ?
+                new ObjectParameter("main_cours_id", main_cours_id) :
+                new ObjectParameter("main_cours_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_main_cours_student_grade3_Result>("get_main_cours_student_grade3", year_idParameter, main_cours_idParameter);
+        }
+    
+        public virtual int cheak_main_cours_lab(Nullable<int> main_id)
+        {
+            var main_idParameter = main_id.HasValue ?
+                new ObjectParameter("main_id", main_id) :
+                new ObjectParameter("main_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("cheak_main_cours_lab", main_idParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> cheak_main_cours_lab1(Nullable<int> main_id)
+        {
+            var main_idParameter = main_id.HasValue ?
+                new ObjectParameter("main_id", main_id) :
+                new ObjectParameter("main_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("cheak_main_cours_lab1", main_idParameter);
+        }
+    
+        public virtual ObjectResult<getUser_Result> getUser()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getUser_Result>("getUser");
+        }
+    
+        public virtual ObjectResult<getStudent_Result> getStudent()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getStudent_Result>("getStudent");
+        }
+    
+        public virtual ObjectResult<Nullable<int>> cheak_main_cours_lab2(Nullable<int> main_id)
+        {
+            var main_idParameter = main_id.HasValue ?
+                new ObjectParameter("main_id", main_id) :
+                new ObjectParameter("main_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("cheak_main_cours_lab2", main_idParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> cheak_main_cours_lab3(Nullable<int> main_id)
+        {
+            var main_idParameter = main_id.HasValue ?
+                new ObjectParameter("main_id", main_id) :
+                new ObjectParameter("main_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("cheak_main_cours_lab3", main_idParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> cheak_main_cours_lab5(Nullable<int> main_id)
+        {
+            var main_idParameter = main_id.HasValue ?
+                new ObjectParameter("main_id", main_id) :
+                new ObjectParameter("main_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("cheak_main_cours_lab5", main_idParameter);
+        }
+    
+        public virtual int tbl_insert_semster_student_main_cours_grade2(Nullable<int> id, Nullable<int> final_only, Nullable<int> halfe_grade, Nullable<int> lab_final, Nullable<int> final_grade, Nullable<int> state_rate)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var final_onlyParameter = final_only.HasValue ?
+                new ObjectParameter("final_only", final_only) :
+                new ObjectParameter("final_only", typeof(int));
+    
+            var halfe_gradeParameter = halfe_grade.HasValue ?
+                new ObjectParameter("halfe_grade", halfe_grade) :
+                new ObjectParameter("halfe_grade", typeof(int));
+    
+            var lab_finalParameter = lab_final.HasValue ?
+                new ObjectParameter("lab_final", lab_final) :
+                new ObjectParameter("lab_final", typeof(int));
+    
+            var final_gradeParameter = final_grade.HasValue ?
+                new ObjectParameter("final_grade", final_grade) :
+                new ObjectParameter("final_grade", typeof(int));
+    
+            var state_rateParameter = state_rate.HasValue ?
+                new ObjectParameter("state_rate", state_rate) :
+                new ObjectParameter("state_rate", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("tbl_insert_semster_student_main_cours_grade2", idParameter, final_onlyParameter, halfe_gradeParameter, lab_finalParameter, final_gradeParameter, state_rateParameter);
+        }
+    
+        public virtual int tbl_insert_semster_student_main_cours_grade3(Nullable<int> id, Nullable<int> final_only, Nullable<int> halfe_grade, Nullable<int> lab_final, Nullable<int> final_grade, Nullable<int> state_rate, Nullable<int> rate)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var final_onlyParameter = final_only.HasValue ?
+                new ObjectParameter("final_only", final_only) :
+                new ObjectParameter("final_only", typeof(int));
+    
+            var halfe_gradeParameter = halfe_grade.HasValue ?
+                new ObjectParameter("halfe_grade", halfe_grade) :
+                new ObjectParameter("halfe_grade", typeof(int));
+    
+            var lab_finalParameter = lab_final.HasValue ?
+                new ObjectParameter("lab_final", lab_final) :
+                new ObjectParameter("lab_final", typeof(int));
+    
+            var final_gradeParameter = final_grade.HasValue ?
+                new ObjectParameter("final_grade", final_grade) :
+                new ObjectParameter("final_grade", typeof(int));
+    
+            var state_rateParameter = state_rate.HasValue ?
+                new ObjectParameter("state_rate", state_rate) :
+                new ObjectParameter("state_rate", typeof(int));
+    
+            var rateParameter = rate.HasValue ?
+                new ObjectParameter("rate", rate) :
+                new ObjectParameter("rate", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("tbl_insert_semster_student_main_cours_grade3", idParameter, final_onlyParameter, halfe_gradeParameter, lab_finalParameter, final_gradeParameter, state_rateParameter, rateParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> checksemster_student10(Nullable<int> id_student, Nullable<int> year_id)
+        {
+            var id_studentParameter = id_student.HasValue ?
+                new ObjectParameter("id_student", id_student) :
+                new ObjectParameter("id_student", typeof(int));
+    
+            var year_idParameter = year_id.HasValue ?
+                new ObjectParameter("year_id", year_id) :
+                new ObjectParameter("year_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("checksemster_student10", id_studentParameter, year_idParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> checksemster_student11(Nullable<int> id_student, Nullable<int> year_id)
+        {
+            var id_studentParameter = id_student.HasValue ?
+                new ObjectParameter("id_student", id_student) :
+                new ObjectParameter("id_student", typeof(int));
+    
+            var year_idParameter = year_id.HasValue ?
+                new ObjectParameter("year_id", year_id) :
+                new ObjectParameter("year_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("checksemster_student11", id_studentParameter, year_idParameter);
+        }
+    
+        public virtual ObjectResult<getStudentsemByDbSemnum_Result> getStudentsemByDbSemnum(Nullable<int> dep_id, Nullable<int> sem_num)
+        {
+            var dep_idParameter = dep_id.HasValue ?
+                new ObjectParameter("dep_id", dep_id) :
+                new ObjectParameter("dep_id", typeof(int));
+    
+            var sem_numParameter = sem_num.HasValue ?
+                new ObjectParameter("sem_num", sem_num) :
+                new ObjectParameter("sem_num", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getStudentsemByDbSemnum_Result>("getStudentsemByDbSemnum", dep_idParameter, sem_numParameter);
+        }
+    
+        public virtual ObjectResult<getStudentsemByDbSemnum1_Result> getStudentsemByDbSemnum1(Nullable<int> dep_id, Nullable<int> sem_num)
+        {
+            var dep_idParameter = dep_id.HasValue ?
+                new ObjectParameter("dep_id", dep_id) :
+                new ObjectParameter("dep_id", typeof(int));
+    
+            var sem_numParameter = sem_num.HasValue ?
+                new ObjectParameter("sem_num", sem_num) :
+                new ObjectParameter("sem_num", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getStudentsemByDbSemnum1_Result>("getStudentsemByDbSemnum1", dep_idParameter, sem_numParameter);
+        }
+    
+        public virtual ObjectResult<string> getStudentsemByDbSemnum2(Nullable<int> dep_id, Nullable<int> sem_num)
+        {
+            var dep_idParameter = dep_id.HasValue ?
+                new ObjectParameter("dep_id", dep_id) :
+                new ObjectParameter("dep_id", typeof(int));
+    
+            var sem_numParameter = sem_num.HasValue ?
+                new ObjectParameter("sem_num", sem_num) :
+                new ObjectParameter("sem_num", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("getStudentsemByDbSemnum2", dep_idParameter, sem_numParameter);
+        }
+    
+        public virtual int rate_calculation(Nullable<int> year_id, Nullable<int> stu_id)
+        {
+            var year_idParameter = year_id.HasValue ?
+                new ObjectParameter("year_id", year_id) :
+                new ObjectParameter("year_id", typeof(int));
+    
+            var stu_idParameter = stu_id.HasValue ?
+                new ObjectParameter("stu_id", stu_id) :
+                new ObjectParameter("stu_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("rate_calculation", year_idParameter, stu_idParameter);
+        }
+    
+        public virtual ObjectResult<get_main_cours_student_report_Result> get_main_cours_student_report(Nullable<int> std_id, Nullable<int> year)
+        {
+            var std_idParameter = std_id.HasValue ?
+                new ObjectParameter("std_id", std_id) :
+                new ObjectParameter("std_id", typeof(int));
+    
+            var yearParameter = year.HasValue ?
+                new ObjectParameter("year", year) :
+                new ObjectParameter("year", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_main_cours_student_report_Result>("get_main_cours_student_report", std_idParameter, yearParameter);
+        }
+    
+        public virtual ObjectResult<get_main_cours_studentV1_Result> get_main_cours_studentV1(Nullable<int> std_id)
+        {
+            var std_idParameter = std_id.HasValue ?
+                new ObjectParameter("std_id", std_id) :
+                new ObjectParameter("std_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_main_cours_studentV1_Result>("get_main_cours_studentV1", std_idParameter);
+        }
+    
+        public virtual ObjectResult<getMainCoursV1_Result> getMainCoursV1()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getMainCoursV1_Result>("getMainCoursV1");
+        }
+    
+        public virtual ObjectResult<getMainCoursV2_Result> getMainCoursV2()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getMainCoursV2_Result>("getMainCoursV2");
+        }
+    
+        public virtual ObjectResult<get_main_cours_studentV2_Result> get_main_cours_studentV2(Nullable<int> std, Nullable<int> year_id)
+        {
+            var stdParameter = std.HasValue ?
+                new ObjectParameter("std", std) :
+                new ObjectParameter("std", typeof(int));
+    
+            var year_idParameter = year_id.HasValue ?
+                new ObjectParameter("year_id", year_id) :
+                new ObjectParameter("year_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_main_cours_studentV2_Result>("get_main_cours_studentV2", stdParameter, year_idParameter);
+        }
+    
+        public virtual ObjectResult<result_Result> result()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<result_Result>("result");
+        }
+    
+        public virtual ObjectResult<string> getMainBysemseter(Nullable<int> semid)
+        {
+            var semidParameter = semid.HasValue ?
+                new ObjectParameter("semid", semid) :
+                new ObjectParameter("semid", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("getMainBysemseter", semidParameter);
         }
     }
 }

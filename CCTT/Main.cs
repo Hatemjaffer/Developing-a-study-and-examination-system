@@ -163,8 +163,8 @@ namespace CCTT
 
         private void btn_report_Click(object sender, EventArgs e)
         {
-            //lb_state.Text = btn_report.Text;
-           // lb_state.Visible = true;
+            lb_state.Text = btn_report.Text;
+            lb_state.Visible = true;
         }
 
         private void btn_add_coures_Click(object sender, EventArgs e)
@@ -187,7 +187,7 @@ namespace CCTT
 
         private void btn_course_Click(object sender, EventArgs e)
         {
-            lb_state.Text = btn_logou.Text;
+            lb_state.Text = btn_course.Text;
             lb_state.Visible = true;
         }
 
@@ -225,7 +225,52 @@ namespace CCTT
 
         private void btn__Click(object sender, EventArgs e)
         {
+            Page_Std_efad page = new Page_Std_efad();
+            LoadPage(page);
+            lb_state.Text = btn_.Text;
+            lb_state.Visible = true;
+        }
 
+       
+
+        private void btn_basc_data_Click(object sender, EventArgs e)
+        {
+            lb_state.Text = btn_basc_data.Text;
+            lb_state.Visible = true;
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_std_go_Click(object sender, EventArgs e)
+        {
+            Page__StudentGrad page = new Page__StudentGrad();
+            LoadPage(page);
+            lb_state.Text = btn_std_go.Text;
+            lb_state.Visible = true;
+        }
+
+        private void accordionControlElement5_Click(object sender, EventArgs e)
+        {
+            Page_Payments page = new Page_Payments();
+            LoadPage(page);
+            lb_state.Text = accordionControlElement5.Text;
+            lb_state.Visible = true;
+        }
+
+        private void btn_grades_course_Click(object sender, EventArgs e)
+        {
+            Page_std_cou_grads page = new Page_std_cou_grads();
+            LoadPage(page);
+            lb_state.Text = btn_grades_course.Text;
+            lb_state.Visible = true;
+        }
+
+        private void btn_efad_dwrat_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

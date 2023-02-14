@@ -153,17 +153,18 @@ namespace CCTT.Pages
 
         private void btn_print_Click(object sender, EventArgs e)
         {
-            XtraReport9 report4 = new XtraReport9();
+            gridControl1.ShowPrintPreview();
+           // XtraReport9 report4 = new XtraReport9();
             // report4.Parameters.
             //   report4.RequestParameters = false;
             
-            report4.Parameters["@year_id"].Value = 2;
-            report4.Parameters["@main_cours_id"].Value = 7;
+           // report4.Parameters["@year_id"].Value = 2;
+           // report4.Parameters["@main_cours_id"].Value = 7;
             //report4.RequestParameters = false;
             //  report4.Parameters = false;
 
             // report4.
-            report4.ShowPreview();
+           // report4.ShowPreview();
         }
 
         private void txt_dep_department_code_KeyDown(object sender, KeyEventArgs e)

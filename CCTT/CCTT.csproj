@@ -118,6 +118,10 @@
     </Compile>
     <Compile Include="BL\Methods.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Class2xxxxxxxxxxxxxxxxx.cs" />
+    <Compile Include="Course_inStudent.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="course_student.cs">
       <DependentUpon>DB_CCTTModel.tt</DependentUpon>
     </Compile>
@@ -222,10 +226,52 @@
     <Compile Include="FRM_Start.Designer.cs">
       <DependentUpon>FRM_Start.cs</DependentUpon>
     </Compile>
+    <Compile Include="getMainCoursV1_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getMainCoursV2_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getMainCours_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getnationality_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getStudentsemByDbSemnum1_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getStudentsemByDbSemnum_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getStudent_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getUser_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="get_main_cours_studentV1_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="get_main_cours_studentV2_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="get_main_cours_student_grade1_Result.cs">
       <DependentUpon>DB_CCTTModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="get_main_cours_student_grade2_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="get_main_cours_student_grade3_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="get_main_cours_student_report_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="get_main_cours_student_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="get_student_idcollge_Result.cs">
       <DependentUpon>DB_CCTTModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
@@ -252,29 +298,47 @@
     <Compile Include="num_semster.cs">
       <DependentUpon>DB_CCTTModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Form1.cs">
+    <Compile Include="ADD_Folder\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\Form1.Designer.cs">
+    <Compile Include="ADD_Folder\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page_Backup.cs">
+    <Compile Include="ADD_Folder\Page_Backup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\Page_Backup.Designer.cs">
+    <Compile Include="ADD_Folder\Page_Backup.Designer.cs">
       <DependentUpon>Page_Backup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page_Course.cs">
+    <Compile Include="ADD_Folder\Page_Course.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\Page_Course.Designer.cs">
+    <Compile Include="ADD_Folder\Page_Course.Designer.cs">
       <DependentUpon>Page_Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_std_cou_grads.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_std_cou_grads.Designer.cs">
+      <DependentUpon>Page_std_cou_grads.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\Page_grades_Course.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Pages\Page_grades_Course.Designer.cs">
       <DependentUpon>Page_grades_Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Std_efad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_Std_efad.Designer.cs">
+      <DependentUpon>Page_Std_efad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Payments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page_Payments.Designer.cs">
+      <DependentUpon>Page_Payments.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\Page_ID_Student.cs">
       <SubType>UserControl</SubType>
@@ -288,16 +352,16 @@
     <Compile Include="Pages\Page_Material_download.Designer.cs">
       <DependentUpon>Page_Material_download.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page_Home or this.cs">
+    <Compile Include="ADD_Folder\Page_Home or this.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\Page_Home or this.Designer.cs">
+    <Compile Include="ADD_Folder\Page_Home or this.Designer.cs">
       <DependentUpon>Page_Home or this.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page_Home_3.cs">
+    <Compile Include="ADD_Folder\Page_Home_3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\Page_Home_3.Designer.cs">
+    <Compile Include="ADD_Folder\Page_Home_3.Designer.cs">
       <DependentUpon>Page_Home_3.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\Page_grades.cs">
@@ -306,22 +370,22 @@
     <Compile Include="Pages\Page_grades.Designer.cs">
       <DependentUpon>Page_grades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page_Restore.cs">
+    <Compile Include="ADD_Folder\Page_Restore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\Page_Restore.Designer.cs">
+    <Compile Include="ADD_Folder\Page_Restore.Designer.cs">
       <DependentUpon>Page_Restore.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page_test_tetcher.cs">
+    <Compile Include="ADD_Folder\Page_test_tetcher.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Pages\Page_test_tetcher.Designer.cs">
+    <Compile Include="ADD_Folder\Page_test_tetcher.Designer.cs">
       <DependentUpon>Page_test_tetcher.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page__Backup.cs">
+    <Compile Include="ADD_Folder\Page__Backup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages\Page__Backup.Designer.cs">
+    <Compile Include="ADD_Folder\Page__Backup.Designer.cs">
       <DependentUpon>Page__Backup.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\Page_Home.cs">
@@ -390,6 +454,12 @@
     <Compile Include="Pages\Page__Group.Designer.cs">
       <DependentUpon>Page__Group.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Page__StudentGrad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Page__StudentGrad.Designer.cs">
+      <DependentUpon>Page__StudentGrad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Page__Stadyyear.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -402,11 +472,17 @@
     <Compile Include="Pages\Page__Users.Designer.cs">
       <DependentUpon>Page__Users.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages_LinkLable\Page_Address.cs">
+    <Compile Include="Pages\XtraForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pages_LinkLable\Page_Address.Designer.cs">
-      <DependentUpon>Page_Address.cs</DependentUpon>
+    <Compile Include="Pages\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\XtraForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\XtraForm2.Designer.cs">
+      <DependentUpon>XtraForm2.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages_LinkLable\Page_degree.cs">
       <SubType>Form</SubType>
@@ -447,6 +523,9 @@
     <Compile Include="permission.cs">
       <DependentUpon>DB_CCTTModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="place_of_birth.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="qualification.cs">
@@ -458,17 +537,29 @@
     <Compile Include="Reports\XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\XtraReport11.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport11.Designer.cs">
+      <DependentUpon>XtraReport11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport12.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport12.Designer.cs">
+      <DependentUpon>XtraReport12.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReport2.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\XtraReport2.Designer.cs">
       <DependentUpon>XtraReport2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\XtraReport3.cs">
+    <Compile Include="Reports\XtraReport3_Efad.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\XtraReport3.Designer.cs">
-      <DependentUpon>XtraReport3.cs</DependentUpon>
+    <Compile Include="Reports\XtraReport3_Efad.Designer.cs">
+      <DependentUpon>XtraReport3_Efad.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\XtraReport4.cs">
       <SubType>Component</SubType>
@@ -476,17 +567,32 @@
     <Compile Include="Reports\XtraReport4.Designer.cs">
       <DependentUpon>XtraReport4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\XtraReport4_Material.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport4_Material.Designer.cs">
+      <DependentUpon>XtraReport4_Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport3.Designer.cs">
+      <DependentUpon>XtraReport3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReport5.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\XtraReport5.Designer.cs">
       <DependentUpon>XtraReport5.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\XtraReport6.cs">
+    <Compile Include="Reports\XtraReport6_Efad_Course.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\XtraReport6.Designer.cs">
-      <DependentUpon>XtraReport6.cs</DependentUpon>
+    <Compile Include="Reports\XtraReport6_Efad_Course.Designer.cs">
+      <DependentUpon>XtraReport6_Efad_Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="result_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Semester.cs">
       <DependentUpon>DB_CCTTModel.tt</DependentUpon>
@@ -545,6 +651,9 @@
     <Compile Include="student.cs">
       <DependentUpon>DB_CCTTModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="student_idcollge_Result.cs">
+      <DependentUpon>DB_CCTTModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="study_Group.cs">
       <DependentUpon>DB_CCTTModel.tt</DependentUpon>
     </Compile>
@@ -593,17 +702,26 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Form1.resx">
+    <EmbeddedResource Include="ADD_Folder\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Page_BACKUP.resx">
+    <EmbeddedResource Include="ADD_Folder\Page_BACKUP.resx">
       <DependentUpon>Page_Backup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Page_Course.resx">
+    <EmbeddedResource Include="ADD_Folder\Page_Course.resx">
       <DependentUpon>Page_Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_std_cou_grads.resx">
+      <DependentUpon>Page_std_cou_grads.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Page_grades_Course.resx">
       <DependentUpon>Page_grades_Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_Std_efad.resx">
+      <DependentUpon>Page_Std_efad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page_Payments.resx">
+      <DependentUpon>Page_Payments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Page_ID_Student.resx">
       <DependentUpon>Page_ID_Student.cs</DependentUpon>
@@ -611,22 +729,22 @@
     <EmbeddedResource Include="Pages\Page_Material_download.resx">
       <DependentUpon>Page_Material_download.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Page_Home or this.resx">
+    <EmbeddedResource Include="ADD_Folder\Page_Home or this.resx">
       <DependentUpon>Page_Home or this.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Page_Home_3.resx">
+    <EmbeddedResource Include="ADD_Folder\Page_Home_3.resx">
       <DependentUpon>Page_Home_3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Page_grades.resx">
       <DependentUpon>Page_grades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Page_Restore.resx">
+    <EmbeddedResource Include="ADD_Folder\Page_Restore.resx">
       <DependentUpon>Page_Restore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Page_test_tetcher.resx">
+    <EmbeddedResource Include="ADD_Folder\Page_test_tetcher.resx">
       <DependentUpon>Page_test_tetcher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Page__Backup.resx">
+    <EmbeddedResource Include="ADD_Folder\Page__Backup.resx">
       <DependentUpon>Page__Backup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Page_Home.resx">
@@ -662,14 +780,20 @@
     <EmbeddedResource Include="Pages\Page__Group.resx">
       <DependentUpon>Page__Group.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Page__StudentGrad.resx">
+      <DependentUpon>Page__StudentGrad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pages\Page__Stadyyear.resx">
       <DependentUpon>Page__Stadyyear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Page__Users.resx">
       <DependentUpon>Page__Users.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages_LinkLable\Page_Address.resx">
-      <DependentUpon>Page_Address.cs</DependentUpon>
+    <EmbeddedResource Include="Pages\XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\XtraForm2.resx">
+      <DependentUpon>XtraForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages_LinkLable\Page_degree.resx">
       <DependentUpon>Page_degree.cs</DependentUpon>
@@ -703,20 +827,32 @@
     <EmbeddedResource Include="Reports\XtraReport1.resx">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport11.resx">
+      <DependentUpon>XtraReport11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport12.resx">
+      <DependentUpon>XtraReport12.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReport2.resx">
       <DependentUpon>XtraReport2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\XtraReport3.resx">
-      <DependentUpon>XtraReport3.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\XtraReport3_Efad.resx">
+      <DependentUpon>XtraReport3_Efad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReport4.resx">
       <DependentUpon>XtraReport4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport4_Material.resx">
+      <DependentUpon>XtraReport4_Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport3.resx">
+      <DependentUpon>XtraReport3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReport5.resx">
       <DependentUpon>XtraReport5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\XtraReport6.resx">
-      <DependentUpon>XtraReport6.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\XtraReport6_Efad_Course.resx">
+      <DependentUpon>XtraReport6_Efad_Course.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XtraReport9.resx">
       <DependentUpon>XtraReport9.cs</DependentUpon>

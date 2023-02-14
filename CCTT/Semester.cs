@@ -18,9 +18,10 @@ namespace CCTT
         public Semester()
         {
             this.study_Group = new HashSet<study_Group>();
+            this.main_course_rel_semster = new HashSet<main_course_rel_semster>();
             this.students = new HashSet<student>();
             this.students1 = new HashSet<student>();
-            this.main_course_rel_semster = new HashSet<main_course_rel_semster>();
+            this.semster_student = new HashSet<semster_student>();
         }
     
         public int sem_id { get; set; }
@@ -31,12 +32,14 @@ namespace CCTT
         public virtual department department { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<study_Group> study_Group { get; set; }
+        public virtual num_semster num_semster { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<main_course_rel_semster> main_course_rel_semster { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<student> students { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<student> students1 { get; set; }
-        public virtual num_semster num_semster { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<main_course_rel_semster> main_course_rel_semster { get; set; }
+        public virtual ICollection<semster_student> semster_student { get; set; }
     }
 }

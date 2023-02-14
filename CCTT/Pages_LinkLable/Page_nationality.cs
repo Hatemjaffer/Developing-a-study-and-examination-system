@@ -48,12 +48,10 @@ namespace CCTT.Pages_LinkLable
         {
             // Instantiate a new DBContext
             CCTT.DB_CCTTEntities dbContext = new CCTT.DB_CCTTEntities();
-            dbContext.nationality.LoadAsync().ContinueWith(loadTask =>
-            {
+         
                 // Bind data to control when loading complete
-                gridControl1.DataSource = dbContext.nationality.Local.ToBindingList();
-            }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
-            txt_nationality.Select();
+                gridControl1.DataSource = dbContext.getnationality();
+                txt_nationality.Select();
         }
 
         // التاكد من فارغ الدخلات
@@ -187,8 +185,9 @@ namespace CCTT.Pages_LinkLable
             page_Studen.txt_student_nationality.DataSource = db.nationality.Select(x => x.nationilty).ToList();
             page_Teacher.txt_teacher_nationality.DataSource = db.nationality.Select(x => x.nationilty).ToList();
             page_trainers.txt_trainer_specialty.DataSource = db.nationality.Select(x => x.nationilty).ToList();
+            page_Teacher.txt_teacher_nationality.DataSource = db.nationality.Select(x => x.nationilty).ToList();
 
-            
+
         }
 
         private void txt_nationality_Enter(object sender, EventArgs e)

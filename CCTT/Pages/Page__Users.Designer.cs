@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Page__Users));
             this.txt_user_password = new System.Windows.Forms.TextBox();
             this.btn_role = new DevExpress.XtraEditors.SimpleButton();
@@ -45,12 +46,24 @@
             this.btn_edt_click = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Add = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.getUserV1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_CCTTDataSet2 = new CCTT.DB_CCTTDataSet2();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colالرقم = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colالأسم = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colالرمزالسري = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colنوعالصلاحية = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.getUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.getUserTableAdapter = new CCTT.DB_CCTTDataSet2TableAdapters.getUserTableAdapter();
+            this.getUserV1TableAdapter = new CCTT.DB_CCTTDataSet2TableAdapters.getUserV1TableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getUserV1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_CCTTDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getUserBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_user_password
@@ -133,7 +146,8 @@
             this.txt_user_role.Font = new System.Drawing.Font("LBC", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_user_role.FormattingEnabled = true;
             this.txt_user_role.Items.AddRange(new object[] {
-            ""});
+            "مدير",
+            "مستخدم"});
             this.txt_user_role.Location = new System.Drawing.Point(3, 63);
             this.txt_user_role.Name = "txt_user_role";
             this.txt_user_role.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -156,6 +170,7 @@
             this.btn_update.Size = new System.Drawing.Size(59, 67);
             this.btn_update.TabIndex = 4;
             this.btn_update.Text = "تحديث";
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // label4
             // 
@@ -253,6 +268,7 @@
             this.btn_delete.Size = new System.Drawing.Size(56, 67);
             this.btn_delete.TabIndex = 3;
             this.btn_delete.Text = "حدف";
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_edt_click
             // 
@@ -266,6 +282,7 @@
             this.btn_edt_click.Size = new System.Drawing.Size(64, 67);
             this.btn_edt_click.TabIndex = 2;
             this.btn_edt_click.Text = "تعديل";
+            this.btn_edt_click.Click += new System.EventHandler(this.btn_edt_click_Click);
             // 
             // btn_Add
             // 
@@ -283,6 +300,7 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.DataSource = this.getUserV1BindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(3, 3);
             this.gridControl1.MainView = this.gridView1;
@@ -292,149 +310,164 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // getUserV1BindingSource
+            // 
+            this.getUserV1BindingSource.DataMember = "getUserV1";
+            this.getUserV1BindingSource.DataSource = this.dB_CCTTDataSet2;
+            // 
+            // dB_CCTTDataSet2
+            // 
+            this.dB_CCTTDataSet2.DataSetName = "DB_CCTTDataSet2";
+            this.dB_CCTTDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gridView1
             // 
-            this.gridView1.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.ColumnFilterButton.Options.UseFont = true;
             this.gridView1.Appearance.ColumnFilterButton.Options.UseTextOptions = true;
             this.gridView1.Appearance.ColumnFilterButton.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.ColumnFilterButton.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.ColumnFilterButtonActive.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.ColumnFilterButtonActive.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseFont = true;
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseTextOptions = true;
             this.gridView1.Appearance.ColumnFilterButtonActive.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.ColumnFilterButtonActive.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.CustomizationFormHint.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.CustomizationFormHint.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.CustomizationFormHint.Options.UseFont = true;
             this.gridView1.Appearance.CustomizationFormHint.Options.UseTextOptions = true;
             this.gridView1.Appearance.CustomizationFormHint.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.CustomizationFormHint.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.DetailTip.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.DetailTip.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.DetailTip.Options.UseFont = true;
             this.gridView1.Appearance.DetailTip.Options.UseTextOptions = true;
             this.gridView1.Appearance.DetailTip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.DetailTip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.Empty.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.Empty.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.Empty.Options.UseFont = true;
             this.gridView1.Appearance.Empty.Options.UseTextOptions = true;
             this.gridView1.Appearance.Empty.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.Empty.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.EvenRow.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.EvenRow.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.EvenRow.Options.UseFont = true;
             this.gridView1.Appearance.EvenRow.Options.UseTextOptions = true;
             this.gridView1.Appearance.EvenRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.EvenRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.FilterCloseButton.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.FilterCloseButton.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.FilterCloseButton.Options.UseFont = true;
             this.gridView1.Appearance.FilterCloseButton.Options.UseTextOptions = true;
             this.gridView1.Appearance.FilterCloseButton.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.FilterCloseButton.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.FilterPanel.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.FilterPanel.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.FilterPanel.Options.UseFont = true;
             this.gridView1.Appearance.FilterPanel.Options.UseTextOptions = true;
             this.gridView1.Appearance.FilterPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.FilterPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.FixedLine.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.FixedLine.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.FixedLine.Options.UseFont = true;
             this.gridView1.Appearance.FixedLine.Options.UseTextOptions = true;
             this.gridView1.Appearance.FixedLine.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.FixedLine.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.FocusedCell.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.FocusedCell.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.FocusedCell.Options.UseFont = true;
             this.gridView1.Appearance.FocusedCell.Options.UseTextOptions = true;
             this.gridView1.Appearance.FocusedCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.FocusedCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.FocusedRow.Options.UseFont = true;
             this.gridView1.Appearance.FocusedRow.Options.UseTextOptions = true;
             this.gridView1.Appearance.FocusedRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.FocusedRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.FooterPanel.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.FooterPanel.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.FooterPanel.Options.UseFont = true;
             this.gridView1.Appearance.FooterPanel.Options.UseTextOptions = true;
             this.gridView1.Appearance.FooterPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.FooterPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.GroupButton.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.GroupButton.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.GroupButton.Options.UseFont = true;
             this.gridView1.Appearance.GroupButton.Options.UseTextOptions = true;
             this.gridView1.Appearance.GroupButton.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.GroupButton.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.GroupFooter.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.GroupFooter.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.GroupFooter.Options.UseFont = true;
             this.gridView1.Appearance.GroupFooter.Options.UseTextOptions = true;
             this.gridView1.Appearance.GroupFooter.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.GroupFooter.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("LBC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.GroupPanel.Options.UseFont = true;
             this.gridView1.Appearance.GroupPanel.Options.UseTextOptions = true;
             this.gridView1.Appearance.GroupPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.GroupPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.GroupRow.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.GroupRow.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.GroupRow.Options.UseFont = true;
             this.gridView1.Appearance.GroupRow.Options.UseTextOptions = true;
             this.gridView1.Appearance.GroupRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.GroupRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
             this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.HideSelectionRow.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.HideSelectionRow.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.HideSelectionRow.Options.UseFont = true;
             this.gridView1.Appearance.HideSelectionRow.Options.UseTextOptions = true;
             this.gridView1.Appearance.HideSelectionRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.HideSelectionRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.HorzLine.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.HorzLine.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.HorzLine.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridView1.Appearance.HorzLine.Options.UseFont = true;
             this.gridView1.Appearance.HorzLine.Options.UseTextOptions = true;
             this.gridView1.Appearance.HorzLine.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.HorzLine.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.HotTrackedRow.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.HotTrackedRow.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.HotTrackedRow.Options.UseFont = true;
             this.gridView1.Appearance.HotTrackedRow.Options.UseTextOptions = true;
             this.gridView1.Appearance.HotTrackedRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.HotTrackedRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.OddRow.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.OddRow.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.OddRow.Options.UseFont = true;
             this.gridView1.Appearance.OddRow.Options.UseTextOptions = true;
             this.gridView1.Appearance.OddRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.OddRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.Preview.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.Preview.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.Preview.Options.UseFont = true;
             this.gridView1.Appearance.Preview.Options.UseTextOptions = true;
             this.gridView1.Appearance.Preview.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.Preview.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.Row.Options.UseFont = true;
             this.gridView1.Appearance.Row.Options.UseTextOptions = true;
             this.gridView1.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.RowSeparator.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.RowSeparator.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.RowSeparator.Options.UseFont = true;
             this.gridView1.Appearance.RowSeparator.Options.UseTextOptions = true;
             this.gridView1.Appearance.RowSeparator.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.RowSeparator.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.SelectedRow.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.SelectedRow.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.SelectedRow.Options.UseFont = true;
             this.gridView1.Appearance.SelectedRow.Options.UseTextOptions = true;
             this.gridView1.Appearance.SelectedRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.SelectedRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.TopNewRow.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.TopNewRow.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.TopNewRow.Options.UseFont = true;
             this.gridView1.Appearance.TopNewRow.Options.UseTextOptions = true;
             this.gridView1.Appearance.TopNewRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.TopNewRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.VertLine.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.VertLine.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.VertLine.Options.UseFont = true;
             this.gridView1.Appearance.VertLine.Options.UseTextOptions = true;
             this.gridView1.Appearance.VertLine.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.VertLine.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("LBC", 11.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.ViewCaption.Options.UseFont = true;
             this.gridView1.Appearance.ViewCaption.Options.UseTextOptions = true;
             this.gridView1.Appearance.ViewCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.ViewCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colالرقم,
+            this.colالأسم,
+            this.colالرمزالسري,
+            this.colنوعالصلاحية});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gridView1.Name = "gridView1";
@@ -443,6 +476,56 @@
             this.gridView1.OptionsFind.ShowFindButton = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
+            // 
+            // colالرقم
+            // 
+            this.colالرقم.FieldName = "الرقم";
+            this.colالرقم.MinWidth = 21;
+            this.colالرقم.Name = "colالرقم";
+            this.colالرقم.Visible = true;
+            this.colالرقم.VisibleIndex = 0;
+            this.colالرقم.Width = 81;
+            // 
+            // colالأسم
+            // 
+            this.colالأسم.FieldName = "الأسم";
+            this.colالأسم.MinWidth = 21;
+            this.colالأسم.Name = "colالأسم";
+            this.colالأسم.Visible = true;
+            this.colالأسم.VisibleIndex = 1;
+            this.colالأسم.Width = 81;
+            // 
+            // colالرمزالسري
+            // 
+            this.colالرمزالسري.FieldName = "الرمز السري";
+            this.colالرمزالسري.MinWidth = 21;
+            this.colالرمزالسري.Name = "colالرمزالسري";
+            this.colالرمزالسري.Visible = true;
+            this.colالرمزالسري.VisibleIndex = 2;
+            this.colالرمزالسري.Width = 81;
+            // 
+            // colنوعالصلاحية
+            // 
+            this.colنوعالصلاحية.FieldName = "نوع الصلاحية";
+            this.colنوعالصلاحية.MinWidth = 21;
+            this.colنوعالصلاحية.Name = "colنوعالصلاحية";
+            this.colنوعالصلاحية.Visible = true;
+            this.colنوعالصلاحية.VisibleIndex = 3;
+            this.colنوعالصلاحية.Width = 81;
+            // 
+            // getUserBindingSource
+            // 
+            this.getUserBindingSource.DataMember = "getUser";
+            this.getUserBindingSource.DataSource = this.dB_CCTTDataSet2;
+            // 
+            // getUserTableAdapter
+            // 
+            this.getUserTableAdapter.ClearBeforeFill = true;
+            // 
+            // getUserV1TableAdapter
+            // 
+            this.getUserV1TableAdapter.ClearBeforeFill = true;
             // 
             // Page__Users
             // 
@@ -459,7 +542,10 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getUserV1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_CCTTDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getUserBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -483,5 +569,14 @@
         private DevExpress.XtraEditors.SimpleButton btn_Add;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.BindingSource getUserBindingSource;
+        private DB_CCTTDataSet2 dB_CCTTDataSet2;
+        private DB_CCTTDataSet2TableAdapters.getUserTableAdapter getUserTableAdapter;
+        private System.Windows.Forms.BindingSource getUserV1BindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colالرقم;
+        private DevExpress.XtraGrid.Columns.GridColumn colالأسم;
+        private DevExpress.XtraGrid.Columns.GridColumn colالرمزالسري;
+        private DevExpress.XtraGrid.Columns.GridColumn colنوعالصلاحية;
+        private DB_CCTTDataSet2TableAdapters.getUserV1TableAdapter getUserV1TableAdapter;
     }
 }

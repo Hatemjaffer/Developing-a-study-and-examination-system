@@ -80,10 +80,11 @@
             this.btn_login.Location = new System.Drawing.Point(56, 215);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(362, 40);
-            this.btn_login.TabIndex = 16;
+            this.btn_login.TabIndex = 2;
             this.btn_login.Text = "دخول";
             this.btn_login.UseVisualStyleBackColor = false;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            this.btn_login.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_Name_KeyDown);
             this.btn_login.MouseLeave += new System.EventHandler(this.btn_login_MouseLeave);
             this.btn_login.MouseHover += new System.EventHandler(this.btn_login_MouseHover);
             // 
@@ -109,15 +110,15 @@
             this.text_pass.Name = "text_pass";
             this.text_pass.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.text_pass.Size = new System.Drawing.Size(371, 27);
-            this.text_pass.TabIndex = 15;
+            this.text_pass.TabIndex = 1;
             this.text_pass.Text = "كلمة المرور";
             this.text_pass.Enter += new System.EventHandler(this.text_pass_Enter);
+            this.text_pass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_Name_KeyDown);
             this.text_pass.MouseLeave += new System.EventHandler(this.text_pass_MouseLeave);
             // 
             // text_Name
             // 
             this.text_Name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.text_Name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.text_Name.BackColor = System.Drawing.Color.White;
             this.text_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.text_Name.Font = new System.Drawing.Font("LBC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,9 +127,10 @@
             this.text_Name.Name = "text_Name";
             this.text_Name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.text_Name.Size = new System.Drawing.Size(372, 27);
-            this.text_Name.TabIndex = 14;
+            this.text_Name.TabIndex = 0;
             this.text_Name.Text = "اسم المستخدم";
             this.text_Name.Enter += new System.EventHandler(this.text_Name_Enter);
+            this.text_Name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_Name_KeyDown);
             this.text_Name.MouseLeave += new System.EventHandler(this.text_Name_MouseLeave);
             // 
             // bunifuElipse1

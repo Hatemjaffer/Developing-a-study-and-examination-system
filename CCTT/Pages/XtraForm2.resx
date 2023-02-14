@@ -117,22 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="efDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="excelDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>233, 17</value>
+  </metadata>
+  <data name="excelDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PFZpZXc+PEZpZWxkIE5hbWU9IlNVQkpFQ1RfU1lNIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNVQkpFQ1RfTkFNRSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTVUJKRUNUX0tJTkQiIFR5cGU9IkRvdWJsZSIgLz48RmllbGQgTmFtZT0iU1VCSkVDVF9TVEFURSIgVHlwZT0iRG91YmxlIiAvPjxGaWVsZCBOYW1lPSJTVUJKRUNUX0NMQVNTIiBUeXBlPSJEb3VibGUiIC8+PEZpZWxkIE5hbWU9IlBBU1NfR1JBREUiIFR5cGU9IkRvdWJsZSIgLz48RmllbGQgTmFtZT0iU1VCSkVDVF9IT1VSIiBUeXBlPSJEb3VibGUiIC8+PEZpZWxkIE5hbWU9IlNVQkpFQ1RfQkVSSUYiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+</value>
+  </data>
+  <metadata name="getMainCoursV2TableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="efDataSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 60</value>
-  </metadata>
-  <metadata name="efDataSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 103</value>
-  </metadata>
-  <metadata name="efDataSource4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 146</value>
-  </metadata>
-  <metadata name="efDataSource5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 189</value>
-  </metadata>
-  <metadata name="get_main_cours_student_grade1TableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 232</value>
   </metadata>
 </root>

@@ -90,5 +90,29 @@ namespace CCTT.Properties {
                 return ((string)(this["DB_CCTTConnectionString1123"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("م.مصطفي شفلو")]
+        public string developmeny_manager {
+            get {
+                return ((string)(this["developmeny_manager"]));
+            }
+            set {
+                this["developmeny_manager"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string courses_department {
+            get {
+                return ((string)(this["courses_department"]));
+            }
+            set {
+                this["courses_department"] = value;
+            }
+        }
     }
 }

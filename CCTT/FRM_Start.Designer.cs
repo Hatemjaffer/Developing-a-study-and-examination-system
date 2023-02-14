@@ -110,6 +110,7 @@
             this.Name = "FRM_Start";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.Text = "FRM_Start";
+            this.Load += new System.EventHandler(this.FRM_Start_Load);
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
