@@ -35,8 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.text_pass = new System.Windows.Forms.TextBox();
             this.text_Name = new System.Windows.Forms.TextBox();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+//            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+         //   this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.btn_minmizar = new System.Windows.Forms.PictureBox();
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
@@ -135,15 +135,15 @@
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 50;
-            this.bunifuElipse1.TargetControl = this;
+      ////      this.bunifuElipse1.ElipseRadius = 50;
+        //    this.bunifuElipse1.TargetControl = this;
             // 
             // bunifuDragControl1
             // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panel1;
-            this.bunifuDragControl1.Vertical = true;
+        ////    this.bunifuDragControl1.Fixed = true;
+        ///    this.bunifuDragControl1.Horizontal = true;
+        //    this.bunifuDragControl1.TargetControl = this.panel1;
+         //   this.bunifuDragControl1.Vertical = true;
             // 
             // btn_minmizar
             // 
@@ -235,10 +235,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox text_pass;
         private System.Windows.Forms.TextBox text_Name;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+     //   private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox btn_minmizar;
         private System.Windows.Forms.PictureBox btn_close;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+      //  private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;

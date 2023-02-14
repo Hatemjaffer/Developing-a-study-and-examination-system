@@ -118,7 +118,6 @@
     </Compile>
     <Compile Include="BL\Methods.cs" />
     <Compile Include="Class1.cs" />
-    <Compile Include="Class2xxxxxxxxxxxxxxxxx.cs" />
     <Compile Include="Course_inStudent.cs">
       <DependentUpon>DB_CCTTModel.tt</DependentUpon>
     </Compile>

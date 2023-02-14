@@ -35,7 +35,7 @@
             this.labelStatus = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+//            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -95,8 +95,8 @@
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 50;
-            this.bunifuElipse1.TargetControl = this;
+         //   this.bunifuElipse1.ElipseRadius = 50;
+         //   this.bunifuElipse1.TargetControl = this;
             // 
             // FRM_Start
             // 
@@ -126,6 +126,6 @@
         private DevExpress.XtraEditors.LabelControl labelStatus;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+//        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
